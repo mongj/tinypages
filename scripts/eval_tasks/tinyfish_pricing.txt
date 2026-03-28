@@ -1,0 +1,20 @@
+You are doing live due diligence on the marketing site. The scout playbook may list nav labels and entry URLs; it does NOT contain exact prices, toggle behavior, footer legal links, or the integrations catalog as rendered today. You must read the live pages and extract fresh facts.
+
+Rules: No login, no completing signup or payment. You may open signup only to the first screen if needed for OAuth visibility.
+
+1) Pricing — Visit the canonical public pricing page. If there is a monthly/annual (or similar) billing toggle, capture prices in BOTH states (or explain if only one is available without an account). For each paid tier that shows a numeric price (not “Custom”/“Contact”), return plan name, billing_period, price_display verbatim, price_numeric, currency.
+
+2) Documentation host — Follow the site’s path to developer/product documentation until you reach a technical docs domain. Report docs_landing_url (first docs page you treat as the doc root) and docs_registrable_domain (e.g. docs.example.com).
+
+3) Privacy policy — From the marketing site footer (or equivalent), open the privacy policy and return privacy_policy_url plus the page <title> or main H1 text.
+
+4) Integrations — On the public integrations listing, count distinct partner/vendor names or logos in the primary grid/list (not nav). If the list is paginated or infinite, scroll only until the count stabilizes for ~3 seconds or you hit 40 items, then report approximate_count and methodology.
+
+Return one JSON object only (no markdown fences), keys:
+- pricing: { "pricing_page_url": string, "billing_toggle_observed": boolean, "plans": [ ... ], "notes": string }
+- docs: { "docs_landing_url": string, "docs_registrable_domain": string }
+- legal: { "privacy_policy_url": string, "page_heading": string }
+- integrations: { "integrations_page_url": string, "approximate_distinct_vendors": number, "methodology": string }
+- playbook_used_how: string (one sentence: which hints from context helped, if any—not the raw JSON)
+
+If any section is unreachable without credentials, set that section to null and explain under a top-level "blockers" array of strings.

@@ -1,0 +1,7 @@
+{
+  "id": "wikipedia_portal",
+  "title": "Wikipedia portal — search routing, language inventory, non-Latin label",
+  "url": "https://www.wikipedia.org/",
+  "artifacts_dir": "artifacts/20260328T031504Z_www.wikipedia.org",
+  "objective_file": "wikipedia_portal.txt"
+}
