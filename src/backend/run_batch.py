@@ -49,15 +49,20 @@ async def _poll_run_until_terminal(
     max_wait_seconds: float = _DEFAULT_POLL_MAX_WAIT_SEC,
 ) -> Run | None:
     """Poll ``GET /v1/runs/{id}`` until COMPLETED, FAILED, or CANCELLED. None if deadline exceeded."""
+    import logging
+    logger = logging.getLogger("tinypages.poll")
+
     deadline = time.monotonic() + max_wait_seconds
     interval = _POLL_INITIAL_INTERVAL
     while time.monotonic() < deadline:
         try:
             run = await client.runs.get(run_id)
         except NotFoundError:
+            logger.info("[poll] run_id=%s not found, retrying", run_id)
             await asyncio.sleep(min(interval, max(0.0, deadline - time.monotonic())))
             interval = min(_POLL_MAX_INTERVAL, interval * 1.25)
             continue
+        logger.info("[poll] run_id=%s status=%s (type=%s)", run_id, run.status, type(run.status).__name__)
         if run.status in (RunStatus.COMPLETED, RunStatus.FAILED, RunStatus.CANCELLED):
             return run
         wait = interval
