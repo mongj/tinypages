@@ -1,0 +1,732 @@
+{
+  "merged_flows": [
+    {
+      "id": "browse_tax_info_individual",
+      "name": "Browse Individual Income Tax Information",
+      "intent_category": "browse",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Taxes",
+          "url": "https://www.iras.gov.sg/taxes",
+          "location": "nav"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click on 'Taxes' in the primary navigation menu."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on 'Individual Income Tax' from the expanded menu."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/taxes/individual-income-tax"
+        ],
+        "labels_seen": [
+          "Taxes",
+          "Individual Income Tax"
+        ],
+        "notes": "The navigation menu expands to show various tax types."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "No blockers for browsing public information."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "16f4d7fd-3a3a-428a-a47e-5aeb5dd39de8"
+        }
+      ]
+    },
+    {
+      "id": "digital_service_file_tax",
+      "name": "File Income Tax Return",
+      "intent_category": "support",
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "label": "Digital Services",
+          "url": "https://www.iras.gov.sg/digital-services",
+          "location": "nav"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click on 'Digital Services' in the primary navigation menu."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on 'Employees' and then 'File Income Tax Return'."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/digital-services/employees/file-income-tax-return"
+        ],
+        "labels_seen": [
+          "Digital Services",
+          "Employees",
+          "File Income Tax Return"
+        ],
+        "notes": "Leads to the information page about filing before redirecting to the login portal."
+      },
+      "blockers": [
+        {
+          "type": "login_required",
+          "detail": "Actual filing requires Singpass login to myTax Portal."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "16f4d7fd-3a3a-428a-a47e-5aeb5dd39de8"
+        }
+      ]
+    },
+    {
+      "id": "auth_login_mytax",
+      "name": "Login to myTax Portal",
+      "intent_category": "auth",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "LOGIN",
+          "url": "https://mytax.iras.gov.sg/login/selection",
+          "location": "cta"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the 'LOGIN' button in the header."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://mytax.iras.gov.sg/login/selection"
+        ],
+        "labels_seen": [
+          "LOGIN"
+        ],
+        "notes": "Direct entry point to the authentication portal."
+      },
+      "blockers": [
+        {
+          "type": "login_required",
+          "detail": "Requires Singpass or other valid credentials."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "16f4d7fd-3a3a-428a-a47e-5aeb5dd39de8"
+        }
+      ]
+    },
+    {
+      "id": "support_contact_us",
+      "name": "Contact IRAS Support",
+      "intent_category": "support",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Contact Us",
+          "url": "https://www.iras.gov.sg/contact-us",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "scroll",
+          "description": "Scroll to the bottom of the page to find the footer."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on 'Contact Us' link."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/contact-us"
+        ],
+        "labels_seen": [
+          "Contact Us"
+        ],
+        "notes": "Provides various contact methods including hotlines and email."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "None"
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "16f4d7fd-3a3a-428a-a47e-5aeb5dd39de8"
+        }
+      ]
+    },
+    {
+      "id": "quick_links_calculators",
+      "name": "Use Tax Calculators",
+      "intent_category": "support",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Calculators",
+          "url": "https://www.iras.gov.sg/quick-links/calculators",
+          "location": "cta"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click on the 'Calculators' icon in the Quick Links section on the homepage."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/quick-links/calculators"
+        ],
+        "labels_seen": [
+          "Calculators"
+        ],
+        "notes": "Part of the carousel of quick links in the hero area."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "None"
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "16f4d7fd-3a3a-428a-a47e-5aeb5dd39de8"
+        }
+      ]
+    },
+    {
+      "id": "personal_tax_sign_in",
+      "name": "Personal Tax Sign In",
+      "intent_category": "auth",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "LOGIN",
+          "url": "https://mytax.iras.gov.sg/login/selection",
+          "location": "nav"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click 'LOGIN' button on homepage"
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Select 'Personal Tax' on the login selection page"
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Click 'Log in with Singpass' on the myTax Portal login screen"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/",
+          "https://mytax.iras.gov.sg/login/selection",
+          "https://login.id.singpass.gov.sg/main"
+        ],
+        "labels_seen": [
+          "LOGIN",
+          "Personal Tax",
+          "Log in with Singpass"
+        ],
+        "notes": "Primary login for individuals is via Singpass."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Flow reached the Singpass login screen successfully."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "181ef7fc-e135-4512-a63d-2331a9471a7f"
+        }
+      ]
+    },
+    {
+      "id": "singpass_registration",
+      "name": "Singpass Registration (Sign Up)",
+      "intent_category": "auth",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Register for Singpass",
+          "url": "https://portal.singpass.gov.sg/home/ui/register/instructions",
+          "location": "other"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click 'LOGIN' on IRAS homepage"
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Select 'Personal Tax'"
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "On Singpass login page, click 'Password login'"
+        },
+        {
+          "order": 4,
+          "action": "click",
+          "description": "Click 'Register for Singpass' link"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://login.id.singpass.gov.sg/main",
+          "https://portal.singpass.gov.sg/home/ui/register/instructions"
+        ],
+        "labels_seen": [
+          "Register for Singpass"
+        ],
+        "notes": "Registration is handled by the national Singpass platform."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Flow leads to the external Singpass registration portal."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "181ef7fc-e135-4512-a63d-2331a9471a7f"
+        }
+      ]
+    },
+    {
+      "id": "singpass_password_reset",
+      "name": "Singpass Password Reset",
+      "intent_category": "auth",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Reset password",
+          "url": "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail",
+          "location": "other"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Navigate to Singpass login page via IRAS Personal Tax login"
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click 'Password login' to reveal recovery options"
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Click 'Reset password'"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://login.id.singpass.gov.sg/main",
+          "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail"
+        ],
+        "labels_seen": [
+          "Reset password"
+        ],
+        "notes": "Password reset for IRAS access is managed via Singpass."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Reachable via the password login sub-menu on Singpass."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "181ef7fc-e135-4512-a63d-2331a9471a7f"
+        }
+      ]
+    },
+    {
+      "id": "singpass_id_recovery",
+      "name": "Singpass ID Recovery",
+      "intent_category": "auth",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Retrieve Singpass ID",
+          "url": "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id",
+          "location": "other"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Navigate to Singpass password login screen"
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click 'Retrieve Singpass ID'"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id"
+        ],
+        "labels_seen": [
+          "Retrieve Singpass ID"
+        ]
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "None"
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "181ef7fc-e135-4512-a63d-2331a9471a7f"
+        }
+      ]
+    },
+    {
+      "id": "business_tax_sign_in",
+      "name": "Business Tax Sign In (CorpPass)",
+      "intent_category": "auth",
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "label": "Company/ Business Tax",
+          "url": "https://mytax.iras.gov.sg/login/selection",
+          "location": "cta"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click 'LOGIN' on homepage"
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Select 'Company/ Business Tax' on the login selection page"
+        },
+        {
+          "order": 3,
+          "action": "navigate",
+          "description": "Redirected to CorpPass login (Singpass-based)"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://mytax.iras.gov.sg/login/selection"
+        ],
+        "labels_seen": [
+          "Company/ Business Tax"
+        ]
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Flow redirects to national business authentication platform."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "181ef7fc-e135-4512-a63d-2331a9471a7f"
+        }
+      ]
+    },
+    {
+      "id": "iras_support_contact",
+      "name": "Contact and Support",
+      "intent_category": "support",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Contact Us",
+          "url": "https://www.iras.gov.sg/contact-us",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the IRAS homepage."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click 'Contact Us' in the footer to view support channels."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/contact-us"
+        ],
+        "labels_seen": [
+          "Contact Us",
+          "Chat with IRAS",
+          "Feedback"
+        ],
+        "notes": "The page provides phone numbers and email links categorized by tax type (Income Tax, GST, etc.)."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Contact info is publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "420b0844-7cad-4259-92a7-ac4c512296c5"
+        }
+      ]
+    },
+    {
+      "id": "iras_legal_privacy",
+      "name": "Privacy Policy",
+      "intent_category": "legal",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Privacy Statement",
+          "url": "https://www.iras.gov.sg/privacy-statement",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the IRAS homepage."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click 'Privacy Statement' in the footer."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/privacy-statement"
+        ],
+        "labels_seen": [
+          "Privacy Statement"
+        ],
+        "notes": "Covers data protection and security measures for the site."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "420b0844-7cad-4259-92a7-ac4c512296c5"
+        }
+      ]
+    },
+    {
+      "id": "iras_legal_terms",
+      "name": "Terms of Use",
+      "intent_category": "legal",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Terms of Use & Browser Compatibility",
+          "url": "https://www.iras.gov.sg/terms-of-use-browser-compatibility",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the IRAS homepage."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click 'Terms of Use & Browser Compatibility' in the footer."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/terms-of-use-browser-compatibility"
+        ],
+        "labels_seen": [
+          "Terms of Use"
+        ],
+        "notes": "Outlines conditions for using the website and its content."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "420b0844-7cad-4259-92a7-ac4c512296c5"
+        }
+      ]
+    },
+    {
+      "id": "iras_security_info",
+      "name": "Security and Scam Protection",
+      "intent_category": "legal",
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "label": "Report Vulnerability",
+          "url": "https://www.tech.gov.sg/report_vulnerability",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the IRAS homepage."
+        },
+        {
+          "order": 2,
+          "action": "type",
+          "description": "Search for 'scam' to find security advisories."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/",
+          "https://www.tech.gov.sg/report_vulnerability"
+        ],
+        "labels_seen": [
+          "Report Vulnerability",
+          "scam advisory",
+          "scam support hotline"
+        ],
+        "notes": "Vulnerability reporting is external via GovTech. Internal security advisories are accessible via search/banners."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "General advisories are public."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "420b0844-7cad-4259-92a7-ac4c512296c5"
+        }
+      ]
+    },
+    {
+      "id": "iras_docs_help",
+      "name": "Tax Guides and Docs",
+      "intent_category": "support",
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "label": "Useful links",
+          "url": "https://www.iras.gov.sg/useful-links",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the IRAS homepage."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click 'Useful links' to see the guide repository."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.iras.gov.sg/useful-links"
+        ],
+        "labels_seen": [
+          "Useful links",
+          "e-Tax Guides"
+        ],
+        "notes": "The site uses a 'Taxes' mega-menu and 'Useful links' as the primary documentation hub."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Guides and forms are public."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "420b0844-7cad-4259-92a7-ac4c512296c5"
+        }
+      ]
+    }
+  ],
+  "merge_count": 15,
+  "source_runs": 4,
+  "collected_notes": [
+    "[nav]: The website uses a mega-menu for primary navigation which simplifies browsing tax types and digital services. Most interactive tasks (filing, checking balance) require authentication via Singpass.",
+    "[auth]: IRAS has centralized its authentication via the myTax Portal, which utilizes Singapore's national digital identity platforms (Singpass for individuals and CorpPass for businesses). Consequently, all account registration and recovery flows are hosted on the Singpass domain rather than the IRAS domain itself.",
+    "[commerce]: The IRAS website is a government tax agency portal and is not a commercial e-commerce site. While it facilitates tax payments (Stamp Duty, Property Tax, etc.) and offers fee-based services like 'Check Annual Value of Property' ($2.50 fee), it does not use a traditional commerce model. Specifically, there are no product listings, product detail pages for goods, 'add-to-cart' buttons, or a centralized shopping cart. Transactions are direct service or tax payments. Therefore, no commerce flows were identified.",
+    "[support]: IRAS does not have a single 'Help Center' or 'Status' page link in the footer. Status information is typically communicated via banners or the login page (myTax Portal). Support is heavily categorized by tax type."
+  ],
+  "seed_url": "https://www.iras.gov.sg/",
+  "created_at": "2026-03-28T03:30:40.378059+00:00"
+}

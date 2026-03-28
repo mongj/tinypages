@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-sidebar: #F3F4F6;
+  --text-primary: #1A1A2E;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --accent-teal: #00D4AA;
+  --accent-teal-light: #E6FBF5;
+  --accent-amber: #FFBE2E;
+  --accent-amber-light: #FFF8E6;
+  --border: #E5E7EB;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-sidebar: var(--bg-sidebar);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-teal-light: var(--accent-teal-light);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-amber-light: var(--accent-amber-light);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+}
