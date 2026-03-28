@@ -1,0 +1,689 @@
+{
+  "scout_id": "nav",
+  "seed_url": "https://www.wikipedia.org/",
+  "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919",
+  "status": "COMPLETED",
+  "num_of_steps": 2,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "browse_english_wikipedia",
+        "name": "Browse English Wikipedia",
+        "intent_category": "browse",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "English \u2014 Wikipedia \u2014 The Free Encyclopedia",
+            "url": "https://en.wikipedia.org/",
+            "location": "hero"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on the English language link to enter the English Wikipedia site."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://en.wikipedia.org/"
+          ],
+          "labels_seen": [
+            "English"
+          ],
+          "notes": "Primary entry point for English speakers."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers observed for this path."
+          }
+        ]
+      },
+      {
+        "id": "search_article",
+        "name": "Search for an Article",
+        "intent_category": "browse",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "search",
+            "url": "https://www.wikipedia.org/",
+            "location": "hero"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "type",
+            "description": "Type search query into the search input field."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click the search button or select a suggestion to view the article."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wikipedia.org/"
+          ],
+          "labels_seen": [
+            "search",
+            "Search"
+          ],
+          "notes": "Verified that typing triggers a suggestion dropdown."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Search is open to all users."
+          }
+        ]
+      },
+      {
+        "id": "donate_to_wikimedia",
+        "name": "Donate to Wikimedia Foundation",
+        "intent_category": "commerce",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "You can support our work with a donation.",
+            "url": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the donation link in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://donate.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "donation"
+          ],
+          "notes": "Standard path for financial support."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None, but requires external payment method if followed to completion."
+          }
+        ]
+      },
+      {
+        "id": "download_mobile_app",
+        "name": "Download Mobile Applications",
+        "intent_category": "other",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Download Wikipedia for Android or iOS",
+            "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the mobile app download link to view available versions."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications"
+          ],
+          "labels_seen": [
+            "Download Wikipedia for Android or iOS"
+          ],
+          "notes": "Links to an internal list of mobile apps."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Informational page about apps."
+          }
+        ]
+      },
+      {
+        "id": "view_privacy_policy",
+        "name": "View Privacy Policy",
+        "intent_category": "legal",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Privacy Policy",
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Privacy Policy link in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+          ],
+          "labels_seen": [
+            "Privacy Policy"
+          ],
+          "notes": "Standard legal documentation link."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Accessible to all."
+          }
+        ]
+      },
+      {
+        "id": "explore_wiktionary",
+        "name": "Explore Wiktionary",
+        "intent_category": "other",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Wiktionary Free dictionary",
+            "url": "https://www.wiktionary.org/",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on the Wiktionary sister project link."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wiktionary.org/"
+          ],
+          "labels_seen": [
+            "Wiktionary"
+          ],
+          "notes": "One of several sister project links."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Leads to a different domain."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "The Wikipedia portal page acts as a language and project switcher. Most primary paths lead away from the root domain to language-specific subdomains or sister project domains."
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "browse_english_wikipedia",
+        "name": "Browse English Wikipedia",
+        "intent_category": "browse",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "English \u2014 Wikipedia \u2014 The Free Encyclopedia",
+            "url": "https://en.wikipedia.org/",
+            "location": "hero"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on the English language link to enter the English Wikipedia site."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://en.wikipedia.org/"
+          ],
+          "labels_seen": [
+            "English"
+          ],
+          "notes": "Primary entry point for English speakers."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers observed for this path."
+          }
+        ]
+      },
+      {
+        "id": "search_article",
+        "name": "Search for an Article",
+        "intent_category": "browse",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "search",
+            "url": "https://www.wikipedia.org/",
+            "location": "hero"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "type",
+            "description": "Type search query into the search input field."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click the search button or select a suggestion to view the article."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wikipedia.org/"
+          ],
+          "labels_seen": [
+            "search",
+            "Search"
+          ],
+          "notes": "Verified that typing triggers a suggestion dropdown."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Search is open to all users."
+          }
+        ]
+      },
+      {
+        "id": "donate_to_wikimedia",
+        "name": "Donate to Wikimedia Foundation",
+        "intent_category": "commerce",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "You can support our work with a donation.",
+            "url": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the donation link in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://donate.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "donation"
+          ],
+          "notes": "Standard path for financial support."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None, but requires external payment method if followed to completion."
+          }
+        ]
+      },
+      {
+        "id": "download_mobile_app",
+        "name": "Download Mobile Applications",
+        "intent_category": "other",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Download Wikipedia for Android or iOS",
+            "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the mobile app download link to view available versions."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications"
+          ],
+          "labels_seen": [
+            "Download Wikipedia for Android or iOS"
+          ],
+          "notes": "Links to an internal list of mobile apps."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Informational page about apps."
+          }
+        ]
+      },
+      {
+        "id": "view_privacy_policy",
+        "name": "View Privacy Policy",
+        "intent_category": "legal",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Privacy Policy",
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Privacy Policy link in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+          ],
+          "labels_seen": [
+            "Privacy Policy"
+          ],
+          "notes": "Standard legal documentation link."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Accessible to all."
+          }
+        ]
+      },
+      {
+        "id": "explore_wiktionary",
+        "name": "Explore Wiktionary",
+        "intent_category": "other",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Wiktionary Free dictionary",
+            "url": "https://www.wiktionary.org/",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on the Wiktionary sister project link."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wiktionary.org/"
+          ],
+          "labels_seen": [
+            "Wiktionary"
+          ],
+          "notes": "One of several sister project links."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Leads to a different domain."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "The Wikipedia portal page acts as a language and project switcher. Most primary paths lead away from the root domain to language-specific subdomains or sister project domains."
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919",
+        "status": "COMPLETED",
+        "num_of_steps": 2,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "browse_english_wikipedia",
+              "name": "Browse English Wikipedia",
+              "intent_category": "browse",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "English \u2014 Wikipedia \u2014 The Free Encyclopedia",
+                  "url": "https://en.wikipedia.org/",
+                  "location": "hero"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click on the English language link to enter the English Wikipedia site."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://en.wikipedia.org/"
+                ],
+                "labels_seen": [
+                  "English"
+                ],
+                "notes": "Primary entry point for English speakers."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "No blockers observed for this path."
+                }
+              ]
+            },
+            {
+              "id": "search_article",
+              "name": "Search for an Article",
+              "intent_category": "browse",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "search",
+                  "url": "https://www.wikipedia.org/",
+                  "location": "hero"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "type",
+                  "description": "Type search query into the search input field."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click the search button or select a suggestion to view the article."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.wikipedia.org/"
+                ],
+                "labels_seen": [
+                  "search",
+                  "Search"
+                ],
+                "notes": "Verified that typing triggers a suggestion dropdown."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Search is open to all users."
+                }
+              ]
+            },
+            {
+              "id": "donate_to_wikimedia",
+              "name": "Donate to Wikimedia Foundation",
+              "intent_category": "commerce",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "You can support our work with a donation.",
+                  "url": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the donation link in the footer."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://donate.wikimedia.org/"
+                ],
+                "labels_seen": [
+                  "donation"
+                ],
+                "notes": "Standard path for financial support."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "None, but requires external payment method if followed to completion."
+                }
+              ]
+            },
+            {
+              "id": "download_mobile_app",
+              "name": "Download Mobile Applications",
+              "intent_category": "other",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Download Wikipedia for Android or iOS",
+                  "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the mobile app download link to view available versions."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications"
+                ],
+                "labels_seen": [
+                  "Download Wikipedia for Android or iOS"
+                ],
+                "notes": "Links to an internal list of mobile apps."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Informational page about apps."
+                }
+              ]
+            },
+            {
+              "id": "view_privacy_policy",
+              "name": "View Privacy Policy",
+              "intent_category": "legal",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Privacy Policy",
+                  "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the Privacy Policy link in the footer."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+                ],
+                "labels_seen": [
+                  "Privacy Policy"
+                ],
+                "notes": "Standard legal documentation link."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Accessible to all."
+                }
+              ]
+            },
+            {
+              "id": "explore_wiktionary",
+              "name": "Explore Wiktionary",
+              "intent_category": "other",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Wiktionary Free dictionary",
+                  "url": "https://www.wiktionary.org/",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click on the Wiktionary sister project link."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.wiktionary.org/"
+                ],
+                "labels_seen": [
+                  "Wiktionary"
+                ],
+                "notes": "One of several sister project links."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Leads to a different domain."
+                }
+              ]
+            }
+          ],
+          "global_blockers": [],
+          "notes": "The Wikipedia portal page acts as a language and project switcher. Most primary paths lead away from the root domain to language-specific subdomains or sister project domains."
+        },
+        "error": null
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:15:48.758974+00:00"
+}

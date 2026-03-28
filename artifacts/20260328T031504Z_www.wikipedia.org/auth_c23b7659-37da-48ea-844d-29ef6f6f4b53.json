@@ -1,0 +1,425 @@
+{
+  "scout_id": "auth",
+  "seed_url": "https://www.wikipedia.org/",
+  "run_id": "c23b7659-37da-48ea-844d-29ef6f6f4b53",
+  "status": "COMPLETED",
+  "num_of_steps": 20,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "wikipedia_sign_in",
+        "name": "Sign In Flow",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Log in",
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia English homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on the 'Log in' link in the top right header."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/",
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page"
+          ],
+          "labels_seen": [
+            "Log in",
+            "English"
+          ],
+          "notes": "The login page features username and password fields."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Login page is accessible."
+          }
+        ]
+      },
+      {
+        "id": "wikipedia_sign_up",
+        "name": "Sign Up Flow",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Create account",
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia English homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on the 'Create account' link in the top right header."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/",
+            "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page"
+          ],
+          "labels_seen": [
+            "Create account",
+            "English"
+          ],
+          "notes": "The account creation page requires a username, password, and optional email."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Sign up page is accessible."
+          }
+        ]
+      },
+      {
+        "id": "wikipedia_password_reset",
+        "name": "Password Reset Flow",
+        "intent_category": "auth",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Forgot your password?",
+            "url": "https://en.wikipedia.org/wiki/Special:PasswordReset",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia English login page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Forgot your password?' link usually located below the password field."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+            "https://en.wikipedia.org/wiki/Special:PasswordReset"
+          ],
+          "labels_seen": [
+            "Forgot your password?",
+            "Special:PasswordReset"
+          ],
+          "notes": "Encountered an error page stating 'Internal error' and 'Your address is blocked' when attempting to access the reset page directly."
+        },
+        "blockers": [
+          {
+            "type": "blocked",
+            "detail": "The agent's IP address was blocked from accessing the password recovery page to prevent abuse."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "Authentication entry points on Wikipedia are primarily found in the 'Personal tools' section of individual language wikis (e.g., English Wikipedia). The password reset page was found but was inaccessible due to an IP-level block during the scout."
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "wikipedia_sign_in",
+        "name": "Sign In Flow",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Log in",
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia English homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on the 'Log in' link in the top right header."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/",
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page"
+          ],
+          "labels_seen": [
+            "Log in",
+            "English"
+          ],
+          "notes": "The login page features username and password fields."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Login page is accessible."
+          }
+        ]
+      },
+      {
+        "id": "wikipedia_sign_up",
+        "name": "Sign Up Flow",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Create account",
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia English homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on the 'Create account' link in the top right header."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/",
+            "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page"
+          ],
+          "labels_seen": [
+            "Create account",
+            "English"
+          ],
+          "notes": "The account creation page requires a username, password, and optional email."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Sign up page is accessible."
+          }
+        ]
+      },
+      {
+        "id": "wikipedia_password_reset",
+        "name": "Password Reset Flow",
+        "intent_category": "auth",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Forgot your password?",
+            "url": "https://en.wikipedia.org/wiki/Special:PasswordReset",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia English login page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Forgot your password?' link usually located below the password field."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+            "https://en.wikipedia.org/wiki/Special:PasswordReset"
+          ],
+          "labels_seen": [
+            "Forgot your password?",
+            "Special:PasswordReset"
+          ],
+          "notes": "Encountered an error page stating 'Internal error' and 'Your address is blocked' when attempting to access the reset page directly."
+        },
+        "blockers": [
+          {
+            "type": "blocked",
+            "detail": "The agent's IP address was blocked from accessing the password recovery page to prevent abuse."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "Authentication entry points on Wikipedia are primarily found in the 'Personal tools' section of individual language wikis (e.g., English Wikipedia). The password reset page was found but was inaccessible due to an IP-level block during the scout."
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "c23b7659-37da-48ea-844d-29ef6f6f4b53",
+        "status": "COMPLETED",
+        "num_of_steps": 20,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "wikipedia_sign_in",
+              "name": "Sign In Flow",
+              "intent_category": "auth",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Log in",
+                  "url": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+                  "location": "nav"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Wikipedia English homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on the 'Log in' link in the top right header."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.wikipedia.org/",
+                  "https://en.wikipedia.org/",
+                  "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page"
+                ],
+                "labels_seen": [
+                  "Log in",
+                  "English"
+                ],
+                "notes": "The login page features username and password fields."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Login page is accessible."
+                }
+              ]
+            },
+            {
+              "id": "wikipedia_sign_up",
+              "name": "Sign Up Flow",
+              "intent_category": "auth",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Create account",
+                  "url": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page",
+                  "location": "nav"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Wikipedia English homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on the 'Create account' link in the top right header."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.wikipedia.org/",
+                  "https://en.wikipedia.org/",
+                  "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page"
+                ],
+                "labels_seen": [
+                  "Create account",
+                  "English"
+                ],
+                "notes": "The account creation page requires a username, password, and optional email."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Sign up page is accessible."
+                }
+              ]
+            },
+            {
+              "id": "wikipedia_password_reset",
+              "name": "Password Reset Flow",
+              "intent_category": "auth",
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "label": "Forgot your password?",
+                  "url": "https://en.wikipedia.org/wiki/Special:PasswordReset",
+                  "location": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Wikipedia English login page."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'Forgot your password?' link usually located below the password field."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+                  "https://en.wikipedia.org/wiki/Special:PasswordReset"
+                ],
+                "labels_seen": [
+                  "Forgot your password?",
+                  "Special:PasswordReset"
+                ],
+                "notes": "Encountered an error page stating 'Internal error' and 'Your address is blocked' when attempting to access the reset page directly."
+              },
+              "blockers": [
+                {
+                  "type": "blocked",
+                  "detail": "The agent's IP address was blocked from accessing the password recovery page to prevent abuse."
+                }
+              ]
+            }
+          ],
+          "global_blockers": [],
+          "notes": "Authentication entry points on Wikipedia are primarily found in the 'Personal tools' section of individual language wikis (e.g., English Wikipedia). The password reset page was found but was inaccessible due to an IP-level block during the scout."
+        },
+        "error": null
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:17:36.703345+00:00"
+}

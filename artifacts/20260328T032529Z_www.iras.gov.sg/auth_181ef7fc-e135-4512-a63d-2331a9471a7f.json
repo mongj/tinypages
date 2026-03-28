@@ -1,0 +1,728 @@
+{
+  "scout_id": "auth",
+  "seed_url": "https://www.iras.gov.sg/",
+  "run_id": "181ef7fc-e135-4512-a63d-2331a9471a7f",
+  "status": "COMPLETED",
+  "num_of_steps": 19,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "personal_tax_sign_in",
+        "name": "Personal Tax Sign In",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "LOGIN",
+            "url": "https://mytax.iras.gov.sg/login/selection",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'LOGIN' button on homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select 'Personal Tax' on the login selection page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Log in with Singpass' on the myTax Portal login screen"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/",
+            "https://mytax.iras.gov.sg/login/selection",
+            "https://login.id.singpass.gov.sg/main"
+          ],
+          "labels_seen": [
+            "LOGIN",
+            "Personal Tax",
+            "Log in with Singpass"
+          ],
+          "notes": "Primary login for individuals is via Singpass."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow reached the Singpass login screen successfully."
+          }
+        ]
+      },
+      {
+        "id": "singpass_registration",
+        "name": "Singpass Registration (Sign Up)",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Register for Singpass",
+            "url": "https://portal.singpass.gov.sg/home/ui/register/instructions",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'LOGIN' on IRAS homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select 'Personal Tax'"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "On Singpass login page, click 'Password login'"
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Click 'Register for Singpass' link"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://login.id.singpass.gov.sg/main",
+            "https://portal.singpass.gov.sg/home/ui/register/instructions"
+          ],
+          "labels_seen": [
+            "Register for Singpass"
+          ],
+          "notes": "Registration is handled by the national Singpass platform."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow leads to the external Singpass registration portal."
+          }
+        ]
+      },
+      {
+        "id": "singpass_password_reset",
+        "name": "Singpass Password Reset",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Reset password",
+            "url": "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Navigate to Singpass login page via IRAS Personal Tax login"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Password login' to reveal recovery options"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Reset password'"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://login.id.singpass.gov.sg/main",
+            "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail"
+          ],
+          "labels_seen": [
+            "Reset password"
+          ],
+          "notes": "Password reset for IRAS access is managed via Singpass."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reachable via the password login sub-menu on Singpass."
+          }
+        ]
+      },
+      {
+        "id": "singpass_id_recovery",
+        "name": "Singpass ID Recovery",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Retrieve Singpass ID",
+            "url": "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Navigate to Singpass password login screen"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Retrieve Singpass ID'"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id"
+          ],
+          "labels_seen": [
+            "Retrieve Singpass ID"
+          ]
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None"
+          }
+        ]
+      },
+      {
+        "id": "business_tax_sign_in",
+        "name": "Business Tax Sign In (CorpPass)",
+        "intent_category": "auth",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Company/ Business Tax",
+            "url": "https://mytax.iras.gov.sg/login/selection",
+            "location": "cta"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'LOGIN' on homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select 'Company/ Business Tax' on the login selection page"
+          },
+          {
+            "order": 3,
+            "action": "navigate",
+            "description": "Redirected to CorpPass login (Singpass-based)"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://mytax.iras.gov.sg/login/selection"
+          ],
+          "labels_seen": [
+            "Company/ Business Tax"
+          ]
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow redirects to national business authentication platform."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "IRAS has centralized its authentication via the myTax Portal, which utilizes Singapore's national digital identity platforms (Singpass for individuals and CorpPass for businesses). Consequently, all account registration and recovery flows are hosted on the Singpass domain rather than the IRAS domain itself."
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "personal_tax_sign_in",
+        "name": "Personal Tax Sign In",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "LOGIN",
+            "url": "https://mytax.iras.gov.sg/login/selection",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'LOGIN' button on homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select 'Personal Tax' on the login selection page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Log in with Singpass' on the myTax Portal login screen"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/",
+            "https://mytax.iras.gov.sg/login/selection",
+            "https://login.id.singpass.gov.sg/main"
+          ],
+          "labels_seen": [
+            "LOGIN",
+            "Personal Tax",
+            "Log in with Singpass"
+          ],
+          "notes": "Primary login for individuals is via Singpass."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow reached the Singpass login screen successfully."
+          }
+        ]
+      },
+      {
+        "id": "singpass_registration",
+        "name": "Singpass Registration (Sign Up)",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Register for Singpass",
+            "url": "https://portal.singpass.gov.sg/home/ui/register/instructions",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'LOGIN' on IRAS homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select 'Personal Tax'"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "On Singpass login page, click 'Password login'"
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Click 'Register for Singpass' link"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://login.id.singpass.gov.sg/main",
+            "https://portal.singpass.gov.sg/home/ui/register/instructions"
+          ],
+          "labels_seen": [
+            "Register for Singpass"
+          ],
+          "notes": "Registration is handled by the national Singpass platform."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow leads to the external Singpass registration portal."
+          }
+        ]
+      },
+      {
+        "id": "singpass_password_reset",
+        "name": "Singpass Password Reset",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Reset password",
+            "url": "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Navigate to Singpass login page via IRAS Personal Tax login"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Password login' to reveal recovery options"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Reset password'"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://login.id.singpass.gov.sg/main",
+            "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail"
+          ],
+          "labels_seen": [
+            "Reset password"
+          ],
+          "notes": "Password reset for IRAS access is managed via Singpass."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reachable via the password login sub-menu on Singpass."
+          }
+        ]
+      },
+      {
+        "id": "singpass_id_recovery",
+        "name": "Singpass ID Recovery",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Retrieve Singpass ID",
+            "url": "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Navigate to Singpass password login screen"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Retrieve Singpass ID'"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id"
+          ],
+          "labels_seen": [
+            "Retrieve Singpass ID"
+          ]
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None"
+          }
+        ]
+      },
+      {
+        "id": "business_tax_sign_in",
+        "name": "Business Tax Sign In (CorpPass)",
+        "intent_category": "auth",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Company/ Business Tax",
+            "url": "https://mytax.iras.gov.sg/login/selection",
+            "location": "cta"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'LOGIN' on homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select 'Company/ Business Tax' on the login selection page"
+          },
+          {
+            "order": 3,
+            "action": "navigate",
+            "description": "Redirected to CorpPass login (Singpass-based)"
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://mytax.iras.gov.sg/login/selection"
+          ],
+          "labels_seen": [
+            "Company/ Business Tax"
+          ]
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow redirects to national business authentication platform."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "IRAS has centralized its authentication via the myTax Portal, which utilizes Singapore's national digital identity platforms (Singpass for individuals and CorpPass for businesses). Consequently, all account registration and recovery flows are hosted on the Singpass domain rather than the IRAS domain itself."
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "181ef7fc-e135-4512-a63d-2331a9471a7f",
+        "status": "COMPLETED",
+        "num_of_steps": 19,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "personal_tax_sign_in",
+              "name": "Personal Tax Sign In",
+              "intent_category": "auth",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "LOGIN",
+                  "url": "https://mytax.iras.gov.sg/login/selection",
+                  "location": "nav"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'LOGIN' button on homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select 'Personal Tax' on the login selection page"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click 'Log in with Singpass' on the myTax Portal login screen"
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/",
+                  "https://mytax.iras.gov.sg/login/selection",
+                  "https://login.id.singpass.gov.sg/main"
+                ],
+                "labels_seen": [
+                  "LOGIN",
+                  "Personal Tax",
+                  "Log in with Singpass"
+                ],
+                "notes": "Primary login for individuals is via Singpass."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Flow reached the Singpass login screen successfully."
+                }
+              ]
+            },
+            {
+              "id": "singpass_registration",
+              "name": "Singpass Registration (Sign Up)",
+              "intent_category": "auth",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Register for Singpass",
+                  "url": "https://portal.singpass.gov.sg/home/ui/register/instructions",
+                  "location": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'LOGIN' on IRAS homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select 'Personal Tax'"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "On Singpass login page, click 'Password login'"
+                },
+                {
+                  "order": 4,
+                  "action": "click",
+                  "description": "Click 'Register for Singpass' link"
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://login.id.singpass.gov.sg/main",
+                  "https://portal.singpass.gov.sg/home/ui/register/instructions"
+                ],
+                "labels_seen": [
+                  "Register for Singpass"
+                ],
+                "notes": "Registration is handled by the national Singpass platform."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Flow leads to the external Singpass registration portal."
+                }
+              ]
+            },
+            {
+              "id": "singpass_password_reset",
+              "name": "Singpass Password Reset",
+              "intent_category": "auth",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Reset password",
+                  "url": "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail",
+                  "location": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Navigate to Singpass login page via IRAS Personal Tax login"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'Password login' to reveal recovery options"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click 'Reset password'"
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://login.id.singpass.gov.sg/main",
+                  "https://portal.singpass.gov.sg/home/ui/online-reset-password/user-detail"
+                ],
+                "labels_seen": [
+                  "Reset password"
+                ],
+                "notes": "Password reset for IRAS access is managed via Singpass."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Reachable via the password login sub-menu on Singpass."
+                }
+              ]
+            },
+            {
+              "id": "singpass_id_recovery",
+              "name": "Singpass ID Recovery",
+              "intent_category": "auth",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Retrieve Singpass ID",
+                  "url": "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id",
+                  "location": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Navigate to Singpass password login screen"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'Retrieve Singpass ID'"
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://portal.singpass.gov.sg/home/ui/retrieve-account/retrieve-singpass-id"
+                ],
+                "labels_seen": [
+                  "Retrieve Singpass ID"
+                ]
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "None"
+                }
+              ]
+            },
+            {
+              "id": "business_tax_sign_in",
+              "name": "Business Tax Sign In (CorpPass)",
+              "intent_category": "auth",
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "label": "Company/ Business Tax",
+                  "url": "https://mytax.iras.gov.sg/login/selection",
+                  "location": "cta"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'LOGIN' on homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select 'Company/ Business Tax' on the login selection page"
+                },
+                {
+                  "order": 3,
+                  "action": "navigate",
+                  "description": "Redirected to CorpPass login (Singpass-based)"
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://mytax.iras.gov.sg/login/selection"
+                ],
+                "labels_seen": [
+                  "Company/ Business Tax"
+                ]
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Flow redirects to national business authentication platform."
+                }
+              ]
+            }
+          ],
+          "global_blockers": [],
+          "notes": "IRAS has centralized its authentication via the myTax Portal, which utilizes Singapore's national digital identity platforms (Singpass for individuals and CorpPass for businesses). Consequently, all account registration and recovery flows are hosted on the Singpass domain rather than the IRAS domain itself."
+        },
+        "error": null
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:30:40.378059+00:00"
+}

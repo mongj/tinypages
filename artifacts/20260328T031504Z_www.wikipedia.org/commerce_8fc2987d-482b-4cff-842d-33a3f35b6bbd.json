@@ -1,0 +1,425 @@
+{
+  "scout_id": "commerce",
+  "seed_url": "https://www.wikipedia.org/",
+  "run_id": "8fc2987d-482b-4cff-842d-33a3f35b6bbd",
+  "status": "COMPLETED",
+  "num_of_steps": 14,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "wikimedia_store_purchase",
+        "name": "Purchase Merchandise from Wikimedia Store",
+        "intent_category": "commerce",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Wikipedia Store",
+            "url": "https://store.wikimedia.org/",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikimedia Store website."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a product from the featured collection or product listings."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Choose product options such as size on the product detail page."
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Click the 'Add to cart' button."
+          },
+          {
+            "order": 5,
+            "action": "click",
+            "description": "Navigate to the cart page to review the selection."
+          },
+          {
+            "order": 6,
+            "action": "click",
+            "description": "Click the 'checkout' button to proceed to the payment information screen."
+          },
+          {
+            "order": 7,
+            "action": "type",
+            "description": "Enter contact email and shipping address details (stopped before submission)."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://store.wikimedia.org/",
+            "https://store.wikimedia.org/products/i-support-wikipedia-box-t-shirt-unisex",
+            "https://store.wikimedia.org/cart",
+            "https://store.wikimedia.org/checkouts/"
+          ],
+          "labels_seen": [
+            "Choose options",
+            "Add to cart",
+            "checkout",
+            "Email",
+            "Delivery",
+            "Payment",
+            "Pay now"
+          ],
+          "notes": "The store uses a standard Shopify-style checkout flow. Guest checkout is available by providing an email address."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Successfully reached the final checkout page where payment details are requested."
+          }
+        ]
+      },
+      {
+        "id": "wikipedia_donation",
+        "name": "Donate to Wikimedia Foundation",
+        "intent_category": "commerce",
+        "confidence": 0.95,
+        "entry_points": [
+          {
+            "label": "Donate",
+            "url": "https://donate.wikimedia.org/",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Donate' link from the Wikipedia sidebar or portal."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select donation frequency (One-time, Monthly, Annual)."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Select or enter a donation amount."
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Choose a payment method (Credit card, PayPal, etc.)."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://donate.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "One-time",
+            "Monthly",
+            "Credit/debit card",
+            "PayPal",
+            "Venmo"
+          ],
+          "notes": "The donation flow involves selecting a payment amount and method, leading to a payment processing interface."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow is accessible and leads directly to payment selection."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "Wikipedia itself is an encyclopedia, but it hosts a merchandise store (store.wikimedia.org) and a donation platform (donate.wikimedia.org) which contain commercial flows, including product listings, cart management, and payment UI."
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "wikimedia_store_purchase",
+        "name": "Purchase Merchandise from Wikimedia Store",
+        "intent_category": "commerce",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Wikipedia Store",
+            "url": "https://store.wikimedia.org/",
+            "location": "other"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikimedia Store website."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a product from the featured collection or product listings."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Choose product options such as size on the product detail page."
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Click the 'Add to cart' button."
+          },
+          {
+            "order": 5,
+            "action": "click",
+            "description": "Navigate to the cart page to review the selection."
+          },
+          {
+            "order": 6,
+            "action": "click",
+            "description": "Click the 'checkout' button to proceed to the payment information screen."
+          },
+          {
+            "order": 7,
+            "action": "type",
+            "description": "Enter contact email and shipping address details (stopped before submission)."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://store.wikimedia.org/",
+            "https://store.wikimedia.org/products/i-support-wikipedia-box-t-shirt-unisex",
+            "https://store.wikimedia.org/cart",
+            "https://store.wikimedia.org/checkouts/"
+          ],
+          "labels_seen": [
+            "Choose options",
+            "Add to cart",
+            "checkout",
+            "Email",
+            "Delivery",
+            "Payment",
+            "Pay now"
+          ],
+          "notes": "The store uses a standard Shopify-style checkout flow. Guest checkout is available by providing an email address."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Successfully reached the final checkout page where payment details are requested."
+          }
+        ]
+      },
+      {
+        "id": "wikipedia_donation",
+        "name": "Donate to Wikimedia Foundation",
+        "intent_category": "commerce",
+        "confidence": 0.95,
+        "entry_points": [
+          {
+            "label": "Donate",
+            "url": "https://donate.wikimedia.org/",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Donate' link from the Wikipedia sidebar or portal."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select donation frequency (One-time, Monthly, Annual)."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Select or enter a donation amount."
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Choose a payment method (Credit card, PayPal, etc.)."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://donate.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "One-time",
+            "Monthly",
+            "Credit/debit card",
+            "PayPal",
+            "Venmo"
+          ],
+          "notes": "The donation flow involves selecting a payment amount and method, leading to a payment processing interface."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Flow is accessible and leads directly to payment selection."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "Wikipedia itself is an encyclopedia, but it hosts a merchandise store (store.wikimedia.org) and a donation platform (donate.wikimedia.org) which contain commercial flows, including product listings, cart management, and payment UI."
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "8fc2987d-482b-4cff-842d-33a3f35b6bbd",
+        "status": "COMPLETED",
+        "num_of_steps": 14,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "wikimedia_store_purchase",
+              "name": "Purchase Merchandise from Wikimedia Store",
+              "intent_category": "commerce",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Wikipedia Store",
+                  "url": "https://store.wikimedia.org/",
+                  "location": "other"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Wikimedia Store website."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select a product from the featured collection or product listings."
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Choose product options such as size on the product detail page."
+                },
+                {
+                  "order": 4,
+                  "action": "click",
+                  "description": "Click the 'Add to cart' button."
+                },
+                {
+                  "order": 5,
+                  "action": "click",
+                  "description": "Navigate to the cart page to review the selection."
+                },
+                {
+                  "order": 6,
+                  "action": "click",
+                  "description": "Click the 'checkout' button to proceed to the payment information screen."
+                },
+                {
+                  "order": 7,
+                  "action": "type",
+                  "description": "Enter contact email and shipping address details (stopped before submission)."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://store.wikimedia.org/",
+                  "https://store.wikimedia.org/products/i-support-wikipedia-box-t-shirt-unisex",
+                  "https://store.wikimedia.org/cart",
+                  "https://store.wikimedia.org/checkouts/"
+                ],
+                "labels_seen": [
+                  "Choose options",
+                  "Add to cart",
+                  "checkout",
+                  "Email",
+                  "Delivery",
+                  "Payment",
+                  "Pay now"
+                ],
+                "notes": "The store uses a standard Shopify-style checkout flow. Guest checkout is available by providing an email address."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Successfully reached the final checkout page where payment details are requested."
+                }
+              ]
+            },
+            {
+              "id": "wikipedia_donation",
+              "name": "Donate to Wikimedia Foundation",
+              "intent_category": "commerce",
+              "confidence": 0.95,
+              "entry_points": [
+                {
+                  "label": "Donate",
+                  "url": "https://donate.wikimedia.org/",
+                  "location": "nav"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'Donate' link from the Wikipedia sidebar or portal."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select donation frequency (One-time, Monthly, Annual)."
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Select or enter a donation amount."
+                },
+                {
+                  "order": 4,
+                  "action": "click",
+                  "description": "Choose a payment method (Credit card, PayPal, etc.)."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://donate.wikimedia.org/"
+                ],
+                "labels_seen": [
+                  "One-time",
+                  "Monthly",
+                  "Credit/debit card",
+                  "PayPal",
+                  "Venmo"
+                ],
+                "notes": "The donation flow involves selecting a payment amount and method, leading to a payment processing interface."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Flow is accessible and leads directly to payment selection."
+                }
+              ]
+            }
+          ],
+          "global_blockers": [],
+          "notes": "Wikipedia itself is an encyclopedia, but it hosts a merchandise store (store.wikimedia.org) and a donation platform (donate.wikimedia.org) which contain commercial flows, including product listings, cart management, and payment UI."
+        },
+        "error": null
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:17:35.894261+00:00"
+}

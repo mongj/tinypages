@@ -1,0 +1,672 @@
+{
+  "scout_id": "support",
+  "seed_url": "https://wikipedia.org",
+  "run_id": "de03cf88-da1a-4e5a-af2b-c8a85b33fbcd",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "wikipedia_help_center",
+        "name": "Wikipedia Help Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Help link in the footer or sidebar of the main page"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Directly accessible from the sidebar and footer on all Wikipedia articles.",
+          "urls_seen": [
+            "https://en.wikipedia.org/wiki/Help:Contents"
+          ],
+          "labels_seen": [
+            "Help"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Help:Contents",
+            "label": "Help",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "wikipedia_contact",
+        "name": "Contact Wikipedia",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Contact us' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Provides separate paths for readers, article subjects, donors, and press.",
+          "urls_seen": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Contact_us"
+          ],
+          "labels_seen": [
+            "Contact us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Contact_us",
+            "label": "Contact us",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "wikimedia_privacy_policy",
+        "name": "Privacy Policy",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Privacy policy' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Hosted on the Wikimedia Foundation site.",
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+          ],
+          "labels_seen": [
+            "Privacy policy"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+            "label": "Privacy policy",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "wikimedia_terms_of_use",
+        "name": "Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Terms of Use' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Hosted on the Wikimedia Foundation site.",
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use"
+          ],
+          "labels_seen": [
+            "Terms of Use"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
+            "label": "Terms of Use",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "wikimedia_security",
+        "name": "Security Information",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Security page via sidebar on Foundation wiki or direct link"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Contains reporting instructions and security team information.",
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security"
+          ],
+          "labels_seen": [
+            "Security"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security",
+            "label": "Security",
+            "location": "other"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "wikimedia_status",
+        "name": "Site Status",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Navigate to Developer portal, go to 'Get Help', then click 'Status'"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Not directly in main Wikipedia footer; found via Developer Get Help section.",
+          "urls_seen": [
+            "https://www.wikimediastatus.net/"
+          ],
+          "labels_seen": [
+            "Status"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.wikimediastatus.net/",
+            "label": "Status",
+            "location": "other"
+          }
+        ],
+        "intent_category": "other"
+      },
+      {
+        "id": "wikipedia_docs",
+        "name": "Developer Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Developers' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Central portal for API docs and technical guides.",
+          "urls_seen": [
+            "https://developer.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "Developers"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://developer.wikimedia.org/",
+            "label": "Developers",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "browse"
+      }
+    ],
+    "notes": "Wikipedia and the Wikimedia Foundation provide comprehensive support and legal links in the footer and sidebar. Most destinations are shallow and do not require login for viewing.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "wikipedia_help_center",
+        "name": "Wikipedia Help Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Help link in the footer or sidebar of the main page"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Directly accessible from the sidebar and footer on all Wikipedia articles.",
+          "urls_seen": [
+            "https://en.wikipedia.org/wiki/Help:Contents"
+          ],
+          "labels_seen": [
+            "Help"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Help:Contents",
+            "label": "Help",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "wikipedia_contact",
+        "name": "Contact Wikipedia",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Contact us' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Provides separate paths for readers, article subjects, donors, and press.",
+          "urls_seen": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Contact_us"
+          ],
+          "labels_seen": [
+            "Contact us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Wikipedia:Contact_us",
+            "label": "Contact us",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "wikimedia_privacy_policy",
+        "name": "Privacy Policy",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Privacy policy' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Hosted on the Wikimedia Foundation site.",
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+          ],
+          "labels_seen": [
+            "Privacy policy"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+            "label": "Privacy policy",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "wikimedia_terms_of_use",
+        "name": "Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Terms of Use' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Hosted on the Wikimedia Foundation site.",
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use"
+          ],
+          "labels_seen": [
+            "Terms of Use"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
+            "label": "Terms of Use",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "wikimedia_security",
+        "name": "Security Information",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Security page via sidebar on Foundation wiki or direct link"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Contains reporting instructions and security team information.",
+          "urls_seen": [
+            "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security"
+          ],
+          "labels_seen": [
+            "Security"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security",
+            "label": "Security",
+            "location": "other"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "wikimedia_status",
+        "name": "Site Status",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Navigate to Developer portal, go to 'Get Help', then click 'Status'"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Not directly in main Wikipedia footer; found via Developer Get Help section.",
+          "urls_seen": [
+            "https://www.wikimediastatus.net/"
+          ],
+          "labels_seen": [
+            "Status"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.wikimediastatus.net/",
+            "label": "Status",
+            "location": "other"
+          }
+        ],
+        "intent_category": "other"
+      },
+      {
+        "id": "wikipedia_docs",
+        "name": "Developer Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Developers' link in the footer"
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Central portal for API docs and technical guides.",
+          "urls_seen": [
+            "https://developer.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "Developers"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://developer.wikimedia.org/",
+            "label": "Developers",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "browse"
+      }
+    ],
+    "notes": "Wikipedia and the Wikimedia Foundation provide comprehensive support and legal links in the footer and sidebar. Most destinations are shallow and do not require login for viewing.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "de03cf88-da1a-4e5a-af2b-c8a85b33fbcd",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "wikipedia_help_center",
+              "name": "Wikipedia Help Center",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the Help link in the footer or sidebar of the main page"
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Directly accessible from the sidebar and footer on all Wikipedia articles.",
+                "urls_seen": [
+                  "https://en.wikipedia.org/wiki/Help:Contents"
+                ],
+                "labels_seen": [
+                  "Help"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://en.wikipedia.org/wiki/Help:Contents",
+                  "label": "Help",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "wikipedia_contact",
+              "name": "Contact Wikipedia",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'Contact us' link in the footer"
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Provides separate paths for readers, article subjects, donors, and press.",
+                "urls_seen": [
+                  "https://en.wikipedia.org/wiki/Wikipedia:Contact_us"
+                ],
+                "labels_seen": [
+                  "Contact us"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://en.wikipedia.org/wiki/Wikipedia:Contact_us",
+                  "label": "Contact us",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "wikimedia_privacy_policy",
+              "name": "Privacy Policy",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'Privacy policy' link in the footer"
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Hosted on the Wikimedia Foundation site.",
+                "urls_seen": [
+                  "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+                ],
+                "labels_seen": [
+                  "Privacy policy"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+                  "label": "Privacy policy",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "wikimedia_terms_of_use",
+              "name": "Terms of Use",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'Terms of Use' link in the footer"
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Hosted on the Wikimedia Foundation site.",
+                "urls_seen": [
+                  "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use"
+                ],
+                "labels_seen": [
+                  "Terms of Use"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
+                  "label": "Terms of Use",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "wikimedia_security",
+              "name": "Security Information",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Security page via sidebar on Foundation wiki or direct link"
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Contains reporting instructions and security team information.",
+                "urls_seen": [
+                  "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security"
+                ],
+                "labels_seen": [
+                  "Security"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security",
+                  "label": "Security",
+                  "location": "other"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "wikimedia_status",
+              "name": "Site Status",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Navigate to Developer portal, go to 'Get Help', then click 'Status'"
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Not directly in main Wikipedia footer; found via Developer Get Help section.",
+                "urls_seen": [
+                  "https://www.wikimediastatus.net/"
+                ],
+                "labels_seen": [
+                  "Status"
+                ]
+              },
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "url": "https://www.wikimediastatus.net/",
+                  "label": "Status",
+                  "location": "other"
+                }
+              ],
+              "intent_category": "other"
+            },
+            {
+              "id": "wikipedia_docs",
+              "name": "Developer Documentation",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'Developers' link in the footer"
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Central portal for API docs and technical guides.",
+                "urls_seen": [
+                  "https://developer.wikimedia.org/"
+                ],
+                "labels_seen": [
+                  "Developers"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://developer.wikimedia.org/",
+                  "label": "Developers",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "browse"
+            }
+          ],
+          "notes": "Wikipedia and the Wikimedia Foundation provide comprehensive support and legal links in the footer and sidebar. Most destinations are shallow and do not require login for viewing.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:55:16.135807+00:00"
+}

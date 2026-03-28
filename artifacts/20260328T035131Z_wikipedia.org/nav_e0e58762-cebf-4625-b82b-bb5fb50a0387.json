@@ -1,0 +1,717 @@
+{
+  "scout_id": "nav",
+  "seed_url": "https://wikipedia.org",
+  "run_id": "e0e58762-cebf-4625-b82b-bb5fb50a0387",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "search_wikipedia",
+        "name": "Search for an article",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "type",
+            "description": "Enter search query into the search input field"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the search button to perform the search"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Search is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The search bar is the central focus of the landing page.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "Search Wikipedia",
+            "Search"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": null,
+            "label": "Search Wikipedia",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "donate_to_wikipedia",
+        "name": "Donate to support Wikipedia",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll down to the footer section"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the donation link in the footer"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Donation page is accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The donation link is prominently displayed in the footer.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "You can support our work with a donation.",
+            "Donate"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://donate.wikimedia.org/",
+            "label": "You can support our work with a donation.",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "view_terms_of_use",
+        "name": "Read Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll down to the footer"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click on 'Terms of Use' link"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Legal documents are public."
+          }
+        ],
+        "evidence": {
+          "notes": "Standard legal links found in the footer.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "Terms of Use"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+            "label": "Terms of Use",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "browse_language_wiki",
+        "name": "Navigate to a specific language Wikipedia",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on a language link (e.g., English)"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Language portals are publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The language links surround the central logo.",
+          "urls_seen": [
+            "https://wikipedia.org",
+            "https://en.wikipedia.org/"
+          ],
+          "labels_seen": [
+            "English",
+            "\u65e5\u672c\u8a9e",
+            "Deutsch"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/",
+            "label": "English",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "download_mobile_app",
+        "name": "Find mobile applications",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll to the bottom of the page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Download Wikipedia for Android or iOS' link"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Information about apps is public."
+          }
+        ],
+        "evidence": {
+          "notes": "Link located near the bottom of the portal page.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "Download Wikipedia for Android or iOS"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
+            "label": "Download Wikipedia for Android or iOS",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "Wikipedia.org serves as a global portal leading to specific language Wikipedias and Wikimedia Foundation resources. The information architecture is very flat and focus-oriented.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "search_wikipedia",
+        "name": "Search for an article",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "type",
+            "description": "Enter search query into the search input field"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the search button to perform the search"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Search is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The search bar is the central focus of the landing page.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "Search Wikipedia",
+            "Search"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": null,
+            "label": "Search Wikipedia",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "donate_to_wikipedia",
+        "name": "Donate to support Wikipedia",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll down to the footer section"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the donation link in the footer"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Donation page is accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The donation link is prominently displayed in the footer.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "You can support our work with a donation.",
+            "Donate"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://donate.wikimedia.org/",
+            "label": "You can support our work with a donation.",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "view_terms_of_use",
+        "name": "Read Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll down to the footer"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click on 'Terms of Use' link"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Legal documents are public."
+          }
+        ],
+        "evidence": {
+          "notes": "Standard legal links found in the footer.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "Terms of Use"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+            "label": "Terms of Use",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "browse_language_wiki",
+        "name": "Navigate to a specific language Wikipedia",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on a language link (e.g., English)"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Language portals are publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The language links surround the central logo.",
+          "urls_seen": [
+            "https://wikipedia.org",
+            "https://en.wikipedia.org/"
+          ],
+          "labels_seen": [
+            "English",
+            "\u65e5\u672c\u8a9e",
+            "Deutsch"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/",
+            "label": "English",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "download_mobile_app",
+        "name": "Find mobile applications",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to https://wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll to the bottom of the page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Download Wikipedia for Android or iOS' link"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Information about apps is public."
+          }
+        ],
+        "evidence": {
+          "notes": "Link located near the bottom of the portal page.",
+          "urls_seen": [
+            "https://wikipedia.org"
+          ],
+          "labels_seen": [
+            "Download Wikipedia for Android or iOS"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
+            "label": "Download Wikipedia for Android or iOS",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "Wikipedia.org serves as a global portal leading to specific language Wikipedias and Wikimedia Foundation resources. The information architecture is very flat and focus-oriented.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "e0e58762-cebf-4625-b82b-bb5fb50a0387",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "search_wikipedia",
+              "name": "Search for an article",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to https://wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "type",
+                  "description": "Enter search query into the search input field"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click the search button to perform the search"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Search is publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "The search bar is the central focus of the landing page.",
+                "urls_seen": [
+                  "https://wikipedia.org"
+                ],
+                "labels_seen": [
+                  "Search Wikipedia",
+                  "Search"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": null,
+                  "label": "Search Wikipedia",
+                  "location": "hero"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "donate_to_wikipedia",
+              "name": "Donate to support Wikipedia",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to https://wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "scroll",
+                  "description": "Scroll down to the footer section"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click the donation link in the footer"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Donation page is accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "The donation link is prominently displayed in the footer.",
+                "urls_seen": [
+                  "https://wikipedia.org"
+                ],
+                "labels_seen": [
+                  "You can support our work with a donation.",
+                  "Donate"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://donate.wikimedia.org/",
+                  "label": "You can support our work with a donation.",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "view_terms_of_use",
+              "name": "Read Terms of Use",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to https://wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "scroll",
+                  "description": "Scroll down to the footer"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click on 'Terms of Use' link"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Legal documents are public."
+                }
+              ],
+              "evidence": {
+                "notes": "Standard legal links found in the footer.",
+                "urls_seen": [
+                  "https://wikipedia.org"
+                ],
+                "labels_seen": [
+                  "Terms of Use"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+                  "label": "Terms of Use",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "browse_language_wiki",
+              "name": "Navigate to a specific language Wikipedia",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to https://wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on a language link (e.g., English)"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Language portals are publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "The language links surround the central logo.",
+                "urls_seen": [
+                  "https://wikipedia.org",
+                  "https://en.wikipedia.org/"
+                ],
+                "labels_seen": [
+                  "English",
+                  "\u65e5\u672c\u8a9e",
+                  "Deutsch"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://en.wikipedia.org/",
+                  "label": "English",
+                  "location": "hero"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "download_mobile_app",
+              "name": "Find mobile applications",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to https://wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "scroll",
+                  "description": "Scroll to the bottom of the page"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click 'Download Wikipedia for Android or iOS' link"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Information about apps is public."
+                }
+              ],
+              "evidence": {
+                "notes": "Link located near the bottom of the portal page.",
+                "urls_seen": [
+                  "https://wikipedia.org"
+                ],
+                "labels_seen": [
+                  "Download Wikipedia for Android or iOS"
+                ]
+              },
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
+                  "label": "Download Wikipedia for Android or iOS",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "other"
+            }
+          ],
+          "notes": "Wikipedia.org serves as a global portal leading to specific language Wikipedias and Wikimedia Foundation resources. The information architecture is very flat and focus-oriented.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:52:29.463622+00:00"
+}

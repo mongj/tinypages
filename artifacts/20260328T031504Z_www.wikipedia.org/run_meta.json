@@ -1,0 +1,10 @@
+{
+  "seed_url": "https://www.wikipedia.org/",
+  "created_at": "2026-03-28T03:19:14.012011+00:00",
+  "scouts": [
+    "nav",
+    "auth",
+    "commerce",
+    "support"
+  ]
+}

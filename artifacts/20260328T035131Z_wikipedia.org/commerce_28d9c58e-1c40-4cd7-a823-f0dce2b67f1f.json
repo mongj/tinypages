@@ -1,0 +1,423 @@
+{
+  "scout_id": "commerce",
+  "seed_url": "https://wikipedia.org",
+  "run_id": "28d9c58e-1c40-4cd7-a823-f0dce2b67f1f",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "wikipedia_store_purchase",
+        "name": "Wikipedia Store Purchase Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia Store website."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a product from the featured collection or product listings."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the 'Add to cart' button on the product detail page."
+          },
+          {
+            "order": 4,
+            "action": "navigate",
+            "description": "Navigate to the shopping cart page."
+          },
+          {
+            "order": 5,
+            "action": "click",
+            "description": "Click the 'Check out' button in the cart."
+          },
+          {
+            "order": 6,
+            "action": "type",
+            "description": "Provide contact and delivery information on the checkout page."
+          },
+          {
+            "order": 7,
+            "action": "other",
+            "description": "Reach the payment section to enter credit card or other payment details."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Successfully reached the payment UI without blockers."
+          }
+        ],
+        "evidence": {
+          "notes": "The Wikipedia Store is the official merchandise shop for the Wikimedia Foundation. It follows a standard Shopify commerce flow.",
+          "urls_seen": [
+            "https://store.wikimedia.org/",
+            "https://store.wikimedia.org/products/w-classic-cap",
+            "https://store.wikimedia.org/cart",
+            "https://store.wikimedia.org/checkouts/..."
+          ],
+          "labels_seen": [
+            "Add to cart",
+            "Check out",
+            "Card number",
+            "Expiration date (MM / YY)",
+            "Security code",
+            "Pay now"
+          ]
+        },
+        "confidence": 0.95,
+        "entry_points": [
+          {
+            "url": "https://store.wikimedia.org",
+            "label": "Wikipedia Store",
+            "location": "other"
+          }
+        ],
+        "intent_category": "commerce"
+      },
+      {
+        "id": "wikipedia_donation_flow",
+        "name": "Wikipedia Donation Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the donation link on the Wikipedia home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a donation amount and frequency."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Select a payment method (e.g., Credit Card)."
+          },
+          {
+            "order": 4,
+            "action": "type",
+            "description": "Enter personal information required for the donation."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Successfully navigated to the personal information step of the donation flow."
+          }
+        ],
+        "evidence": {
+          "notes": "While Wikipedia is non-commercial, the donation flow resembles a checkout process.",
+          "urls_seen": [
+            "https://donate.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "$10",
+            "Donate by credit/debit card",
+            "First name",
+            "Last name",
+            "Email address"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://donate.wikimedia.org/",
+            "label": "You can support our work with a donation.",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "commerce"
+      }
+    ],
+    "notes": "Wikipedia itself is a non-profit encyclopedia. However, it hosts a commercial merchandise store (store.wikimedia.org) and a donation platform (donate.wikimedia.org) that both feature commerce-like checkout flows.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "wikipedia_store_purchase",
+        "name": "Wikipedia Store Purchase Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Wikipedia Store website."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a product from the featured collection or product listings."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the 'Add to cart' button on the product detail page."
+          },
+          {
+            "order": 4,
+            "action": "navigate",
+            "description": "Navigate to the shopping cart page."
+          },
+          {
+            "order": 5,
+            "action": "click",
+            "description": "Click the 'Check out' button in the cart."
+          },
+          {
+            "order": 6,
+            "action": "type",
+            "description": "Provide contact and delivery information on the checkout page."
+          },
+          {
+            "order": 7,
+            "action": "other",
+            "description": "Reach the payment section to enter credit card or other payment details."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Successfully reached the payment UI without blockers."
+          }
+        ],
+        "evidence": {
+          "notes": "The Wikipedia Store is the official merchandise shop for the Wikimedia Foundation. It follows a standard Shopify commerce flow.",
+          "urls_seen": [
+            "https://store.wikimedia.org/",
+            "https://store.wikimedia.org/products/w-classic-cap",
+            "https://store.wikimedia.org/cart",
+            "https://store.wikimedia.org/checkouts/..."
+          ],
+          "labels_seen": [
+            "Add to cart",
+            "Check out",
+            "Card number",
+            "Expiration date (MM / YY)",
+            "Security code",
+            "Pay now"
+          ]
+        },
+        "confidence": 0.95,
+        "entry_points": [
+          {
+            "url": "https://store.wikimedia.org",
+            "label": "Wikipedia Store",
+            "location": "other"
+          }
+        ],
+        "intent_category": "commerce"
+      },
+      {
+        "id": "wikipedia_donation_flow",
+        "name": "Wikipedia Donation Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the donation link on the Wikipedia home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a donation amount and frequency."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Select a payment method (e.g., Credit Card)."
+          },
+          {
+            "order": 4,
+            "action": "type",
+            "description": "Enter personal information required for the donation."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Successfully navigated to the personal information step of the donation flow."
+          }
+        ],
+        "evidence": {
+          "notes": "While Wikipedia is non-commercial, the donation flow resembles a checkout process.",
+          "urls_seen": [
+            "https://donate.wikimedia.org/"
+          ],
+          "labels_seen": [
+            "$10",
+            "Donate by credit/debit card",
+            "First name",
+            "Last name",
+            "Email address"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://donate.wikimedia.org/",
+            "label": "You can support our work with a donation.",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "commerce"
+      }
+    ],
+    "notes": "Wikipedia itself is a non-profit encyclopedia. However, it hosts a commercial merchandise store (store.wikimedia.org) and a donation platform (donate.wikimedia.org) that both feature commerce-like checkout flows.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "28d9c58e-1c40-4cd7-a823-f0dce2b67f1f",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "wikipedia_store_purchase",
+              "name": "Wikipedia Store Purchase Flow",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Wikipedia Store website."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select a product from the featured collection or product listings."
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click the 'Add to cart' button on the product detail page."
+                },
+                {
+                  "order": 4,
+                  "action": "navigate",
+                  "description": "Navigate to the shopping cart page."
+                },
+                {
+                  "order": 5,
+                  "action": "click",
+                  "description": "Click the 'Check out' button in the cart."
+                },
+                {
+                  "order": 6,
+                  "action": "type",
+                  "description": "Provide contact and delivery information on the checkout page."
+                },
+                {
+                  "order": 7,
+                  "action": "other",
+                  "description": "Reach the payment section to enter credit card or other payment details."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Successfully reached the payment UI without blockers."
+                }
+              ],
+              "evidence": {
+                "notes": "The Wikipedia Store is the official merchandise shop for the Wikimedia Foundation. It follows a standard Shopify commerce flow.",
+                "urls_seen": [
+                  "https://store.wikimedia.org/",
+                  "https://store.wikimedia.org/products/w-classic-cap",
+                  "https://store.wikimedia.org/cart",
+                  "https://store.wikimedia.org/checkouts/..."
+                ],
+                "labels_seen": [
+                  "Add to cart",
+                  "Check out",
+                  "Card number",
+                  "Expiration date (MM / YY)",
+                  "Security code",
+                  "Pay now"
+                ]
+              },
+              "confidence": 0.95,
+              "entry_points": [
+                {
+                  "url": "https://store.wikimedia.org",
+                  "label": "Wikipedia Store",
+                  "location": "other"
+                }
+              ],
+              "intent_category": "commerce"
+            },
+            {
+              "id": "wikipedia_donation_flow",
+              "name": "Wikipedia Donation Flow",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the donation link on the Wikipedia home page."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select a donation amount and frequency."
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Select a payment method (e.g., Credit Card)."
+                },
+                {
+                  "order": 4,
+                  "action": "type",
+                  "description": "Enter personal information required for the donation."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Successfully navigated to the personal information step of the donation flow."
+                }
+              ],
+              "evidence": {
+                "notes": "While Wikipedia is non-commercial, the donation flow resembles a checkout process.",
+                "urls_seen": [
+                  "https://donate.wikimedia.org/"
+                ],
+                "labels_seen": [
+                  "$10",
+                  "Donate by credit/debit card",
+                  "First name",
+                  "Last name",
+                  "Email address"
+                ]
+              },
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "url": "https://donate.wikimedia.org/",
+                  "label": "You can support our work with a donation.",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "commerce"
+            }
+          ],
+          "notes": "Wikipedia itself is a non-profit encyclopedia. However, it hosts a commercial merchandise store (store.wikimedia.org) and a donation platform (donate.wikimedia.org) that both feature commerce-like checkout flows.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:55:41.042492+00:00"
+}

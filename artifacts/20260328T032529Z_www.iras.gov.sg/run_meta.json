@@ -1,0 +1,10 @@
+{
+  "seed_url": "https://www.iras.gov.sg/",
+  "created_at": "2026-03-28T03:30:40.378059+00:00",
+  "scouts": [
+    "nav",
+    "auth",
+    "commerce",
+    "support"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scout_id": "commerce",
+  "seed_url": "https://www.iras.gov.sg/",
+  "run_id": "c7af2403-7bc3-4ae0-97ee-78e58b1695dc",
+  "status": "COMPLETED",
+  "num_of_steps": 14,
+  "result_raw": {
+    "flows": [],
+    "global_blockers": [],
+    "notes": "The IRAS website is a government tax agency portal and is not a commercial e-commerce site. While it facilitates tax payments (Stamp Duty, Property Tax, etc.) and offers fee-based services like 'Check Annual Value of Property' ($2.50 fee), it does not use a traditional commerce model. Specifically, there are no product listings, product detail pages for goods, 'add-to-cart' buttons, or a centralized shopping cart. Transactions are direct service or tax payments. Therefore, no commerce flows were identified."
+  },
+  "result_payload": {
+    "flows": [],
+    "global_blockers": [],
+    "notes": "The IRAS website is a government tax agency portal and is not a commercial e-commerce site. While it facilitates tax payments (Stamp Duty, Property Tax, etc.) and offers fee-based services like 'Check Annual Value of Property' ($2.50 fee), it does not use a traditional commerce model. Specifically, there are no product listings, product detail pages for goods, 'add-to-cart' buttons, or a centralized shopping cart. Transactions are direct service or tax payments. Therefore, no commerce flows were identified."
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "c7af2403-7bc3-4ae0-97ee-78e58b1695dc",
+        "status": "COMPLETED",
+        "num_of_steps": 14,
+        "result_raw": {
+          "flows": [],
+          "global_blockers": [],
+          "notes": "The IRAS website is a government tax agency portal and is not a commercial e-commerce site. While it facilitates tax payments (Stamp Duty, Property Tax, etc.) and offers fee-based services like 'Check Annual Value of Property' ($2.50 fee), it does not use a traditional commerce model. Specifically, there are no product listings, product detail pages for goods, 'add-to-cart' buttons, or a centralized shopping cart. Transactions are direct service or tax payments. Therefore, no commerce flows were identified."
+        },
+        "error": null
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:27:50.449703+00:00"
+}

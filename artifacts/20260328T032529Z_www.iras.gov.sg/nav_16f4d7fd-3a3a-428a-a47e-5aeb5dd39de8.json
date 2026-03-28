@@ -1,0 +1,620 @@
+{
+  "scout_id": "nav",
+  "seed_url": "https://www.iras.gov.sg/",
+  "run_id": "16f4d7fd-3a3a-428a-a47e-5aeb5dd39de8",
+  "status": "COMPLETED",
+  "num_of_steps": 4,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "browse_tax_info_individual",
+        "name": "Browse Individual Income Tax Information",
+        "intent_category": "browse",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Taxes",
+            "url": "https://www.iras.gov.sg/taxes",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on 'Taxes' in the primary navigation menu."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Individual Income Tax' from the expanded menu."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/taxes/individual-income-tax"
+          ],
+          "labels_seen": [
+            "Taxes",
+            "Individual Income Tax"
+          ],
+          "notes": "The navigation menu expands to show various tax types."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers for browsing public information."
+          }
+        ]
+      },
+      {
+        "id": "digital_service_file_tax",
+        "name": "File Income Tax Return",
+        "intent_category": "support",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Digital Services",
+            "url": "https://www.iras.gov.sg/digital-services",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on 'Digital Services' in the primary navigation menu."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Employees' and then 'File Income Tax Return'."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/digital-services/employees/file-income-tax-return"
+          ],
+          "labels_seen": [
+            "Digital Services",
+            "Employees",
+            "File Income Tax Return"
+          ],
+          "notes": "Leads to the information page about filing before redirecting to the login portal."
+        },
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Actual filing requires Singpass login to myTax Portal."
+          }
+        ]
+      },
+      {
+        "id": "auth_login_mytax",
+        "name": "Login to myTax Portal",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "LOGIN",
+            "url": "https://mytax.iras.gov.sg/login/selection",
+            "location": "cta"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'LOGIN' button in the header."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://mytax.iras.gov.sg/login/selection"
+          ],
+          "labels_seen": [
+            "LOGIN"
+          ],
+          "notes": "Direct entry point to the authentication portal."
+        },
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Requires Singpass or other valid credentials."
+          }
+        ]
+      },
+      {
+        "id": "support_contact_us",
+        "name": "Contact IRAS Support",
+        "intent_category": "support",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Contact Us",
+            "url": "https://www.iras.gov.sg/contact-us",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "scroll",
+            "description": "Scroll to the bottom of the page to find the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Contact Us' link."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/contact-us"
+          ],
+          "labels_seen": [
+            "Contact Us"
+          ],
+          "notes": "Provides various contact methods including hotlines and email."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None"
+          }
+        ]
+      },
+      {
+        "id": "quick_links_calculators",
+        "name": "Use Tax Calculators",
+        "intent_category": "support",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Calculators",
+            "url": "https://www.iras.gov.sg/quick-links/calculators",
+            "location": "cta"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on the 'Calculators' icon in the Quick Links section on the homepage."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/quick-links/calculators"
+          ],
+          "labels_seen": [
+            "Calculators"
+          ],
+          "notes": "Part of the carousel of quick links in the hero area."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None"
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "The website uses a mega-menu for primary navigation which simplifies browsing tax types and digital services. Most interactive tasks (filing, checking balance) require authentication via Singpass."
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "browse_tax_info_individual",
+        "name": "Browse Individual Income Tax Information",
+        "intent_category": "browse",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Taxes",
+            "url": "https://www.iras.gov.sg/taxes",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on 'Taxes' in the primary navigation menu."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Individual Income Tax' from the expanded menu."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/taxes/individual-income-tax"
+          ],
+          "labels_seen": [
+            "Taxes",
+            "Individual Income Tax"
+          ],
+          "notes": "The navigation menu expands to show various tax types."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers for browsing public information."
+          }
+        ]
+      },
+      {
+        "id": "digital_service_file_tax",
+        "name": "File Income Tax Return",
+        "intent_category": "support",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Digital Services",
+            "url": "https://www.iras.gov.sg/digital-services",
+            "location": "nav"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on 'Digital Services' in the primary navigation menu."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Employees' and then 'File Income Tax Return'."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/digital-services/employees/file-income-tax-return"
+          ],
+          "labels_seen": [
+            "Digital Services",
+            "Employees",
+            "File Income Tax Return"
+          ],
+          "notes": "Leads to the information page about filing before redirecting to the login portal."
+        },
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Actual filing requires Singpass login to myTax Portal."
+          }
+        ]
+      },
+      {
+        "id": "auth_login_mytax",
+        "name": "Login to myTax Portal",
+        "intent_category": "auth",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "LOGIN",
+            "url": "https://mytax.iras.gov.sg/login/selection",
+            "location": "cta"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'LOGIN' button in the header."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://mytax.iras.gov.sg/login/selection"
+          ],
+          "labels_seen": [
+            "LOGIN"
+          ],
+          "notes": "Direct entry point to the authentication portal."
+        },
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Requires Singpass or other valid credentials."
+          }
+        ]
+      },
+      {
+        "id": "support_contact_us",
+        "name": "Contact IRAS Support",
+        "intent_category": "support",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Contact Us",
+            "url": "https://www.iras.gov.sg/contact-us",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "scroll",
+            "description": "Scroll to the bottom of the page to find the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Contact Us' link."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/contact-us"
+          ],
+          "labels_seen": [
+            "Contact Us"
+          ],
+          "notes": "Provides various contact methods including hotlines and email."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None"
+          }
+        ]
+      },
+      {
+        "id": "quick_links_calculators",
+        "name": "Use Tax Calculators",
+        "intent_category": "support",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Calculators",
+            "url": "https://www.iras.gov.sg/quick-links/calculators",
+            "location": "cta"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on the 'Calculators' icon in the Quick Links section on the homepage."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/quick-links/calculators"
+          ],
+          "labels_seen": [
+            "Calculators"
+          ],
+          "notes": "Part of the carousel of quick links in the hero area."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "None"
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "The website uses a mega-menu for primary navigation which simplifies browsing tax types and digital services. Most interactive tasks (filing, checking balance) require authentication via Singpass."
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "16f4d7fd-3a3a-428a-a47e-5aeb5dd39de8",
+        "status": "COMPLETED",
+        "num_of_steps": 4,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "browse_tax_info_individual",
+              "name": "Browse Individual Income Tax Information",
+              "intent_category": "browse",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Taxes",
+                  "url": "https://www.iras.gov.sg/taxes",
+                  "location": "nav"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click on 'Taxes' in the primary navigation menu."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'Individual Income Tax' from the expanded menu."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/taxes/individual-income-tax"
+                ],
+                "labels_seen": [
+                  "Taxes",
+                  "Individual Income Tax"
+                ],
+                "notes": "The navigation menu expands to show various tax types."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "No blockers for browsing public information."
+                }
+              ]
+            },
+            {
+              "id": "digital_service_file_tax",
+              "name": "File Income Tax Return",
+              "intent_category": "support",
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "label": "Digital Services",
+                  "url": "https://www.iras.gov.sg/digital-services",
+                  "location": "nav"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click on 'Digital Services' in the primary navigation menu."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'Employees' and then 'File Income Tax Return'."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/digital-services/employees/file-income-tax-return"
+                ],
+                "labels_seen": [
+                  "Digital Services",
+                  "Employees",
+                  "File Income Tax Return"
+                ],
+                "notes": "Leads to the information page about filing before redirecting to the login portal."
+              },
+              "blockers": [
+                {
+                  "type": "login_required",
+                  "detail": "Actual filing requires Singpass login to myTax Portal."
+                }
+              ]
+            },
+            {
+              "id": "auth_login_mytax",
+              "name": "Login to myTax Portal",
+              "intent_category": "auth",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "LOGIN",
+                  "url": "https://mytax.iras.gov.sg/login/selection",
+                  "location": "cta"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'LOGIN' button in the header."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://mytax.iras.gov.sg/login/selection"
+                ],
+                "labels_seen": [
+                  "LOGIN"
+                ],
+                "notes": "Direct entry point to the authentication portal."
+              },
+              "blockers": [
+                {
+                  "type": "login_required",
+                  "detail": "Requires Singpass or other valid credentials."
+                }
+              ]
+            },
+            {
+              "id": "support_contact_us",
+              "name": "Contact IRAS Support",
+              "intent_category": "support",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Contact Us",
+                  "url": "https://www.iras.gov.sg/contact-us",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "scroll",
+                  "description": "Scroll to the bottom of the page to find the footer."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'Contact Us' link."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/contact-us"
+                ],
+                "labels_seen": [
+                  "Contact Us"
+                ],
+                "notes": "Provides various contact methods including hotlines and email."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "None"
+                }
+              ]
+            },
+            {
+              "id": "quick_links_calculators",
+              "name": "Use Tax Calculators",
+              "intent_category": "support",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Calculators",
+                  "url": "https://www.iras.gov.sg/quick-links/calculators",
+                  "location": "cta"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click on the 'Calculators' icon in the Quick Links section on the homepage."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/quick-links/calculators"
+                ],
+                "labels_seen": [
+                  "Calculators"
+                ],
+                "notes": "Part of the carousel of quick links in the hero area."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "None"
+                }
+              ]
+            }
+          ],
+          "global_blockers": [],
+          "notes": "The website uses a mega-menu for primary navigation which simplifies browsing tax types and digital services. Most interactive tasks (filing, checking balance) require authentication via Singpass."
+        },
+        "error": null
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:29:47.063552+00:00"
+}

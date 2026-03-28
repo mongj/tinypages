@@ -1,0 +1,489 @@
+{
+  "scout_id": "auth",
+  "seed_url": "https://wikipedia.org",
+  "run_id": "4adefc0e-8d50-4a74-8c1e-1fa75ad546c8",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "wikipedia_sign_in",
+        "name": "Sign In",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'English' to go to the English Wikipedia main page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Log in' in the top navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reached the login screen without issues."
+          }
+        ],
+        "evidence": {
+          "notes": "The Log in page is hosted on auth.wikimedia.org for English Wikipedia.",
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/wiki/Main_Page",
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin"
+          ],
+          "labels_seen": [
+            "English",
+            "Log in"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin",
+            "label": "Log in",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "wikipedia_sign_up",
+        "name": "Sign Up",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'English' to go to the English Wikipedia main page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Create account' in the top navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reached the registration screen without issues."
+          }
+        ],
+        "evidence": {
+          "notes": "Account creation page includes hCaptcha integration.",
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/wiki/Main_Page",
+            "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount"
+          ],
+          "labels_seen": [
+            "English",
+            "Create account"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount",
+            "label": "Create account",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "wikipedia_password_reset",
+        "name": "Password Reset",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'English' to go to the English Wikipedia main page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Log in' in the top navigation bar"
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Click 'Forgot your password?' link on the login form"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reached the password reset screen without issues."
+          }
+        ],
+        "evidence": {
+          "notes": "The reset password flow is accessible from the login page.",
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin",
+            "https://auth.wikimedia.org/enwiki/w/index.php?title=Special:PasswordReset"
+          ],
+          "labels_seen": [
+            "Forgot your password?",
+            "Reset password"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:PasswordReset",
+            "label": "Forgot your password?",
+            "location": "other"
+          }
+        ],
+        "intent_category": "auth"
+      }
+    ],
+    "notes": "Entry points are primarily found after navigating from the global portal to a specific language edition (e.g., English Wikipedia).",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "wikipedia_sign_in",
+        "name": "Sign In",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'English' to go to the English Wikipedia main page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Log in' in the top navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reached the login screen without issues."
+          }
+        ],
+        "evidence": {
+          "notes": "The Log in page is hosted on auth.wikimedia.org for English Wikipedia.",
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/wiki/Main_Page",
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin"
+          ],
+          "labels_seen": [
+            "English",
+            "Log in"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin",
+            "label": "Log in",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "wikipedia_sign_up",
+        "name": "Sign Up",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'English' to go to the English Wikipedia main page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Create account' in the top navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reached the registration screen without issues."
+          }
+        ],
+        "evidence": {
+          "notes": "Account creation page includes hCaptcha integration.",
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/wiki/Main_Page",
+            "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount"
+          ],
+          "labels_seen": [
+            "English",
+            "Create account"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount",
+            "label": "Create account",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "wikipedia_password_reset",
+        "name": "Password Reset",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to wikipedia.org"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'English' to go to the English Wikipedia main page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click 'Log in' in the top navigation bar"
+          },
+          {
+            "order": 4,
+            "action": "click",
+            "description": "Click 'Forgot your password?' link on the login form"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Reached the password reset screen without issues."
+          }
+        ],
+        "evidence": {
+          "notes": "The reset password flow is accessible from the login page.",
+          "urls_seen": [
+            "https://www.wikipedia.org/",
+            "https://en.wikipedia.org/w/index.php?title=Special:UserLogin",
+            "https://auth.wikimedia.org/enwiki/w/index.php?title=Special:PasswordReset"
+          ],
+          "labels_seen": [
+            "Forgot your password?",
+            "Reset password"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://en.wikipedia.org/w/index.php?title=Special:PasswordReset",
+            "label": "Forgot your password?",
+            "location": "other"
+          }
+        ],
+        "intent_category": "auth"
+      }
+    ],
+    "notes": "Entry points are primarily found after navigating from the global portal to a specific language edition (e.g., English Wikipedia).",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "4adefc0e-8d50-4a74-8c1e-1fa75ad546c8",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "wikipedia_sign_in",
+              "name": "Sign In",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'English' to go to the English Wikipedia main page"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click 'Log in' in the top navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Reached the login screen without issues."
+                }
+              ],
+              "evidence": {
+                "notes": "The Log in page is hosted on auth.wikimedia.org for English Wikipedia.",
+                "urls_seen": [
+                  "https://www.wikipedia.org/",
+                  "https://en.wikipedia.org/wiki/Main_Page",
+                  "https://en.wikipedia.org/w/index.php?title=Special:UserLogin"
+                ],
+                "labels_seen": [
+                  "English",
+                  "Log in"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin",
+                  "label": "Log in",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "wikipedia_sign_up",
+              "name": "Sign Up",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'English' to go to the English Wikipedia main page"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click 'Create account' in the top navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Reached the registration screen without issues."
+                }
+              ],
+              "evidence": {
+                "notes": "Account creation page includes hCaptcha integration.",
+                "urls_seen": [
+                  "https://www.wikipedia.org/",
+                  "https://en.wikipedia.org/wiki/Main_Page",
+                  "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount"
+                ],
+                "labels_seen": [
+                  "English",
+                  "Create account"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount",
+                  "label": "Create account",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "wikipedia_password_reset",
+              "name": "Password Reset",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to wikipedia.org"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'English' to go to the English Wikipedia main page"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click 'Log in' in the top navigation bar"
+                },
+                {
+                  "order": 4,
+                  "action": "click",
+                  "description": "Click 'Forgot your password?' link on the login form"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Reached the password reset screen without issues."
+                }
+              ],
+              "evidence": {
+                "notes": "The reset password flow is accessible from the login page.",
+                "urls_seen": [
+                  "https://www.wikipedia.org/",
+                  "https://en.wikipedia.org/w/index.php?title=Special:UserLogin",
+                  "https://auth.wikimedia.org/enwiki/w/index.php?title=Special:PasswordReset"
+                ],
+                "labels_seen": [
+                  "Forgot your password?",
+                  "Reset password"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://en.wikipedia.org/w/index.php?title=Special:PasswordReset",
+                  "label": "Forgot your password?",
+                  "location": "other"
+                }
+              ],
+              "intent_category": "auth"
+            }
+          ],
+          "notes": "Entry points are primarily found after navigating from the global portal to a specific language edition (e.g., English Wikipedia).",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:53:03.744477+00:00"
+}

@@ -1,0 +1,659 @@
+{
+  "scout_id": "support",
+  "seed_url": "https://www.iras.gov.sg/",
+  "run_id": "420b0844-7cad-4259-92a7-ac4c512296c5",
+  "status": "COMPLETED",
+  "num_of_steps": 8,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "iras_support_contact",
+        "name": "Contact and Support",
+        "intent_category": "support",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Contact Us",
+            "url": "https://www.iras.gov.sg/contact-us",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Contact Us' in the footer to view support channels."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/contact-us"
+          ],
+          "labels_seen": [
+            "Contact Us",
+            "Chat with IRAS",
+            "Feedback"
+          ],
+          "notes": "The page provides phone numbers and email links categorized by tax type (Income Tax, GST, etc.)."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Contact info is publicly accessible."
+          }
+        ]
+      },
+      {
+        "id": "iras_legal_privacy",
+        "name": "Privacy Policy",
+        "intent_category": "legal",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Privacy Statement",
+            "url": "https://www.iras.gov.sg/privacy-statement",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Privacy Statement' in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/privacy-statement"
+          ],
+          "labels_seen": [
+            "Privacy Statement"
+          ],
+          "notes": "Covers data protection and security measures for the site."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ]
+      },
+      {
+        "id": "iras_legal_terms",
+        "name": "Terms of Use",
+        "intent_category": "legal",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Terms of Use & Browser Compatibility",
+            "url": "https://www.iras.gov.sg/terms-of-use-browser-compatibility",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Terms of Use & Browser Compatibility' in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/terms-of-use-browser-compatibility"
+          ],
+          "labels_seen": [
+            "Terms of Use"
+          ],
+          "notes": "Outlines conditions for using the website and its content."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ]
+      },
+      {
+        "id": "iras_security_info",
+        "name": "Security and Scam Protection",
+        "intent_category": "legal",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Report Vulnerability",
+            "url": "https://www.tech.gov.sg/report_vulnerability",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "type",
+            "description": "Search for 'scam' to find security advisories."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/",
+            "https://www.tech.gov.sg/report_vulnerability"
+          ],
+          "labels_seen": [
+            "Report Vulnerability",
+            "scam advisory",
+            "scam support hotline"
+          ],
+          "notes": "Vulnerability reporting is external via GovTech. Internal security advisories are accessible via search/banners."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "General advisories are public."
+          }
+        ]
+      },
+      {
+        "id": "iras_docs_help",
+        "name": "Tax Guides and Docs",
+        "intent_category": "support",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Useful links",
+            "url": "https://www.iras.gov.sg/useful-links",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Useful links' to see the guide repository."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/useful-links"
+          ],
+          "labels_seen": [
+            "Useful links",
+            "e-Tax Guides"
+          ],
+          "notes": "The site uses a 'Taxes' mega-menu and 'Useful links' as the primary documentation hub."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Guides and forms are public."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "IRAS does not have a single 'Help Center' or 'Status' page link in the footer. Status information is typically communicated via banners or the login page (myTax Portal). Support is heavily categorized by tax type."
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "iras_support_contact",
+        "name": "Contact and Support",
+        "intent_category": "support",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Contact Us",
+            "url": "https://www.iras.gov.sg/contact-us",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Contact Us' in the footer to view support channels."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/contact-us"
+          ],
+          "labels_seen": [
+            "Contact Us",
+            "Chat with IRAS",
+            "Feedback"
+          ],
+          "notes": "The page provides phone numbers and email links categorized by tax type (Income Tax, GST, etc.)."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Contact info is publicly accessible."
+          }
+        ]
+      },
+      {
+        "id": "iras_legal_privacy",
+        "name": "Privacy Policy",
+        "intent_category": "legal",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Privacy Statement",
+            "url": "https://www.iras.gov.sg/privacy-statement",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Privacy Statement' in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/privacy-statement"
+          ],
+          "labels_seen": [
+            "Privacy Statement"
+          ],
+          "notes": "Covers data protection and security measures for the site."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ]
+      },
+      {
+        "id": "iras_legal_terms",
+        "name": "Terms of Use",
+        "intent_category": "legal",
+        "confidence": 1,
+        "entry_points": [
+          {
+            "label": "Terms of Use & Browser Compatibility",
+            "url": "https://www.iras.gov.sg/terms-of-use-browser-compatibility",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Terms of Use & Browser Compatibility' in the footer."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/terms-of-use-browser-compatibility"
+          ],
+          "labels_seen": [
+            "Terms of Use"
+          ],
+          "notes": "Outlines conditions for using the website and its content."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ]
+      },
+      {
+        "id": "iras_security_info",
+        "name": "Security and Scam Protection",
+        "intent_category": "legal",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Report Vulnerability",
+            "url": "https://www.tech.gov.sg/report_vulnerability",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "type",
+            "description": "Search for 'scam' to find security advisories."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/",
+            "https://www.tech.gov.sg/report_vulnerability"
+          ],
+          "labels_seen": [
+            "Report Vulnerability",
+            "scam advisory",
+            "scam support hotline"
+          ],
+          "notes": "Vulnerability reporting is external via GovTech. Internal security advisories are accessible via search/banners."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "General advisories are public."
+          }
+        ]
+      },
+      {
+        "id": "iras_docs_help",
+        "name": "Tax Guides and Docs",
+        "intent_category": "support",
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "label": "Useful links",
+            "url": "https://www.iras.gov.sg/useful-links",
+            "location": "footer"
+          }
+        ],
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the IRAS homepage."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Useful links' to see the guide repository."
+          }
+        ],
+        "evidence": {
+          "urls_seen": [
+            "https://www.iras.gov.sg/useful-links"
+          ],
+          "labels_seen": [
+            "Useful links",
+            "e-Tax Guides"
+          ],
+          "notes": "The site uses a 'Taxes' mega-menu and 'Useful links' as the primary documentation hub."
+        },
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Guides and forms are public."
+          }
+        ]
+      }
+    ],
+    "global_blockers": [],
+    "notes": "IRAS does not have a single 'Help Center' or 'Status' page link in the footer. Status information is typically communicated via banners or the login page (myTax Portal). Support is heavily categorized by tax type."
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "420b0844-7cad-4259-92a7-ac4c512296c5",
+        "status": "COMPLETED",
+        "num_of_steps": 8,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "iras_support_contact",
+              "name": "Contact and Support",
+              "intent_category": "support",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Contact Us",
+                  "url": "https://www.iras.gov.sg/contact-us",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the IRAS homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'Contact Us' in the footer to view support channels."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/contact-us"
+                ],
+                "labels_seen": [
+                  "Contact Us",
+                  "Chat with IRAS",
+                  "Feedback"
+                ],
+                "notes": "The page provides phone numbers and email links categorized by tax type (Income Tax, GST, etc.)."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Contact info is publicly accessible."
+                }
+              ]
+            },
+            {
+              "id": "iras_legal_privacy",
+              "name": "Privacy Policy",
+              "intent_category": "legal",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Privacy Statement",
+                  "url": "https://www.iras.gov.sg/privacy-statement",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the IRAS homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'Privacy Statement' in the footer."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/privacy-statement"
+                ],
+                "labels_seen": [
+                  "Privacy Statement"
+                ],
+                "notes": "Covers data protection and security measures for the site."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible."
+                }
+              ]
+            },
+            {
+              "id": "iras_legal_terms",
+              "name": "Terms of Use",
+              "intent_category": "legal",
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "label": "Terms of Use & Browser Compatibility",
+                  "url": "https://www.iras.gov.sg/terms-of-use-browser-compatibility",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the IRAS homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'Terms of Use & Browser Compatibility' in the footer."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/terms-of-use-browser-compatibility"
+                ],
+                "labels_seen": [
+                  "Terms of Use"
+                ],
+                "notes": "Outlines conditions for using the website and its content."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible."
+                }
+              ]
+            },
+            {
+              "id": "iras_security_info",
+              "name": "Security and Scam Protection",
+              "intent_category": "legal",
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "label": "Report Vulnerability",
+                  "url": "https://www.tech.gov.sg/report_vulnerability",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the IRAS homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "type",
+                  "description": "Search for 'scam' to find security advisories."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/",
+                  "https://www.tech.gov.sg/report_vulnerability"
+                ],
+                "labels_seen": [
+                  "Report Vulnerability",
+                  "scam advisory",
+                  "scam support hotline"
+                ],
+                "notes": "Vulnerability reporting is external via GovTech. Internal security advisories are accessible via search/banners."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "General advisories are public."
+                }
+              ]
+            },
+            {
+              "id": "iras_docs_help",
+              "name": "Tax Guides and Docs",
+              "intent_category": "support",
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "label": "Useful links",
+                  "url": "https://www.iras.gov.sg/useful-links",
+                  "location": "footer"
+                }
+              ],
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the IRAS homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'Useful links' to see the guide repository."
+                }
+              ],
+              "evidence": {
+                "urls_seen": [
+                  "https://www.iras.gov.sg/useful-links"
+                ],
+                "labels_seen": [
+                  "Useful links",
+                  "e-Tax Guides"
+                ],
+                "notes": "The site uses a 'Taxes' mega-menu and 'Useful links' as the primary documentation hub."
+              },
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Guides and forms are public."
+                }
+              ]
+            }
+          ],
+          "global_blockers": [],
+          "notes": "IRAS does not have a single 'Help Center' or 'Status' page link in the footer. Status information is typically communicated via banners or the login page (myTax Portal). Support is heavily categorized by tax type."
+        },
+        "error": null
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T03:26:59.377160+00:00"
+}
