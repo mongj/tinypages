@@ -35,16 +35,16 @@ export function SiteOverview({
       <div className="mt-3 flex items-center gap-4 text-sm text-text-secondary">
         <span>
           <strong className="text-text-primary">{flows.merge_count}</strong>{" "}
-          flows discovered
+          flows documented
         </span>
         <span className="text-border">|</span>
         <span>
           <strong className="text-text-primary">{flows.source_runs}</strong>{" "}
-          scout runs
+          exploration runs
         </span>
         <span className="text-border">|</span>
         <span>
-          Indexed{" "}
+          Generated{" "}
           {new Date(flows.created_at).toLocaleDateString("en-US", {
             month: "short",
             day: "numeric",

@@ -30,7 +30,7 @@ export function SiteCard({ meta }: { meta: SiteMeta }) {
         </span>
         <span className="text-border">|</span>
         <span>
-          <strong className="text-text-primary">{meta.scoutCount}</strong> scouts
+          <strong className="text-text-primary">{meta.scoutCount}</strong> explorations
         </span>
         <span className="text-border">|</span>
         <span>
