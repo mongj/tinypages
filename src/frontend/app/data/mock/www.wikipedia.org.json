@@ -1,0 +1,850 @@
+{
+  "merged_flows": [
+    {
+      "id": "browse_english_wikipedia",
+      "name": "Browse English Wikipedia",
+      "intent_category": "browse",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "English \u2014 Wikipedia \u2014 The Free Encyclopedia",
+          "url": "https://en.wikipedia.org/",
+          "location": "hero"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click on the English language link to enter the English Wikipedia site."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://en.wikipedia.org/"
+        ],
+        "labels_seen": [
+          "English"
+        ],
+        "notes": "Primary entry point for English speakers."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "No blockers observed for this path."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919"
+        }
+      ]
+    },
+    {
+      "id": "search_article",
+      "name": "Search for an Article",
+      "intent_category": "browse",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "search",
+          "url": "https://www.wikipedia.org/",
+          "location": "hero"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "type",
+          "description": "Type search query into the search input field."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click the search button or select a suggestion to view the article."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.wikipedia.org/"
+        ],
+        "labels_seen": [
+          "search",
+          "Search"
+        ],
+        "notes": "Verified that typing triggers a suggestion dropdown."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Search is open to all users."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919"
+        }
+      ]
+    },
+    {
+      "id": "donate_to_wikimedia",
+      "name": "Donate to Wikimedia Foundation",
+      "intent_category": "commerce",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "You can support our work with a donation.",
+          "url": "https://donate.wikimedia.org/?wmf_medium=portal&wmf_campaign=portalFooter&wmf_source=portalFooter",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the donation link in the footer."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://donate.wikimedia.org/"
+        ],
+        "labels_seen": [
+          "donation"
+        ],
+        "notes": "Standard path for financial support."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "None, but requires external payment method if followed to completion."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919"
+        }
+      ]
+    },
+    {
+      "id": "download_mobile_app",
+      "name": "Download Mobile Applications",
+      "intent_category": "other",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Download Wikipedia for Android or iOS",
+          "url": "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the mobile app download link to view available versions."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications"
+        ],
+        "labels_seen": [
+          "Download Wikipedia for Android or iOS"
+        ],
+        "notes": "Links to an internal list of mobile apps."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Informational page about apps."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919"
+        }
+      ]
+    },
+    {
+      "id": "view_privacy_policy",
+      "name": "View Privacy Policy",
+      "intent_category": "legal",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Privacy Policy",
+          "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the Privacy Policy link in the footer."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+        ],
+        "labels_seen": [
+          "Privacy Policy"
+        ],
+        "notes": "Standard legal documentation link."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Accessible to all."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919"
+        }
+      ]
+    },
+    {
+      "id": "explore_wiktionary",
+      "name": "Explore Wiktionary",
+      "intent_category": "other",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Wiktionary Free dictionary",
+          "url": "https://www.wiktionary.org/",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click on the Wiktionary sister project link."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.wiktionary.org/"
+        ],
+        "labels_seen": [
+          "Wiktionary"
+        ],
+        "notes": "One of several sister project links."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Leads to a different domain."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "3663ebe8-d6c9-4bfc-9554-651e406ad919"
+        }
+      ]
+    },
+    {
+      "id": "wikipedia_sign_in",
+      "name": "Sign In Flow",
+      "intent_category": "auth",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Log in",
+          "url": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+          "location": "nav"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Wikipedia English homepage."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on the 'Log in' link in the top right header."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.wikipedia.org/",
+          "https://en.wikipedia.org/",
+          "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page"
+        ],
+        "labels_seen": [
+          "Log in",
+          "English"
+        ],
+        "notes": "The login page features username and password fields."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Login page is accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "c23b7659-37da-48ea-844d-29ef6f6f4b53"
+        }
+      ]
+    },
+    {
+      "id": "wikipedia_sign_up",
+      "name": "Sign Up Flow",
+      "intent_category": "auth",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Create account",
+          "url": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page",
+          "location": "nav"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Wikipedia English homepage."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on the 'Create account' link in the top right header."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://www.wikipedia.org/",
+          "https://en.wikipedia.org/",
+          "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page"
+        ],
+        "labels_seen": [
+          "Create account",
+          "English"
+        ],
+        "notes": "The account creation page requires a username, password, and optional email."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Sign up page is accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "c23b7659-37da-48ea-844d-29ef6f6f4b53"
+        }
+      ]
+    },
+    {
+      "id": "wikipedia_password_reset",
+      "name": "Password Reset Flow",
+      "intent_category": "auth",
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "label": "Forgot your password?",
+          "url": "https://en.wikipedia.org/wiki/Special:PasswordReset",
+          "location": "other"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Wikipedia English login page."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on 'Forgot your password?' link usually located below the password field."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+          "https://en.wikipedia.org/wiki/Special:PasswordReset"
+        ],
+        "labels_seen": [
+          "Forgot your password?",
+          "Special:PasswordReset"
+        ],
+        "notes": "Encountered an error page stating 'Internal error' and 'Your address is blocked' when attempting to access the reset page directly."
+      },
+      "blockers": [
+        {
+          "type": "blocked",
+          "detail": "The agent's IP address was blocked from accessing the password recovery page to prevent abuse."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "auth",
+          "run_id": "c23b7659-37da-48ea-844d-29ef6f6f4b53"
+        }
+      ]
+    },
+    {
+      "id": "wikimedia_store_purchase",
+      "name": "Purchase Merchandise from Wikimedia Store",
+      "intent_category": "commerce",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Wikipedia Store",
+          "url": "https://store.wikimedia.org/",
+          "location": "other"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Wikimedia Store website."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Select a product from the featured collection or product listings."
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Choose product options such as size on the product detail page."
+        },
+        {
+          "order": 4,
+          "action": "click",
+          "description": "Click the 'Add to cart' button."
+        },
+        {
+          "order": 5,
+          "action": "click",
+          "description": "Navigate to the cart page to review the selection."
+        },
+        {
+          "order": 6,
+          "action": "click",
+          "description": "Click the 'checkout' button to proceed to the payment information screen."
+        },
+        {
+          "order": 7,
+          "action": "type",
+          "description": "Enter contact email and shipping address details (stopped before submission)."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://store.wikimedia.org/",
+          "https://store.wikimedia.org/products/i-support-wikipedia-box-t-shirt-unisex",
+          "https://store.wikimedia.org/cart",
+          "https://store.wikimedia.org/checkouts/"
+        ],
+        "labels_seen": [
+          "Choose options",
+          "Add to cart",
+          "checkout",
+          "Email",
+          "Delivery",
+          "Payment",
+          "Pay now"
+        ],
+        "notes": "The store uses a standard Shopify-style checkout flow. Guest checkout is available by providing an email address."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Successfully reached the final checkout page where payment details are requested."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "commerce",
+          "run_id": "8fc2987d-482b-4cff-842d-33a3f35b6bbd"
+        }
+      ]
+    },
+    {
+      "id": "wikipedia_donation",
+      "name": "Donate to Wikimedia Foundation",
+      "intent_category": "commerce",
+      "confidence": 0.95,
+      "entry_points": [
+        {
+          "label": "Donate",
+          "url": "https://donate.wikimedia.org/",
+          "location": "nav"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the 'Donate' link from the Wikipedia sidebar or portal."
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Select donation frequency (One-time, Monthly, Annual)."
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Select or enter a donation amount."
+        },
+        {
+          "order": 4,
+          "action": "click",
+          "description": "Choose a payment method (Credit card, PayPal, etc.)."
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://donate.wikimedia.org/"
+        ],
+        "labels_seen": [
+          "One-time",
+          "Monthly",
+          "Credit/debit card",
+          "PayPal",
+          "Venmo"
+        ],
+        "notes": "The donation flow involves selecting a payment amount and method, leading to a payment processing interface."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Flow is accessible and leads directly to payment selection."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "commerce",
+          "run_id": "8fc2987d-482b-4cff-842d-33a3f35b6bbd"
+        }
+      ]
+    },
+    {
+      "id": "help_center_flow",
+      "name": "Help Center",
+      "intent_category": "support",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Help",
+          "url": "https://en.wikipedia.org/wiki/Help:Contents",
+          "location": "nav"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to English Wikipedia main page"
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on 'Help' or 'Help:Contents' in the sidebar navigation"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://en.wikipedia.org/wiki/Help:Contents"
+        ],
+        "labels_seen": [
+          "Help",
+          "Help:Contents"
+        ],
+        "notes": "The Help link is prominently displayed in the sidebar of English Wikipedia."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "b6f9e7aa-1c92-4d43-8a20-db1f9ed25cd5"
+        }
+      ]
+    },
+    {
+      "id": "contact_support_flow",
+      "name": "Contact Wikipedia",
+      "intent_category": "support",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Contact us",
+          "url": "https://en.wikipedia.org/wiki/Wikipedia:Contact_us",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to English Wikipedia main page"
+        },
+        {
+          "order": 2,
+          "action": "scroll",
+          "description": "Scroll to the bottom of the page"
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Click on 'Contact Wikipedia' in the footer"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://en.wikipedia.org/wiki/Wikipedia:Contact_us"
+        ],
+        "labels_seen": [
+          "Contact us",
+          "Contact Wikipedia"
+        ],
+        "notes": "Provides various contact methods for readers, editors, and press."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "b6f9e7aa-1c92-4d43-8a20-db1f9ed25cd5"
+        }
+      ]
+    },
+    {
+      "id": "privacy_policy_flow",
+      "name": "Privacy Policy",
+      "intent_category": "legal",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Privacy policy",
+          "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to English Wikipedia main page"
+        },
+        {
+          "order": 2,
+          "action": "scroll",
+          "description": "Scroll to the footer"
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Click on 'Privacy policy'"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy"
+        ],
+        "labels_seen": [
+          "Privacy policy"
+        ],
+        "notes": "Redirects to the Wikimedia Foundation policy page."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "b6f9e7aa-1c92-4d43-8a20-db1f9ed25cd5"
+        }
+      ]
+    },
+    {
+      "id": "terms_of_service_flow",
+      "name": "Terms of Use",
+      "intent_category": "legal",
+      "confidence": 1,
+      "entry_points": [
+        {
+          "label": "Terms of Use",
+          "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to English Wikipedia main page"
+        },
+        {
+          "order": 2,
+          "action": "scroll",
+          "description": "Scroll to the footer"
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Click on 'Terms of Use'"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use"
+        ],
+        "labels_seen": [
+          "Terms of Use"
+        ],
+        "notes": "Hosted on the Wikimedia Foundation site."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "b6f9e7aa-1c92-4d43-8a20-db1f9ed25cd5"
+        }
+      ]
+    },
+    {
+      "id": "security_information_flow",
+      "name": "Security and Legal Contacts",
+      "intent_category": "support",
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "label": "Security",
+          "url": "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security",
+          "location": "other"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Privacy Policy or Foundation page"
+        },
+        {
+          "order": 2,
+          "action": "click",
+          "description": "Click on 'Security' in the sidebar or linked text"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://foundation.wikimedia.org/wiki/Special:MyLanguage/Security"
+        ],
+        "labels_seen": [
+          "Security"
+        ],
+        "notes": "Contains information on reporting security vulnerabilities."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "b6f9e7aa-1c92-4d43-8a20-db1f9ed25cd5"
+        }
+      ]
+    },
+    {
+      "id": "status_statistics_flow",
+      "name": "System Statistics",
+      "intent_category": "other",
+      "confidence": 0.8,
+      "entry_points": [
+        {
+          "label": "Statistics",
+          "url": "https://stats.wikimedia.org/",
+          "location": "footer"
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to English Wikipedia main page"
+        },
+        {
+          "order": 2,
+          "action": "scroll",
+          "description": "Scroll to the footer"
+        },
+        {
+          "order": 3,
+          "action": "click",
+          "description": "Click on 'Statistics'"
+        }
+      ],
+      "evidence": {
+        "urls_seen": [
+          "https://stats.wikimedia.org/"
+        ],
+        "labels_seen": [
+          "Statistics"
+        ],
+        "notes": "Provides operational and content statistics, though not a real-time system health dashboard."
+      },
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible."
+        }
+      ],
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "b6f9e7aa-1c92-4d43-8a20-db1f9ed25cd5"
+        }
+      ]
+    }
+  ],
+  "merge_count": 17,
+  "source_runs": 4,
+  "collected_notes": [
+    "[nav]: The Wikipedia portal page acts as a language and project switcher. Most primary paths lead away from the root domain to language-specific subdomains or sister project domains.",
+    "[auth]: Authentication entry points on Wikipedia are primarily found in the 'Personal tools' section of individual language wikis (e.g., English Wikipedia). The password reset page was found but was inaccessible due to an IP-level block during the scout.",
+    "[commerce]: Wikipedia itself is an encyclopedia, but it hosts a merchandise store (store.wikimedia.org) and a donation platform (donate.wikimedia.org) which contain commercial flows, including product listings, cart management, and payment UI.",
+    "[support]: Wikipedia and the Wikimedia Foundation provide transparent access to support, legal, and security information. No login or CAPTCHAs were encountered during navigation."
+  ],
+  "seed_url": "https://www.wikipedia.org/",
+  "created_at": "2026-03-28T03:19:14.012011+00:00"
+}
