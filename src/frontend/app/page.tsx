@@ -1,5 +1,6 @@
 import { getAllSites } from "./data/sites";
 import { SiteCard } from "./components/home/SiteCard";
+import { IndexForm } from "./components/home/IndexForm";
 
 export default function HomePage() {
   const sites = getAllSites();
@@ -7,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       {/* Hero */}
-      <div className="mb-16 text-center">
+      <div className="mb-12 text-center">
         <h1 className="text-4xl font-semibold mb-4">
           <span className="text-accent-teal">tiny</span>
           <span className="text-text-primary">pages</span>
@@ -16,6 +17,14 @@ export default function HomePage() {
           The web, pre-read for agents. Every user flow mapped, so AI agents
           don&apos;t have to rediscover a website from scratch.
         </p>
+      </div>
+
+      {/* Index a new site */}
+      <div className="mb-12">
+        <h2 className="text-sm font-medium text-text-muted uppercase tracking-wide mb-4">
+          Index a Site
+        </h2>
+        <IndexForm />
       </div>
 
       {/* Site grid */}
