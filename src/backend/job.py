@@ -9,9 +9,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
-from dotenv import load_dotenv
-
+import modal
 from assessment import build_assessment
+from dotenv import load_dotenv
 from run_batch import run_swarm, write_artifacts
 from scout_prompts import SCOUT_SPECS, list_scout_ids
 
@@ -108,3 +108,80 @@ def run_job_for_url(
     assess = build_assessment(artifacts)
     (out_path / "assessment.json").write_text(json.dumps(assess, indent=2), encoding="utf-8")
     return JobResult(out_dir=out_path.resolve(), assessment=assess, artifacts=artifacts)
+
+
+# -- Modal remote job --
+
+app = modal.App("tinypages-indexer")
+
+_modal_image = (
+    modal.Image.debian_slim(python_version="3.12")
+    .pip_install_from_pyproject("pyproject.toml")
+    .workdir("/root/app")
+    .add_local_dir(".", remote_path="/root/app")
+)
+
+
+@app.function(
+    image=_modal_image,
+    secrets=[modal.Secret.from_dotenv()],
+    timeout=1800,
+)
+@modal.fastapi_endpoint()
+def run_job_remote(job_id: str, seed_url: str) -> dict:
+    """Run all scouts for *seed_url*, writing progress to Supabase along the way."""
+    import asyncio
+    import logging
+    from datetime import datetime, timezone
+
+    from db import get_supabase
+    from dotenv import load_dotenv
+    from merge_flows import merge_flow_artifacts
+    from run_batch import run_swarm
+    from scout_prompts import list_scout_ids
+
+    load_dotenv()
+    logger = logging.getLogger("tinypages.job")
+    logging.basicConfig(level=logging.INFO)
+
+    logger.info("[%s] starting url=%s", job_id, seed_url)
+    sb = get_supabase()
+
+    sb.table("jobs").update({"status": "running"}).eq("job_id", job_id).execute()
+    logger.info("[%s] status=running", job_id)
+
+    try:
+        url = seed_url.strip()
+        scout_ids = list_scout_ids()
+        logger.info("[%s] running %d scouts", job_id, len(scout_ids))
+
+        artifacts = asyncio.run(
+            run_swarm(url, scout_ids, parallelism=2, max_attempts=4, poll_max_wait_seconds=1800.0)
+        )
+        logger.info("[%s] swarm finished, %d artifacts: %s", job_id, len(artifacts), artifacts)
+
+        merged = merge_flow_artifacts(artifacts)
+        logger.info("[%s] merged flows, %d keys", job_id, len(merged))
+
+        sb.table("indexed_pages").upsert({
+            "page_url": seed_url,
+            "last_indexed_by": job_id,
+            "data": merged,
+        }).execute()
+        logger.info("[%s] wrote indexed_pages to supabase", job_id)
+
+        sb.table("jobs").update({
+            "status": "completed",
+            "end_time": datetime.now(timezone.utc).isoformat(),
+        }).eq("job_id", job_id).execute()
+        logger.info("[%s] job completed", job_id)
+
+        return {"status": "completed", "job_id": job_id}
+
+    except Exception:
+        logger.exception("[%s] job failed", job_id)
+        sb.table("jobs").update({
+            "status": "failed",
+            "end_time": datetime.now(timezone.utc).isoformat(),
+        }).eq("job_id", job_id).execute()
+        raise
