@@ -1,0 +1,46 @@
+{
+  "description": "Manual evaluation checklist for TinyFish flow-scout MVP. After each run, open artifacts/.../flows.json and per-scout JSON files; mark each expected_flow as found, missed, or wrong (false positive).",
+  "sites": [
+    {
+      "id": "wikipedia_portal",
+      "url": "https://www.wikipedia.org/",
+      "notes": "Stable public site; good for sanity checks on nav and language flows.",
+      "expected_flows": [
+        { "name": "Pick a language / enter a wiki", "hints": ["language links", "Wikipedia title"] },
+        { "name": "Search from portal", "hints": ["search"] },
+        { "name": "Download / app promotion if visible", "hints": ["app", "download"] },
+        { "name": "Foundation / donate if linked from portal", "hints": ["donate", "foundation"] },
+        { "name": "Privacy / legal from footer area", "hints": ["privacy", "terms"] }
+      ]
+    },
+    {
+      "id": "stripe_docs",
+      "url": "https://docs.stripe.com/",
+      "notes": "Docs-heavy IA; tests discovery of learn/reference/support-style flows without payments.",
+      "expected_flows": [
+        { "name": "API reference or equivalent top-level docs entry", "hints": ["API", "reference"] },
+        { "name": "Get started / quickstart path", "hints": ["start", "quickstart", "overview"] },
+        { "name": "Payments or checkout conceptual docs", "hints": ["payment", "checkout"] },
+        { "name": "Search docs", "hints": ["search"] },
+        { "name": "Support / help contact path", "hints": ["support", "contact", "help"] },
+        { "name": "Authentication or security-related docs link", "hints": ["security", "authentication"] }
+      ]
+    },
+    {
+      "id": "example_com",
+      "url": "https://example.com/",
+      "notes": "Minimal page; expect very few flows — useful for false-positive checks.",
+      "expected_flows": [
+        { "name": "Learn more / spec link if present", "hints": ["learn more", "RFC"] },
+        { "name": "IANA reserved domain explanation", "hints": ["example", "documentation"] }
+      ]
+    }
+  ],
+  "scoring_columns": [
+    "expected_flow_id_or_name",
+    "verdict_found_missed_wrong",
+    "matching_scout_flow_name_if_found",
+    "notes_grounding_urls_or_labels"
+  ],
+  "stability_protocol": "Run the same --url and --scouts twice the same day; compare flows.json merge_count and flow names. Large drift suggests flaky indexing."
+}
