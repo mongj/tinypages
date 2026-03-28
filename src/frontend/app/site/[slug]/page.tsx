@@ -8,7 +8,7 @@ export default async function SitePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const site = getSite(slug);
+  const site = await getSite(slug);
   if (!site) notFound();
 
   return <SiteOverview meta={site.meta} flows={site.flows} />;

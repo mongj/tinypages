@@ -2,8 +2,8 @@ import { getAllSites } from "./data/sites";
 import { SiteCard } from "./components/home/SiteCard";
 import { IndexForm } from "./components/home/IndexForm";
 
-export default function HomePage() {
-  const sites = getAllSites();
+export default async function HomePage() {
+  const sites = await getAllSites();
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">

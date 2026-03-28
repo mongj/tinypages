@@ -8,7 +8,7 @@ export default async function FlowPage({
   params: Promise<{ slug: string; flowId: string }>;
 }) {
   const { slug, flowId } = await params;
-  const site = getSite(slug);
+  const site = await getSite(slug);
   if (!site) notFound();
 
   const flow = site.flows.merged_flows.find((f) => f.id === flowId);

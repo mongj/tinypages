@@ -10,7 +10,7 @@ export default async function SiteLayout({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const site = getSite(slug);
+  const site = await getSite(slug);
   if (!site) notFound();
 
   return (
