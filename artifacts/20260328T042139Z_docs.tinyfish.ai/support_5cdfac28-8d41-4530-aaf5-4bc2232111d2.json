@@ -1,0 +1,636 @@
+{
+  "scout_id": "support",
+  "seed_url": "https://docs.tinyfish.ai",
+  "run_id": "5cdfac28-8d41-4530-aaf5-4bc2232111d2",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "documentation_help_center",
+        "name": "Documentation and Help Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Documentation is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Main documentation site serving as the primary help resource.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai/"
+          ],
+          "labels_seen": [
+            "Documentation",
+            "Quick Start",
+            "API Reference"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.tinyfish.ai/",
+            "label": "Documentation",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "contact_support_form",
+        "name": "Contact Support via Typeform",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website to access footer links."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Contact Us' in the footer."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Contact form is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The contact link leads to an external Typeform.",
+          "urls_seen": [
+            "https://tinyfish.ai",
+            "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+          ],
+          "labels_seen": [
+            "Contact Us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+            "label": "Contact Us",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "privacy_policy",
+        "name": "Privacy Policy",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website and scroll to the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'PRIVACY' link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Privacy policy is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Privacy policy is hosted on the main domain.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/privacy-policy"
+          ],
+          "labels_seen": [
+            "PRIVACY"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/privacy-policy",
+            "label": "PRIVACY",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "terms_of_service",
+        "name": "Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website and scroll to the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'TERMS' link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Terms page is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Terms of use page is hosted on the main domain.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/terms-of-use"
+          ],
+          "labels_seen": [
+            "TERMS"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/terms-of-use",
+            "label": "TERMS",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "security_trust_center",
+        "name": "Security and Trust Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website and scroll to the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Trust' link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Trust center overview is public."
+          }
+        ],
+        "evidence": {
+          "notes": "Trust center contains security controls and compliance information (ISO 27001).",
+          "urls_seen": [
+            "https://trust.tinyfish.ai/"
+          ],
+          "labels_seen": [
+            "Trust"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://trust.tinyfish.ai/",
+            "label": "Trust",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      }
+    ],
+    "notes": "No dedicated 'Status' page was found in the main IA, footer, or Trust center. Discord and FAQ are available on the documentation site for community support.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "documentation_help_center",
+        "name": "Documentation and Help Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Documentation is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Main documentation site serving as the primary help resource.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai/"
+          ],
+          "labels_seen": [
+            "Documentation",
+            "Quick Start",
+            "API Reference"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.tinyfish.ai/",
+            "label": "Documentation",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "contact_support_form",
+        "name": "Contact Support via Typeform",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website to access footer links."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Contact Us' in the footer."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Contact form is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "The contact link leads to an external Typeform.",
+          "urls_seen": [
+            "https://tinyfish.ai",
+            "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+          ],
+          "labels_seen": [
+            "Contact Us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+            "label": "Contact Us",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "privacy_policy",
+        "name": "Privacy Policy",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website and scroll to the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'PRIVACY' link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Privacy policy is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Privacy policy is hosted on the main domain.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/privacy-policy"
+          ],
+          "labels_seen": [
+            "PRIVACY"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/privacy-policy",
+            "label": "PRIVACY",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "terms_of_service",
+        "name": "Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website and scroll to the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'TERMS' link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Terms page is publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Terms of use page is hosted on the main domain.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/terms-of-use"
+          ],
+          "labels_seen": [
+            "TERMS"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/terms-of-use",
+            "label": "TERMS",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "security_trust_center",
+        "name": "Security and Trust Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the main website and scroll to the footer."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'Trust' link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Trust center overview is public."
+          }
+        ],
+        "evidence": {
+          "notes": "Trust center contains security controls and compliance information (ISO 27001).",
+          "urls_seen": [
+            "https://trust.tinyfish.ai/"
+          ],
+          "labels_seen": [
+            "Trust"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://trust.tinyfish.ai/",
+            "label": "Trust",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      }
+    ],
+    "notes": "No dedicated 'Status' page was found in the main IA, footer, or Trust center. Discord and FAQ are available on the documentation site for community support.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "5cdfac28-8d41-4530-aaf5-4bc2232111d2",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "documentation_help_center",
+              "name": "Documentation and Help Center",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the documentation home page."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Documentation is publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "Main documentation site serving as the primary help resource.",
+                "urls_seen": [
+                  "https://docs.tinyfish.ai/"
+                ],
+                "labels_seen": [
+                  "Documentation",
+                  "Quick Start",
+                  "API Reference"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://docs.tinyfish.ai/",
+                  "label": "Documentation",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "contact_support_form",
+              "name": "Contact Support via Typeform",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the main website to access footer links."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'Contact Us' in the footer."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Contact form is publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "The contact link leads to an external Typeform.",
+                "urls_seen": [
+                  "https://tinyfish.ai",
+                  "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+                ],
+                "labels_seen": [
+                  "Contact Us"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+                  "label": "Contact Us",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "privacy_policy",
+              "name": "Privacy Policy",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the main website and scroll to the footer."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'PRIVACY' link."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Privacy policy is publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "Privacy policy is hosted on the main domain.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/privacy-policy"
+                ],
+                "labels_seen": [
+                  "PRIVACY"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/privacy-policy",
+                  "label": "PRIVACY",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "terms_of_service",
+              "name": "Terms of Use",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the main website and scroll to the footer."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'TERMS' link."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Terms page is publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "Terms of use page is hosted on the main domain.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/terms-of-use"
+                ],
+                "labels_seen": [
+                  "TERMS"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/terms-of-use",
+                  "label": "TERMS",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "security_trust_center",
+              "name": "Security and Trust Center",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the main website and scroll to the footer."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'Trust' link."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Trust center overview is public."
+                }
+              ],
+              "evidence": {
+                "notes": "Trust center contains security controls and compliance information (ISO 27001).",
+                "urls_seen": [
+                  "https://trust.tinyfish.ai/"
+                ],
+                "labels_seen": [
+                  "Trust"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://trust.tinyfish.ai/",
+                  "label": "Trust",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            }
+          ],
+          "notes": "No dedicated 'Status' page was found in the main IA, footer, or Trust center. Discord and FAQ are available on the documentation site for community support.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T04:25:06.754697+00:00"
+}

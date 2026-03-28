@@ -1,0 +1,612 @@
+{
+  "scout_id": "nav",
+  "seed_url": "https://docs.tinyfish.ai",
+  "run_id": "d6ba7916-e985-4521-9b71-a4241643dc91",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "browse_documentation",
+        "name": "Browse Documentation and Quick Start",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click the 'Quick Start' card to view the setup guide."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Path is fully accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Primary path for new users to understand the product.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai/quick-start"
+          ],
+          "labels_seen": [
+            "Quick Start",
+            "Documentation",
+            "Run your first automation in 5 minutes"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.tinyfish.ai/quick-start",
+            "label": "Quick Start",
+            "location": "cta"
+          },
+          {
+            "url": "https://docs.tinyfish.ai/",
+            "label": "Documentation",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "auth_signup",
+        "name": "Sign Up for API Access",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Get API Key' in the navigation bar or the hero section."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "The sign-up page is reachable but requires user registration to proceed."
+          }
+        ],
+        "evidence": {
+          "notes": "Redirects to a separate subdomain for account management.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/signup"
+          ],
+          "labels_seen": [
+            "Get API Key",
+            "Sign up and start automating"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/signup",
+            "label": "Get API Key",
+            "location": "nav"
+          },
+          {
+            "url": "https://agent.tinyfish.ai/signup",
+            "label": "Sign up and start automating",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "browse_api_reference",
+        "name": "Explore API Reference",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'API Ref' in the top navigation or the 'API Reference' card."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Technical documentation is public."
+          }
+        ],
+        "evidence": {
+          "notes": "Technical path for developers to see endpoint details.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai/api-reference"
+          ],
+          "labels_seen": [
+            "API Ref",
+            "Complete endpoint documentation"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.tinyfish.ai/api-reference",
+            "label": "API Ref",
+            "location": "nav"
+          },
+          {
+            "url": "https://docs.tinyfish.ai/api-reference",
+            "label": "Complete endpoint documentation",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "support_community",
+        "name": "Get Community Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll to the 'Support' section or the footer."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the 'Discord Community' card or footer link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Requires a Discord account to join the server."
+          }
+        ],
+        "evidence": {
+          "notes": "Primary support channel identified.",
+          "urls_seen": [
+            "https://discord.gg/tinyfish"
+          ],
+          "labels_seen": [
+            "Discord Community",
+            "Join our community for help and discussions"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://discord.gg/tinyfish",
+            "label": "Discord Community",
+            "location": "cta"
+          },
+          {
+            "url": "https://discord.gg/tinyfish",
+            "label": "Discord icon",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      }
+    ],
+    "notes": "The documentation site (docs.tinyfish.ai) does not contain explicit 'Pricing' or 'Legal' pages. Contacting sales is limited to an 'Email Support' link which does not have a visible URL but likely triggers a mailto. The site is primarily a technical resource with direct links to a signup app.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "browse_documentation",
+        "name": "Browse Documentation and Quick Start",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click the 'Quick Start' card to view the setup guide."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Path is fully accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Primary path for new users to understand the product.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai/quick-start"
+          ],
+          "labels_seen": [
+            "Quick Start",
+            "Documentation",
+            "Run your first automation in 5 minutes"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.tinyfish.ai/quick-start",
+            "label": "Quick Start",
+            "location": "cta"
+          },
+          {
+            "url": "https://docs.tinyfish.ai/",
+            "label": "Documentation",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "auth_signup",
+        "name": "Sign Up for API Access",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'Get API Key' in the navigation bar or the hero section."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "The sign-up page is reachable but requires user registration to proceed."
+          }
+        ],
+        "evidence": {
+          "notes": "Redirects to a separate subdomain for account management.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/signup"
+          ],
+          "labels_seen": [
+            "Get API Key",
+            "Sign up and start automating"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/signup",
+            "label": "Get API Key",
+            "location": "nav"
+          },
+          {
+            "url": "https://agent.tinyfish.ai/signup",
+            "label": "Sign up and start automating",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "browse_api_reference",
+        "name": "Explore API Reference",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click 'API Ref' in the top navigation or the 'API Reference' card."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Technical documentation is public."
+          }
+        ],
+        "evidence": {
+          "notes": "Technical path for developers to see endpoint details.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai/api-reference"
+          ],
+          "labels_seen": [
+            "API Ref",
+            "Complete endpoint documentation"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.tinyfish.ai/api-reference",
+            "label": "API Ref",
+            "location": "nav"
+          },
+          {
+            "url": "https://docs.tinyfish.ai/api-reference",
+            "label": "Complete endpoint documentation",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "support_community",
+        "name": "Get Community Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the documentation home page."
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll to the 'Support' section or the footer."
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click the 'Discord Community' card or footer link."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Requires a Discord account to join the server."
+          }
+        ],
+        "evidence": {
+          "notes": "Primary support channel identified.",
+          "urls_seen": [
+            "https://discord.gg/tinyfish"
+          ],
+          "labels_seen": [
+            "Discord Community",
+            "Join our community for help and discussions"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://discord.gg/tinyfish",
+            "label": "Discord Community",
+            "location": "cta"
+          },
+          {
+            "url": "https://discord.gg/tinyfish",
+            "label": "Discord icon",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      }
+    ],
+    "notes": "The documentation site (docs.tinyfish.ai) does not contain explicit 'Pricing' or 'Legal' pages. Contacting sales is limited to an 'Email Support' link which does not have a visible URL but likely triggers a mailto. The site is primarily a technical resource with direct links to a signup app.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "d6ba7916-e985-4521-9b71-a4241643dc91",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "browse_documentation",
+              "name": "Browse Documentation and Quick Start",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the documentation home page."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click the 'Quick Start' card to view the setup guide."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Path is fully accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "Primary path for new users to understand the product.",
+                "urls_seen": [
+                  "https://docs.tinyfish.ai/quick-start"
+                ],
+                "labels_seen": [
+                  "Quick Start",
+                  "Documentation",
+                  "Run your first automation in 5 minutes"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://docs.tinyfish.ai/quick-start",
+                  "label": "Quick Start",
+                  "location": "cta"
+                },
+                {
+                  "url": "https://docs.tinyfish.ai/",
+                  "label": "Documentation",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "auth_signup",
+              "name": "Sign Up for API Access",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the documentation home page."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'Get API Key' in the navigation bar or the hero section."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "The sign-up page is reachable but requires user registration to proceed."
+                }
+              ],
+              "evidence": {
+                "notes": "Redirects to a separate subdomain for account management.",
+                "urls_seen": [
+                  "https://agent.tinyfish.ai/signup"
+                ],
+                "labels_seen": [
+                  "Get API Key",
+                  "Sign up and start automating"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/signup",
+                  "label": "Get API Key",
+                  "location": "nav"
+                },
+                {
+                  "url": "https://agent.tinyfish.ai/signup",
+                  "label": "Sign up and start automating",
+                  "location": "cta"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "browse_api_reference",
+              "name": "Explore API Reference",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the documentation home page."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click 'API Ref' in the top navigation or the 'API Reference' card."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Technical documentation is public."
+                }
+              ],
+              "evidence": {
+                "notes": "Technical path for developers to see endpoint details.",
+                "urls_seen": [
+                  "https://docs.tinyfish.ai/api-reference"
+                ],
+                "labels_seen": [
+                  "API Ref",
+                  "Complete endpoint documentation"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://docs.tinyfish.ai/api-reference",
+                  "label": "API Ref",
+                  "location": "nav"
+                },
+                {
+                  "url": "https://docs.tinyfish.ai/api-reference",
+                  "label": "Complete endpoint documentation",
+                  "location": "cta"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "support_community",
+              "name": "Get Community Support",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the documentation home page."
+                },
+                {
+                  "order": 2,
+                  "action": "scroll",
+                  "description": "Scroll to the 'Support' section or the footer."
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click the 'Discord Community' card or footer link."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Requires a Discord account to join the server."
+                }
+              ],
+              "evidence": {
+                "notes": "Primary support channel identified.",
+                "urls_seen": [
+                  "https://discord.gg/tinyfish"
+                ],
+                "labels_seen": [
+                  "Discord Community",
+                  "Join our community for help and discussions"
+                ]
+              },
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "url": "https://discord.gg/tinyfish",
+                  "label": "Discord Community",
+                  "location": "cta"
+                },
+                {
+                  "url": "https://discord.gg/tinyfish",
+                  "label": "Discord icon",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "support"
+            }
+          ],
+          "notes": "The documentation site (docs.tinyfish.ai) does not contain explicit 'Pricing' or 'Legal' pages. Contacting sales is limited to an 'Email Support' link which does not have a visible URL but likely triggers a mailto. The site is primarily a technical resource with direct links to a signup app.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T04:23:14.214856+00:00"
+}

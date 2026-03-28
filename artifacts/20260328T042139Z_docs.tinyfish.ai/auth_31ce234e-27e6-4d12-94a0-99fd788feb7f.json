@@ -1,0 +1,384 @@
+{
+  "scout_id": "auth",
+  "seed_url": "https://docs.tinyfish.ai",
+  "run_id": "31ce234e-27e6-4d12-94a0-99fd788feb7f",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "sign_in_flow",
+        "name": "Sign In Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on 'Get API Key' in the navigation bar."
+          },
+          {
+            "order": 2,
+            "action": "navigate",
+            "description": "User is redirected to the sign-in page at accounts.tinyfish.ai."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Entry point is accessible without login."
+          }
+        ],
+        "evidence": {
+          "notes": "The 'Get API Key' button in the header serves as the primary entry point to the authentication system.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai",
+            "https://accounts.tinyfish.ai/sign-in?redirect_url=https%3A%2F%2Fagent.tinyfish.ai%2Fsignup"
+          ],
+          "labels_seen": [
+            "Get API Key",
+            "Sign in to TinyFish",
+            "Email address",
+            "Password"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/api-keys",
+            "label": "Get API Key",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "sign_up_flow",
+        "name": "Sign Up Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Get API Key' card in the 'Get Started' section of the homepage."
+          },
+          {
+            "order": 2,
+            "action": "navigate",
+            "description": "User is directed to the sign-up page at accounts.tinyfish.ai."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Registration screen is accessible without login."
+          }
+        ],
+        "evidence": {
+          "notes": "A secondary call-to-action card specifically mentions signing up.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai",
+            "https://accounts.tinyfish.ai/sign-up#/?redirect_url=https://agent.tinyfish.ai/signup"
+          ],
+          "labels_seen": [
+            "Get API Key - Sign up and start automating",
+            "Create your account",
+            "Email address",
+            "Password"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/signup",
+            "label": "Get API Key - Sign up and start automating",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "password_reset_flow",
+        "name": "Password Reset Flow",
+        "steps": [],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No entry point found for password reset."
+          }
+        ],
+        "evidence": {
+          "notes": "No 'Forgot password' or 'Reset password' link was visible on the sign-in or sign-up pages, even when visually inspected via screenshot. This may be due to the authentication provider (Clerk) configuration.",
+          "urls_seen": [
+            "https://accounts.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": []
+        },
+        "confidence": 0,
+        "entry_points": [],
+        "intent_category": "auth"
+      }
+    ],
+    "notes": "The authentication flow is handled by accounts.tinyfish.ai (Clerk). While Sign In and Sign Up entry points are clearly present on the documentation homepage, a password reset mechanism was not found during the scouting process.",
+    "global_blockers": [
+      {
+        "type": "login_required",
+        "detail": "Accessing the actual agent dashboard or API key management requires a successful login."
+      }
+    ]
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "sign_in_flow",
+        "name": "Sign In Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click on 'Get API Key' in the navigation bar."
+          },
+          {
+            "order": 2,
+            "action": "navigate",
+            "description": "User is redirected to the sign-in page at accounts.tinyfish.ai."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Entry point is accessible without login."
+          }
+        ],
+        "evidence": {
+          "notes": "The 'Get API Key' button in the header serves as the primary entry point to the authentication system.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai",
+            "https://accounts.tinyfish.ai/sign-in?redirect_url=https%3A%2F%2Fagent.tinyfish.ai%2Fsignup"
+          ],
+          "labels_seen": [
+            "Get API Key",
+            "Sign in to TinyFish",
+            "Email address",
+            "Password"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/api-keys",
+            "label": "Get API Key",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "sign_up_flow",
+        "name": "Sign Up Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Get API Key' card in the 'Get Started' section of the homepage."
+          },
+          {
+            "order": 2,
+            "action": "navigate",
+            "description": "User is directed to the sign-up page at accounts.tinyfish.ai."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Registration screen is accessible without login."
+          }
+        ],
+        "evidence": {
+          "notes": "A secondary call-to-action card specifically mentions signing up.",
+          "urls_seen": [
+            "https://docs.tinyfish.ai",
+            "https://accounts.tinyfish.ai/sign-up#/?redirect_url=https://agent.tinyfish.ai/signup"
+          ],
+          "labels_seen": [
+            "Get API Key - Sign up and start automating",
+            "Create your account",
+            "Email address",
+            "Password"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/signup",
+            "label": "Get API Key - Sign up and start automating",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "password_reset_flow",
+        "name": "Password Reset Flow",
+        "steps": [],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No entry point found for password reset."
+          }
+        ],
+        "evidence": {
+          "notes": "No 'Forgot password' or 'Reset password' link was visible on the sign-in or sign-up pages, even when visually inspected via screenshot. This may be due to the authentication provider (Clerk) configuration.",
+          "urls_seen": [
+            "https://accounts.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": []
+        },
+        "confidence": 0,
+        "entry_points": [],
+        "intent_category": "auth"
+      }
+    ],
+    "notes": "The authentication flow is handled by accounts.tinyfish.ai (Clerk). While Sign In and Sign Up entry points are clearly present on the documentation homepage, a password reset mechanism was not found during the scouting process.",
+    "global_blockers": [
+      {
+        "type": "login_required",
+        "detail": "Accessing the actual agent dashboard or API key management requires a successful login."
+      }
+    ]
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "31ce234e-27e6-4d12-94a0-99fd788feb7f",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "sign_in_flow",
+              "name": "Sign In Flow",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click on 'Get API Key' in the navigation bar."
+                },
+                {
+                  "order": 2,
+                  "action": "navigate",
+                  "description": "User is redirected to the sign-in page at accounts.tinyfish.ai."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Entry point is accessible without login."
+                }
+              ],
+              "evidence": {
+                "notes": "The 'Get API Key' button in the header serves as the primary entry point to the authentication system.",
+                "urls_seen": [
+                  "https://docs.tinyfish.ai",
+                  "https://accounts.tinyfish.ai/sign-in?redirect_url=https%3A%2F%2Fagent.tinyfish.ai%2Fsignup"
+                ],
+                "labels_seen": [
+                  "Get API Key",
+                  "Sign in to TinyFish",
+                  "Email address",
+                  "Password"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/api-keys",
+                  "label": "Get API Key",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "sign_up_flow",
+              "name": "Sign Up Flow",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'Get API Key' card in the 'Get Started' section of the homepage."
+                },
+                {
+                  "order": 2,
+                  "action": "navigate",
+                  "description": "User is directed to the sign-up page at accounts.tinyfish.ai."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Registration screen is accessible without login."
+                }
+              ],
+              "evidence": {
+                "notes": "A secondary call-to-action card specifically mentions signing up.",
+                "urls_seen": [
+                  "https://docs.tinyfish.ai",
+                  "https://accounts.tinyfish.ai/sign-up#/?redirect_url=https://agent.tinyfish.ai/signup"
+                ],
+                "labels_seen": [
+                  "Get API Key - Sign up and start automating",
+                  "Create your account",
+                  "Email address",
+                  "Password"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/signup",
+                  "label": "Get API Key - Sign up and start automating",
+                  "location": "cta"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "password_reset_flow",
+              "name": "Password Reset Flow",
+              "steps": [],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "No entry point found for password reset."
+                }
+              ],
+              "evidence": {
+                "notes": "No 'Forgot password' or 'Reset password' link was visible on the sign-in or sign-up pages, even when visually inspected via screenshot. This may be due to the authentication provider (Clerk) configuration.",
+                "urls_seen": [
+                  "https://accounts.tinyfish.ai/sign-in"
+                ],
+                "labels_seen": []
+              },
+              "confidence": 0,
+              "entry_points": [],
+              "intent_category": "auth"
+            }
+          ],
+          "notes": "The authentication flow is handled by accounts.tinyfish.ai (Clerk). While Sign In and Sign Up entry points are clearly present on the documentation homepage, a password reset mechanism was not found during the scouting process.",
+          "global_blockers": [
+            {
+              "type": "login_required",
+              "detail": "Accessing the actual agent dashboard or API key management requires a successful login."
+            }
+          ]
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T04:23:14.490730+00:00"
+}

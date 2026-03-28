@@ -1,0 +1,222 @@
+{
+  "scout_id": "commerce",
+  "seed_url": "https://docs.tinyfish.ai",
+  "run_id": "fb9f7ea0-477d-4ae4-bbf6-c61bbd135bb0",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "saas_subscription_flow",
+        "name": "SaaS Subscription Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the pricing page to view available service plans."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a plan (e.g., Starter or Pro) by clicking 'Get Started'."
+          },
+          {
+            "order": 3,
+            "action": "navigate",
+            "description": "User is redirected to the authentication/signup page to create an account before billing."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Account creation is mandatory to reach the payment UI or complete a purchase."
+          }
+        ],
+        "evidence": {
+          "notes": "The site uses a typical SaaS commerce model where users select a plan and must create an account to proceed to payment and checkout.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/pricing",
+            "https://agent.tinyfish.ai/sign-up"
+          ],
+          "labels_seen": [
+            "PRICING",
+            "Pay-as-you-go",
+            "Starter",
+            "Pro",
+            "Get Started"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/pricing",
+            "label": "PRICING",
+            "location": "nav"
+          },
+          {
+            "url": "https://agent.tinyfish.ai/sign-up",
+            "label": "Get Started",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "commerce"
+      }
+    ],
+    "notes": "TinyFish is a commercial SaaS platform. The commerce flow is centered around subscription plans (Product Listing) on the Pricing page. The checkout process begins with account registration.",
+    "global_blockers": [
+      {
+        "type": "login_required",
+        "detail": "Most commercial interactions, including billing and payment UI, are behind a login wall."
+      }
+    ]
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "saas_subscription_flow",
+        "name": "SaaS Subscription Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the pricing page to view available service plans."
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Select a plan (e.g., Starter or Pro) by clicking 'Get Started'."
+          },
+          {
+            "order": 3,
+            "action": "navigate",
+            "description": "User is redirected to the authentication/signup page to create an account before billing."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Account creation is mandatory to reach the payment UI or complete a purchase."
+          }
+        ],
+        "evidence": {
+          "notes": "The site uses a typical SaaS commerce model where users select a plan and must create an account to proceed to payment and checkout.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/pricing",
+            "https://agent.tinyfish.ai/sign-up"
+          ],
+          "labels_seen": [
+            "PRICING",
+            "Pay-as-you-go",
+            "Starter",
+            "Pro",
+            "Get Started"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/pricing",
+            "label": "PRICING",
+            "location": "nav"
+          },
+          {
+            "url": "https://agent.tinyfish.ai/sign-up",
+            "label": "Get Started",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "commerce"
+      }
+    ],
+    "notes": "TinyFish is a commercial SaaS platform. The commerce flow is centered around subscription plans (Product Listing) on the Pricing page. The checkout process begins with account registration.",
+    "global_blockers": [
+      {
+        "type": "login_required",
+        "detail": "Most commercial interactions, including billing and payment UI, are behind a login wall."
+      }
+    ]
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "fb9f7ea0-477d-4ae4-bbf6-c61bbd135bb0",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "saas_subscription_flow",
+              "name": "SaaS Subscription Flow",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the pricing page to view available service plans."
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Select a plan (e.g., Starter or Pro) by clicking 'Get Started'."
+                },
+                {
+                  "order": 3,
+                  "action": "navigate",
+                  "description": "User is redirected to the authentication/signup page to create an account before billing."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "login_required",
+                  "detail": "Account creation is mandatory to reach the payment UI or complete a purchase."
+                }
+              ],
+              "evidence": {
+                "notes": "The site uses a typical SaaS commerce model where users select a plan and must create an account to proceed to payment and checkout.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/pricing",
+                  "https://agent.tinyfish.ai/sign-up"
+                ],
+                "labels_seen": [
+                  "PRICING",
+                  "Pay-as-you-go",
+                  "Starter",
+                  "Pro",
+                  "Get Started"
+                ]
+              },
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/pricing",
+                  "label": "PRICING",
+                  "location": "nav"
+                },
+                {
+                  "url": "https://agent.tinyfish.ai/sign-up",
+                  "label": "Get Started",
+                  "location": "cta"
+                }
+              ],
+              "intent_category": "commerce"
+            }
+          ],
+          "notes": "TinyFish is a commercial SaaS platform. The commerce flow is centered around subscription plans (Product Listing) on the Pricing page. The checkout process begins with account registration.",
+          "global_blockers": [
+            {
+              "type": "login_required",
+              "detail": "Most commercial interactions, including billing and payment UI, are behind a login wall."
+            }
+          ]
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T04:24:26.838993+00:00"
+}

@@ -3,27 +3,10 @@
 from __future__ import annotations
 
 import argparse
-import asyncio
 import json
-from datetime import datetime, timezone
-from pathlib import Path
 
-from dotenv import load_dotenv
-
-from assessment import build_assessment
-from run_batch import run_swarm, write_artifacts
-from scout_prompts import SCOUT_SPECS, list_scout_ids
-
-
-def _parse_scouts(arg: str | None) -> list[str]:
-    all_ids = list_scout_ids()
-    if arg is None or arg.strip() == "" or arg.strip().lower() == "all":
-        return all_ids
-    parts = [p.strip() for p in arg.split(",") if p.strip()]
-    unknown = [p for p in parts if p not in SCOUT_SPECS]
-    if unknown:
-        raise SystemExit(f"Unknown scout id(s): {unknown}. Valid: {all_ids}")
-    return parts
+from job import normalize_scout_ids, resolve_output_directory, run_job_for_url
+from scout_prompts import list_scout_ids
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -68,49 +51,31 @@ def main(argv: list[str] | None = None) -> int:
         help="Less console output (still writes JSON files).",
     )
     args = parser.parse_args(argv)
-    load_dotenv()
 
     seed_url = args.url.strip()
-    scout_ids = _parse_scouts(args.scouts)
-    if not args.out_dir:
-        from urllib.parse import urlparse
+    try:
+        scout_ids = normalize_scout_ids(args.scouts)
+    except ValueError as e:
+        raise SystemExit(str(e)) from e
 
-        host = urlparse(seed_url).netloc.replace(":", "_") or "site"
-        ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        out_dir = Path("artifacts") / f"{ts}_{host}"
-    else:
-        out_dir = Path(args.out_dir)
+    out_dir = resolve_output_directory(seed_url, args.out_dir or None)
 
     if not args.quiet:
         print(f"Seed URL: {seed_url}")
         print(f"Scouts: {scout_ids} (parallelism={args.parallelism})")
         print(f"Output: {out_dir.resolve()}")
 
-    def on_progress(sid: str, row: dict) -> None:
-        if args.quiet:
-            return
-        st = row.get("status")
-        nflows = 0
-        p = row.get("result_payload")
-        if isinstance(p, dict) and isinstance(p.get("flows"), list):
-            nflows = len(p["flows"])
-        print(f"  done scout={sid} status={st} flows={nflows} run_id={row.get('run_id')}")
-
-    artifacts = asyncio.run(
-        run_swarm(
-            seed_url,
-            scout_ids,
-            parallelism=args.parallelism,
-            max_attempts=args.max_attempts,
-            poll_max_wait_seconds=args.poll_timeout,
-            progress=on_progress,
-        )
+    result = run_job_for_url(
+        seed_url,
+        scouts=scout_ids,
+        out_dir=out_dir,
+        parallelism=args.parallelism,
+        max_attempts=args.max_attempts,
+        poll_timeout=args.poll_timeout,
+        quiet=args.quiet,
     )
-    write_artifacts(out_dir, seed_url, artifacts)
-    assess = build_assessment(artifacts)
-    (out_dir / "assessment.json").write_text(json.dumps(assess, indent=2), encoding="utf-8")
     if not args.quiet:
-        print(json.dumps(assess, indent=2))
+        print(json.dumps(result.assessment, indent=2))
     return 0
 
 
