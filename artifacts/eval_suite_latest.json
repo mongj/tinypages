@@ -1,0 +1,119 @@
+{
+  "mode": "all",
+  "recorded_at": "2026-03-28T15:01:53.685413+08:00",
+  "tasks": [
+    {
+      "task_id": "docs_tinyfish_nav",
+      "title": "TinyFish docs \u2014 verbatim Python install / API surface evidence",
+      "artifacts_dir": "C:\\Users\\chuaj\\space\\wikipages\\artifacts\\20260328T042139Z_docs.tinyfish.ai",
+      "baseline": {
+        "label": "baseline_no_artifacts",
+        "status": "COMPLETED",
+        "ok": true,
+        "num_of_steps": 54,
+        "duration_api_sec": 392.047,
+        "duration_client_sec": 415.64114040001004,
+        "run_id": "c7bfb6fe-fde4-455b-968b-129f3527de75",
+        "error_message": null,
+        "result_payload": {
+          "python_install": {
+            "source_page_url": "https://docs.tinyfish.ai/anti-bot-guide",
+            "commands_verbatim": [
+              "pip install tinyfish"
+            ]
+          },
+          "api_auth": {
+            "source_page_url": "https://docs.tinyfish.ai/authentication",
+            "section_heading": "REST API Authentication",
+            "evidence_quote": "All REST API requests require an API key passed in the X-API-Key header."
+          },
+          "limits": {
+            "source_page_url": null,
+            "strictest_numeric_limit": null,
+            "limit_description": null
+          },
+          "search_path": [
+            "https://docs.tinyfish.ai/",
+            "https://docs.tinyfish.ai/quick-start",
+            "https://docs.tinyfish.ai/authentication",
+            "https://docs.tinyfish.ai/cli",
+            "https://docs.tinyfish.ai/faq",
+            "https://docs.tinyfish.ai/error-codes",
+            "https://docs.tinyfish.ai/examples/bulk-requests-sync",
+            "https://docs.tinyfish.ai/api-reference",
+            "https://docs.tinyfish.ai/integrations/dify",
+            "https://docs.tinyfish.ai/examples/bulk-requests-async",
+            "https://docs.tinyfish.ai/ai-integration",
+            "https://docs.tinyfish.ai/cli/commands",
+            "https://docs.tinyfish.ai/mcp-integration",
+            "https://docs.tinyfish.ai/common-patterns",
+            "https://docs.tinyfish.ai/anti-bot-guide"
+          ],
+          "playbook_used_how": "IA hints correctly steered me away from pre-computed artifacts toward live doc exploration, which was essential since the install command was only found deep within the Anti-Bot Guide."
+        }
+      },
+      "playbook": {
+        "label": "with_scout_artifacts",
+        "status": "COMPLETED",
+        "ok": true,
+        "num_of_steps": 23,
+        "duration_api_sec": 154.49,
+        "duration_client_sec": 793.0208980000025,
+        "run_id": "ad418c34-b569-46c6-a0b1-aff548446d80",
+        "error_message": null,
+        "result_payload": {
+          "python_install": {
+            "source_page_url": "https://docs.tinyfish.ai/anti-bot-guide",
+            "commands_verbatim": [
+              "pip install tinyfish",
+              "export TINYFISH_API_KEY=\"your-api-key\""
+            ]
+          },
+          "api_auth": {
+            "source_page_url": "https://docs.tinyfish.ai/authentication",
+            "section_heading": "REST API Authentication",
+            "evidence_quote": "All REST API requests require an API key passed in the X-API-Key header."
+          },
+          "limits": {
+            "source_page_url": "https://docs.tinyfish.ai/examples/bulk-requests-sync",
+            "strictest_numeric_limit": 3,
+            "limit_description": "concurrent browser sessions"
+          },
+          "search_path": [
+            "https://docs.tinyfish.ai",
+            "https://docs.tinyfish.ai/quick-start",
+            "https://docs.tinyfish.ai/authentication",
+            "https://docs.tinyfish.ai/cli",
+            "search: pip",
+            "search: Python",
+            "https://docs.tinyfish.ai/anti-bot-guide",
+            "https://docs.tinyfish.ai/faq",
+            "https://docs.tinyfish.ai/error-codes",
+            "https://docs.tinyfish.ai/examples/bulk-requests-sync"
+          ],
+          "playbook_used_how": "The scouting flows highlighted the Authentication and Quick Start pages as key entry points, which helped me confirm the API key section heading and auth details before drilling into specific guides for the SDK installation commands and concurrency limits."
+        }
+      }
+    },
+    {
+      "task_id": "hckr_explore",
+      "title": "hckr_explore",
+      "error": "Task file not found: C:\\Users\\chuaj\\space\\wikipages\\scripts\\eval_tasks\\hckr_explore.json"
+    },
+    {
+      "task_id": "iras_gst_info",
+      "title": "iras_gst_info",
+      "error": "Task file not found: C:\\Users\\chuaj\\space\\wikipages\\scripts\\eval_tasks\\iras_gst_info.json"
+    },
+    {
+      "task_id": "tinyfish_pricing",
+      "title": "tinyfish_pricing",
+      "error": "Task file not found: C:\\Users\\chuaj\\space\\wikipages\\scripts\\eval_tasks\\tinyfish_pricing.json"
+    },
+    {
+      "task_id": "wikipedia_portal",
+      "title": "wikipedia_portal",
+      "error": "Task file not found: C:\\Users\\chuaj\\space\\wikipages\\scripts\\eval_tasks\\wikipedia_portal.json"
+    }
+  ]
+}

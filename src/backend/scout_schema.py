@@ -14,7 +14,7 @@ Return ONLY valid JSON (no markdown fences, no commentary) matching exactly this
     {
       "id": "stable_snake_case_id",
       "name": "Human-readable flow name",
-      "intent_category": "browse|buy|support|account|auth|commerce|legal|other",
+      "intent_category": "browse|buy|support|account|auth|commerce|legal|search|lead|content|dev|booking|locale|onboarding|careers|partner|community|location|configure|billing|investor|media|other",
       "confidence": 0.0,
       "entry_points": [
         {
