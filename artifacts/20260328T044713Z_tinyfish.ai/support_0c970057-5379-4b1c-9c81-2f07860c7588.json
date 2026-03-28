@@ -1,0 +1,582 @@
+{
+  "scout_id": "support",
+  "seed_url": "https://tinyfish.ai",
+  "run_id": "0c970057-5379-4b1c-9c81-2f07860c7588",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "support_contact",
+        "name": "Contact Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'CONTACT US' link in navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Contact form is publicly accessible via Typeform."
+          }
+        ],
+        "evidence": {
+          "notes": "Directs to a Typeform contact page. Email support also found in documentation.",
+          "urls_seen": [
+            "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+          ],
+          "labels_seen": [
+            "CONTACT US",
+            "support@tinyfish.ai"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+            "label": "CONTACT US",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "documentation",
+        "name": "View Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'DOCS' link in navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Documentation portal is public."
+          }
+        ],
+        "evidence": {
+          "notes": "The documentation is hosted on docs.mino.ai but linked directly from tinyfish.ai.",
+          "urls_seen": [
+            "https://docs.mino.ai/"
+          ],
+          "labels_seen": [
+            "DOCS",
+            "Mino.ai Documentation"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.mino.ai/",
+            "label": "DOCS",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "security_trust",
+        "name": "Security and Trust Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'TRUST' link in navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Overview is public; detailed reports may require access request."
+          }
+        ],
+        "evidence": {
+          "notes": "Vanta-powered trust center displaying compliance and security controls.",
+          "urls_seen": [
+            "https://trust.tinyfish.ai/"
+          ],
+          "labels_seen": [
+            "TRUST",
+            "Trust Center"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://trust.tinyfish.ai/",
+            "label": "TRUST",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "privacy_policy",
+        "name": "Privacy Policy",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'PRIVACY' link in footer"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Full privacy policy text is publicly available.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/privacy-policy"
+          ],
+          "labels_seen": [
+            "PRIVACY",
+            "Privacy Policy"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/privacy-policy",
+            "label": "PRIVACY",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "terms_of_use",
+        "name": "Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'TERMS' link in footer"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Terms of Use agreement is publicly available.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/terms-of-use"
+          ],
+          "labels_seen": [
+            "TERMS",
+            "Terms of Use"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/terms-of-use",
+            "label": "TERMS",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      }
+    ],
+    "notes": "No dedicated 'Status' page found in the primary IA; however, the Trust Center (trust.tinyfish.ai) provides real-time monitoring of security controls. Documentation is hosted on docs.mino.ai.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "support_contact",
+        "name": "Contact Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'CONTACT US' link in navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Contact form is publicly accessible via Typeform."
+          }
+        ],
+        "evidence": {
+          "notes": "Directs to a Typeform contact page. Email support also found in documentation.",
+          "urls_seen": [
+            "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+          ],
+          "labels_seen": [
+            "CONTACT US",
+            "support@tinyfish.ai"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+            "label": "CONTACT US",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "documentation",
+        "name": "View Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'DOCS' link in navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Documentation portal is public."
+          }
+        ],
+        "evidence": {
+          "notes": "The documentation is hosted on docs.mino.ai but linked directly from tinyfish.ai.",
+          "urls_seen": [
+            "https://docs.mino.ai/"
+          ],
+          "labels_seen": [
+            "DOCS",
+            "Mino.ai Documentation"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.mino.ai/",
+            "label": "DOCS",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "security_trust",
+        "name": "Security and Trust Center",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'TRUST' link in navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Overview is public; detailed reports may require access request."
+          }
+        ],
+        "evidence": {
+          "notes": "Vanta-powered trust center displaying compliance and security controls.",
+          "urls_seen": [
+            "https://trust.tinyfish.ai/"
+          ],
+          "labels_seen": [
+            "TRUST",
+            "Trust Center"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://trust.tinyfish.ai/",
+            "label": "TRUST",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "privacy_policy",
+        "name": "Privacy Policy",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'PRIVACY' link in footer"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Full privacy policy text is publicly available.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/privacy-policy"
+          ],
+          "labels_seen": [
+            "PRIVACY",
+            "Privacy Policy"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/privacy-policy",
+            "label": "PRIVACY",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "terms_of_use",
+        "name": "Terms of Use",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click 'TERMS' link in footer"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible."
+          }
+        ],
+        "evidence": {
+          "notes": "Terms of Use agreement is publicly available.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/terms-of-use"
+          ],
+          "labels_seen": [
+            "TERMS",
+            "Terms of Use"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/terms-of-use",
+            "label": "TERMS",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      }
+    ],
+    "notes": "No dedicated 'Status' page found in the primary IA; however, the Trust Center (trust.tinyfish.ai) provides real-time monitoring of security controls. Documentation is hosted on docs.mino.ai.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "0c970057-5379-4b1c-9c81-2f07860c7588",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "support_contact",
+              "name": "Contact Support",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'CONTACT US' link in navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Contact form is publicly accessible via Typeform."
+                }
+              ],
+              "evidence": {
+                "notes": "Directs to a Typeform contact page. Email support also found in documentation.",
+                "urls_seen": [
+                  "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+                ],
+                "labels_seen": [
+                  "CONTACT US",
+                  "support@tinyfish.ai"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+                  "label": "CONTACT US",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "documentation",
+              "name": "View Documentation",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'DOCS' link in navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Documentation portal is public."
+                }
+              ],
+              "evidence": {
+                "notes": "The documentation is hosted on docs.mino.ai but linked directly from tinyfish.ai.",
+                "urls_seen": [
+                  "https://docs.mino.ai/"
+                ],
+                "labels_seen": [
+                  "DOCS",
+                  "Mino.ai Documentation"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://docs.mino.ai/",
+                  "label": "DOCS",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "security_trust",
+              "name": "Security and Trust Center",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'TRUST' link in navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Overview is public; detailed reports may require access request."
+                }
+              ],
+              "evidence": {
+                "notes": "Vanta-powered trust center displaying compliance and security controls.",
+                "urls_seen": [
+                  "https://trust.tinyfish.ai/"
+                ],
+                "labels_seen": [
+                  "TRUST",
+                  "Trust Center"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://trust.tinyfish.ai/",
+                  "label": "TRUST",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "privacy_policy",
+              "name": "Privacy Policy",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'PRIVACY' link in footer"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "Full privacy policy text is publicly available.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/privacy-policy"
+                ],
+                "labels_seen": [
+                  "PRIVACY",
+                  "Privacy Policy"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/privacy-policy",
+                  "label": "PRIVACY",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "terms_of_use",
+              "name": "Terms of Use",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click 'TERMS' link in footer"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible."
+                }
+              ],
+              "evidence": {
+                "notes": "Terms of Use agreement is publicly available.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/terms-of-use"
+                ],
+                "labels_seen": [
+                  "TERMS",
+                  "Terms of Use"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/terms-of-use",
+                  "label": "TERMS",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            }
+          ],
+          "notes": "No dedicated 'Status' page found in the primary IA; however, the Trust Center (trust.tinyfish.ai) provides real-time monitoring of security controls. Documentation is hosted on docs.mino.ai.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T04:50:18.245470+00:00"
+}

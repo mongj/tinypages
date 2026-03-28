@@ -1,0 +1,339 @@
+{
+  "scout_id": "auth",
+  "seed_url": "https://tinyfish.ai",
+  "run_id": "f59cfe23-34c4-4f3d-8cde-5b21bbe6a02c",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "sign_in_flow",
+        "name": "Sign In Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'SIGN IN' link in the navigation bar."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "The sign-in page is hosted on accounts.tinyfish.ai using Clerk.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/sign-in",
+            "https://accounts.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": [
+            "SIGN IN"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/sign-in",
+            "label": "SIGN IN",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "sign_up_flow",
+        "name": "Sign Up / Register Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Start Free' button on the homepage or footer."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "The 'Start Free' link on the homepage leads to the Clerk-hosted sign-up page.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/sign-up",
+            "https://accounts.tinyfish.ai/sign-up"
+          ],
+          "labels_seen": [
+            "Start Free",
+            "Sign up"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/sign-up",
+            "label": "Start Free",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "playground_auth_required",
+        "name": "Playground Access Block",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'PLAYGROUND' link in the navigation bar."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Playground requires authentication and redirects to the sign-in page."
+          }
+        ],
+        "evidence": {
+          "notes": "Accessing the playground automatically redirects unauthenticated users to the sign-in screen.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/playground",
+            "https://accounts.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": [
+            "PLAYGROUND"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/playground",
+            "label": "PLAYGROUND",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "account"
+      }
+    ],
+    "notes": "No explicit 'Forgot password', 'Password reset', or 'Account recovery' entry points were found on the homepage or the initial state of the Clerk sign-in widget. The platform likely relies on Clerk's default passwordless or social authentication flows (Google, GitHub, Microsoft) for account management.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "sign_in_flow",
+        "name": "Sign In Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'SIGN IN' link in the navigation bar."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "The sign-in page is hosted on accounts.tinyfish.ai using Clerk.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/sign-in",
+            "https://accounts.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": [
+            "SIGN IN"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/sign-in",
+            "label": "SIGN IN",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "sign_up_flow",
+        "name": "Sign Up / Register Flow",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'Start Free' button on the homepage or footer."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "The 'Start Free' link on the homepage leads to the Clerk-hosted sign-up page.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/sign-up",
+            "https://accounts.tinyfish.ai/sign-up"
+          ],
+          "labels_seen": [
+            "Start Free",
+            "Sign up"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/sign-up",
+            "label": "Start Free",
+            "location": "cta"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "playground_auth_required",
+        "name": "Playground Access Block",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the 'PLAYGROUND' link in the navigation bar."
+          }
+        ],
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Playground requires authentication and redirects to the sign-in page."
+          }
+        ],
+        "evidence": {
+          "notes": "Accessing the playground automatically redirects unauthenticated users to the sign-in screen.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/playground",
+            "https://accounts.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": [
+            "PLAYGROUND"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/playground",
+            "label": "PLAYGROUND",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "account"
+      }
+    ],
+    "notes": "No explicit 'Forgot password', 'Password reset', or 'Account recovery' entry points were found on the homepage or the initial state of the Clerk sign-in widget. The platform likely relies on Clerk's default passwordless or social authentication flows (Google, GitHub, Microsoft) for account management.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "f59cfe23-34c4-4f3d-8cde-5b21bbe6a02c",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "sign_in_flow",
+              "name": "Sign In Flow",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'SIGN IN' link in the navigation bar."
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "The sign-in page is hosted on accounts.tinyfish.ai using Clerk.",
+                "urls_seen": [
+                  "https://agent.tinyfish.ai/sign-in",
+                  "https://accounts.tinyfish.ai/sign-in"
+                ],
+                "labels_seen": [
+                  "SIGN IN"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/sign-in",
+                  "label": "SIGN IN",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "sign_up_flow",
+              "name": "Sign Up / Register Flow",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'Start Free' button on the homepage or footer."
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "The 'Start Free' link on the homepage leads to the Clerk-hosted sign-up page.",
+                "urls_seen": [
+                  "https://agent.tinyfish.ai/sign-up",
+                  "https://accounts.tinyfish.ai/sign-up"
+                ],
+                "labels_seen": [
+                  "Start Free",
+                  "Sign up"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/sign-up",
+                  "label": "Start Free",
+                  "location": "cta"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "playground_auth_required",
+              "name": "Playground Access Block",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the 'PLAYGROUND' link in the navigation bar."
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "login_required",
+                  "detail": "Playground requires authentication and redirects to the sign-in page."
+                }
+              ],
+              "evidence": {
+                "notes": "Accessing the playground automatically redirects unauthenticated users to the sign-in screen.",
+                "urls_seen": [
+                  "https://agent.tinyfish.ai/playground",
+                  "https://accounts.tinyfish.ai/sign-in"
+                ],
+                "labels_seen": [
+                  "PLAYGROUND"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/playground",
+                  "label": "PLAYGROUND",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "account"
+            }
+          ],
+          "notes": "No explicit 'Forgot password', 'Password reset', or 'Account recovery' entry points were found on the homepage or the initial state of the Clerk sign-in widget. The platform likely relies on Clerk's default passwordless or social authentication flows (Google, GitHub, Microsoft) for account management.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T04:49:06.735558+00:00"
+}

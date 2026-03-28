@@ -1,0 +1,906 @@
+{
+  "scout_id": "nav",
+  "seed_url": "https://tinyfish.ai",
+  "run_id": "7d4ebf61-de36-4dec-a958-7c3cbe77c78f",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "browse_integrations",
+        "name": "Browse Integrations",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'INTEGRATIONS' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "The integrations page lists various platforms that TinyFish can connect with.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/integrations"
+          ],
+          "labels_seen": [
+            "INTEGRATIONS"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/integrations",
+            "label": "INTEGRATIONS",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "view_pricing",
+        "name": "View Pricing",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'PRICING' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "Pricing page displays different tiers of service including Free and Enterprise options.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/pricing"
+          ],
+          "labels_seen": [
+            "PRICING"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/pricing",
+            "label": "PRICING",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "buy"
+      },
+      {
+        "id": "read_docs",
+        "name": "Read Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'DOCS' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "External domain documentation host."
+          }
+        ],
+        "evidence": {
+          "notes": "The documentation link redirects to a separate domain (docs.mino.ai) containing technical guides.",
+          "urls_seen": [
+            "https://docs.mino.ai/"
+          ],
+          "labels_seen": [
+            "DOCS"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.mino.ai/",
+            "label": "DOCS",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "enterprise_solutions",
+        "name": "Explore Enterprise Solutions",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'ENTERPRISE' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "Enterprise page details solutions for specific industry sectors.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/enterprise"
+          ],
+          "labels_seen": [
+            "ENTERPRISE",
+            "Financial Services",
+            "Healthcare",
+            "Retail & Consumer Goods"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/enterprise",
+            "label": "ENTERPRISE",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "contact_sales_support",
+        "name": "Contact Sales or Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll to the footer of the page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click on 'Contact Us' link"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "External form host."
+          }
+        ],
+        "evidence": {
+          "notes": "Contact form is hosted on Typeform.",
+          "urls_seen": [
+            "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+          ],
+          "labels_seen": [
+            "Contact Us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+            "label": "Contact Us",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "user_sign_in",
+        "name": "User Sign In",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'SIGN IN' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "Sign-in page is located on the agent subdomain.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": [
+            "SIGN IN"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/sign-in",
+            "label": "SIGN IN",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "explore_playground",
+        "name": "Explore Playground",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'PLAYGROUND' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Accessing the playground usually redirects to sign-in or requires an active session."
+          }
+        ],
+        "evidence": {
+          "notes": "Playground allows users to interact with the agent platform.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/playground"
+          ],
+          "labels_seen": [
+            "PLAYGROUND"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/playground",
+            "label": "PLAYGROUND",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "The site uses a mix of subdomains (agent.tinyfish.ai) and external hosts (typeform, github, vimeo) for different functionalities.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "browse_integrations",
+        "name": "Browse Integrations",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'INTEGRATIONS' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "The integrations page lists various platforms that TinyFish can connect with.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/integrations"
+          ],
+          "labels_seen": [
+            "INTEGRATIONS"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/integrations",
+            "label": "INTEGRATIONS",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "view_pricing",
+        "name": "View Pricing",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'PRICING' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "Pricing page displays different tiers of service including Free and Enterprise options.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/pricing"
+          ],
+          "labels_seen": [
+            "PRICING"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/pricing",
+            "label": "PRICING",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "buy"
+      },
+      {
+        "id": "read_docs",
+        "name": "Read Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'DOCS' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "External domain documentation host."
+          }
+        ],
+        "evidence": {
+          "notes": "The documentation link redirects to a separate domain (docs.mino.ai) containing technical guides.",
+          "urls_seen": [
+            "https://docs.mino.ai/"
+          ],
+          "labels_seen": [
+            "DOCS"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://docs.mino.ai/",
+            "label": "DOCS",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "enterprise_solutions",
+        "name": "Explore Enterprise Solutions",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'ENTERPRISE' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "Enterprise page details solutions for specific industry sectors.",
+          "urls_seen": [
+            "https://www.tinyfish.ai/enterprise"
+          ],
+          "labels_seen": [
+            "ENTERPRISE",
+            "Financial Services",
+            "Healthcare",
+            "Retail & Consumer Goods"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.tinyfish.ai/enterprise",
+            "label": "ENTERPRISE",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "contact_sales_support",
+        "name": "Contact Sales or Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "scroll",
+            "description": "Scroll to the footer of the page"
+          },
+          {
+            "order": 3,
+            "action": "click",
+            "description": "Click on 'Contact Us' link"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "External form host."
+          }
+        ],
+        "evidence": {
+          "notes": "Contact form is hosted on Typeform.",
+          "urls_seen": [
+            "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+          ],
+          "labels_seen": [
+            "Contact Us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+            "label": "Contact Us",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "user_sign_in",
+        "name": "User Sign In",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'SIGN IN' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "No blockers encountered."
+          }
+        ],
+        "evidence": {
+          "notes": "Sign-in page is located on the agent subdomain.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/sign-in"
+          ],
+          "labels_seen": [
+            "SIGN IN"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/sign-in",
+            "label": "SIGN IN",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "auth"
+      },
+      {
+        "id": "explore_playground",
+        "name": "Explore Playground",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the homepage"
+          },
+          {
+            "order": 2,
+            "action": "click",
+            "description": "Click on 'PLAYGROUND' in the primary navigation bar"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "login_required",
+            "detail": "Accessing the playground usually redirects to sign-in or requires an active session."
+          }
+        ],
+        "evidence": {
+          "notes": "Playground allows users to interact with the agent platform.",
+          "urls_seen": [
+            "https://agent.tinyfish.ai/playground"
+          ],
+          "labels_seen": [
+            "PLAYGROUND"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://agent.tinyfish.ai/playground",
+            "label": "PLAYGROUND",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "The site uses a mix of subdomains (agent.tinyfish.ai) and external hosts (typeform, github, vimeo) for different functionalities.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "7d4ebf61-de36-4dec-a958-7c3cbe77c78f",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "browse_integrations",
+              "name": "Browse Integrations",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'INTEGRATIONS' in the primary navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "No blockers encountered."
+                }
+              ],
+              "evidence": {
+                "notes": "The integrations page lists various platforms that TinyFish can connect with.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/integrations"
+                ],
+                "labels_seen": [
+                  "INTEGRATIONS"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/integrations",
+                  "label": "INTEGRATIONS",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "view_pricing",
+              "name": "View Pricing",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'PRICING' in the primary navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "No blockers encountered."
+                }
+              ],
+              "evidence": {
+                "notes": "Pricing page displays different tiers of service including Free and Enterprise options.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/pricing"
+                ],
+                "labels_seen": [
+                  "PRICING"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/pricing",
+                  "label": "PRICING",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "buy"
+            },
+            {
+              "id": "read_docs",
+              "name": "Read Documentation",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'DOCS' in the primary navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "External domain documentation host."
+                }
+              ],
+              "evidence": {
+                "notes": "The documentation link redirects to a separate domain (docs.mino.ai) containing technical guides.",
+                "urls_seen": [
+                  "https://docs.mino.ai/"
+                ],
+                "labels_seen": [
+                  "DOCS"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://docs.mino.ai/",
+                  "label": "DOCS",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "enterprise_solutions",
+              "name": "Explore Enterprise Solutions",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'ENTERPRISE' in the primary navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "No blockers encountered."
+                }
+              ],
+              "evidence": {
+                "notes": "Enterprise page details solutions for specific industry sectors.",
+                "urls_seen": [
+                  "https://www.tinyfish.ai/enterprise"
+                ],
+                "labels_seen": [
+                  "ENTERPRISE",
+                  "Financial Services",
+                  "Healthcare",
+                  "Retail & Consumer Goods"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.tinyfish.ai/enterprise",
+                  "label": "ENTERPRISE",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "contact_sales_support",
+              "name": "Contact Sales or Support",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "scroll",
+                  "description": "Scroll to the footer of the page"
+                },
+                {
+                  "order": 3,
+                  "action": "click",
+                  "description": "Click on 'Contact Us' link"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "External form host."
+                }
+              ],
+              "evidence": {
+                "notes": "Contact form is hosted on Typeform.",
+                "urls_seen": [
+                  "https://tiny-fish.typeform.com/to/Ivk0DVRA"
+                ],
+                "labels_seen": [
+                  "Contact Us"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://tiny-fish.typeform.com/to/Ivk0DVRA",
+                  "label": "Contact Us",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "user_sign_in",
+              "name": "User Sign In",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'SIGN IN' in the primary navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "No blockers encountered."
+                }
+              ],
+              "evidence": {
+                "notes": "Sign-in page is located on the agent subdomain.",
+                "urls_seen": [
+                  "https://agent.tinyfish.ai/sign-in"
+                ],
+                "labels_seen": [
+                  "SIGN IN"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/sign-in",
+                  "label": "SIGN IN",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "auth"
+            },
+            {
+              "id": "explore_playground",
+              "name": "Explore Playground",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the homepage"
+                },
+                {
+                  "order": 2,
+                  "action": "click",
+                  "description": "Click on 'PLAYGROUND' in the primary navigation bar"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "login_required",
+                  "detail": "Accessing the playground usually redirects to sign-in or requires an active session."
+                }
+              ],
+              "evidence": {
+                "notes": "Playground allows users to interact with the agent platform.",
+                "urls_seen": [
+                  "https://agent.tinyfish.ai/playground"
+                ],
+                "labels_seen": [
+                  "PLAYGROUND"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://agent.tinyfish.ai/playground",
+                  "label": "PLAYGROUND",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "other"
+            }
+          ],
+          "notes": "The site uses a mix of subdomains (agent.tinyfish.ai) and external hosts (typeform, github, vimeo) for different functionalities.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T04:48:27.693892+00:00"
+}

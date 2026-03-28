@@ -1,0 +1,11 @@
+{
+  "seed_url": "https://tinyfish.ai",
+  "created_at": "2026-03-28T04:50:18.247808+00:00",
+  "scouts": [
+    "nav",
+    "auth",
+    "commerce",
+    "support"
+  ],
+  "tinyfish_execution": "queue_then_poll_runs_api"
+}
