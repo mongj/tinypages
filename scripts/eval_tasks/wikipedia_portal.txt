@@ -1,0 +1,15 @@
+Scouts documented that search and language links exist; they did not record search routing behavior, exhaustive language lists, or script diversity. Measure behavior on the live portal.
+
+1) Search routing — On www.wikipedia.org only, use the portal search to query exactly: Photosynthesis. Report initial_suggestions_count (dropdown suggestions before submit, 0 if none), whether you pressed Enter or clicked a suggestion, and final_url after the search resolves. Classify final_destination as "article_on_enwiki" | "portal_stays" | "disambiguation" | "other" with one-sentence justification.
+
+2) Language grid — Still on the portal homepage (reset to https://www.wikipedia.org/ if needed), count how many distinct Wikipedia language links are visible without scrolling below the first screen (viewport “above the fold”). List the first 10 as { "label": string, "url": string } in DOM order.
+
+3) Script diversity — Identify one visible language link whose visible label contains at least one character outside Basic Latin (A–Z, a–z, 0–9, punctuation). Return that label and URL; if none exist above the fold, say so explicitly.
+
+Return one JSON object only (no markdown fences), keys:
+- search: { "query": "Photosynthesis", "initial_suggestions_count": number, "submit_method": string, "final_url": string, "final_destination": string, "justification": string }
+- languages_above_fold: { "count": number, "sample": array of { "label": string, "url": string } }
+- non_latin: { "label": string, "url": string } | null
+- playbook_used_how: string
+
+Do not use the API or off-site tools; browser observation only.

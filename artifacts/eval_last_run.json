@@ -1,0 +1,125 @@
+{
+  "url": "https://tinyfish.ai",
+  "artifacts_dir": "C:\\Users\\chuaj\\space\\wikipages\\artifacts\\20260328T044713Z_tinyfish.ai",
+  "recorded_at": "2026-03-28T14:12:51.667871+08:00",
+  "arms": [
+    {
+      "label": "baseline_no_artifacts",
+      "status": "COMPLETED",
+      "ok": true,
+      "num_of_steps": 12,
+      "duration_api_sec": 113.164,
+      "duration_client_sec": 140.91514390001248,
+      "run_id": "f208c9d3-a017-46e6-a365-63fa33274428",
+      "error_message": null,
+      "result_payload": {
+        "pricing_page_url": "https://www.tinyfish.ai/pricing",
+        "plans": [
+          {
+            "plan_name": "Pay-as-you-go",
+            "billing_period": "pay per use",
+            "price_display": "$0.015/step",
+            "price_numeric": 0.015,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Starter",
+            "billing_period": "monthly",
+            "price_display": "$15.00/mo",
+            "price_numeric": 15,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Starter",
+            "billing_period": "yearly",
+            "price_display": "$14.00/mo",
+            "price_numeric": 14,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Pro",
+            "billing_period": "monthly",
+            "price_display": "$150.00/mo",
+            "price_numeric": 150,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Pro",
+            "billing_period": "yearly",
+            "price_display": "$132.00/mo",
+            "price_numeric": 132,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Enterprise",
+            "billing_period": "custom/contact",
+            "price_display": "Custom pricing",
+            "price_numeric": null,
+            "currency": null
+          }
+        ],
+        "custom_or_contact_pricing": false,
+        "notes": "Starter and Pro plans include a base number of steps (1,650 for Starter, 16,500 for Pro); additional steps are charged at $0.014/step and $0.012/step respectively. Yearly plans are billed annually. All plans include browser, proxy, LLM inference, and anti-bot features."
+      }
+    },
+    {
+      "label": "with_scout_artifacts",
+      "status": "COMPLETED",
+      "ok": true,
+      "num_of_steps": 14,
+      "duration_api_sec": 102.109,
+      "duration_client_sec": 149.89573079999536,
+      "run_id": "e34b1adc-a19f-46d2-91b6-dfceed64350b",
+      "error_message": null,
+      "result_payload": {
+        "pricing_page_url": "https://www.tinyfish.ai/pricing",
+        "plans": [
+          {
+            "plan_name": "Pay-as-you-go",
+            "billing_period": "per step",
+            "price_display": "$0.015/step",
+            "price_numeric": 0.015,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Starter",
+            "billing_period": "monthly",
+            "price_display": "$15.00/mo",
+            "price_numeric": 15,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Starter",
+            "billing_period": "yearly",
+            "price_display": "$14.00/mo",
+            "price_numeric": 14,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Pro",
+            "billing_period": "monthly",
+            "price_display": "$150.00/mo",
+            "price_numeric": 150,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Pro",
+            "billing_period": "yearly",
+            "price_display": "$132.00/mo",
+            "price_numeric": 132,
+            "currency": "USD"
+          },
+          {
+            "plan_name": "Enterprise",
+            "billing_period": "custom/contact",
+            "price_display": "Custom pricing",
+            "price_numeric": null,
+            "currency": null
+          }
+        ],
+        "custom_or_contact_pricing": true,
+        "notes": "Yearly plans are billed annually and offer savings compared to monthly billing (7% for Starter, 12% for Pro). Pay-as-you-go is billed per step with no monthly commitment. A 500-step free trial is available without a credit card."
+      }
+    }
+  ]
+}

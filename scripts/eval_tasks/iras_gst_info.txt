@@ -1,0 +1,16 @@
+Government IA scouts may list high-level tax areas; they do not embed current statutory percentages or fine-print about tax-inclusive display. You must locate authoritative IRAS (or clearly IRAS-owned) pages and quote live text.
+
+1) Standard rate — Find a page on iras.gov.sg that states the prevailing standard GST rate for Singapore as a percentage. Return rate_page_url, rate_percentage_numeric, and rate_evidence_quote (single sentence copied verbatim, ≤200 chars, must include the number).
+
+2) Display / pricing — Find a *different* IRAS page (or a distinct section on the same domain with a different URL path) that explains whether businesses must show GST-inclusive prices to consumers, or how display works. Summarize the rule in ≤40 words and include display_page_url plus one verbatim quote ≤200 chars.
+
+3) Independence — Confirm the two URLs are not identical; if you only find one page covering both, say so under "caveat".
+
+Return one JSON object only (no markdown fences), keys:
+- standard_rate: { "rate_page_url": string, "rate_percentage_numeric": number, "rate_evidence_quote": string }
+- consumer_display: { "display_page_url": string, "summary_under_40_words": string, "evidence_quote": string }
+- navigation_hops: array of strings (each major click from home toward the answers)
+- caveat: string | null
+- playbook_used_how: string
+
+Do not use third-party tax blogs; iras.gov.sg (or obvious IRAS PDFs hosted there) only.

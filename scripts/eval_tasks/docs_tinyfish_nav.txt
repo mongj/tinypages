@@ -1,0 +1,16 @@
+Scout artifacts may show where “Docs” or top sections live; they do not contain install commands, package names, or API endpoint paths. Pull those details from the live documentation only.
+
+1) Python client — Find the official instructions for installing the TinyFish Python SDK (or equivalent “Python quickstart”). Copy the exact shell command(s) as shown (e.g. pip/uv/poetry line), character-for-character including flags, up to 3 lines total if split across steps.
+
+2) API entry — Locate where the docs describe how to authenticate or set an API key for automation. Return the doc section title or heading and one verbatim sentence from that section (≤240 chars) that mentions the key or token.
+
+3) Rate limits or quotas — If the docs mention rate limits, burst limits, or concurrent runs, extract the strictest numeric limit stated (or null if not found) and the page URL where you found it.
+
+Return one JSON object only (no markdown fences), keys:
+- python_install: { "source_page_url": string, "commands_verbatim": array of strings }
+- api_auth: { "source_page_url": string, "section_heading": string, "evidence_quote": string }
+- limits: { "source_page_url": string | null, "strictest_numeric_limit": number | null, "limit_description": string | null }
+- search_path: array of strings (breadcrumbs: each nav click or search query you used—proves you navigated, not hallucinated)
+- playbook_used_how: string (one sentence on how IA hints sped you up, if they did)
+
+If Python install cannot be found without ambiguity, set python_install to null and list what you tried under "failed_after".

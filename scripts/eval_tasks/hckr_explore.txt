@@ -1,0 +1,15 @@
+After redirect, you are on the student org site. Scouts summarized program names (Friday Hacks, Hackerschool, etc.) but did not snapshot dated sessions, CFP wording, or core-team join flows. Extract what is on the site *today*.
+
+1) Next sessions — From event or schedule pages (Friday Hacks and/or Hackerschool), list the next TWO upcoming sessions that have both a title and a calendar date (or ISO-like date). If fewer than two exist, return all you find and say why. Do not invent dates.
+
+2) Hackathon cycle — Find Hack&Roll (or the flagship hackathon). State whether registration for the *next* edition is open, closed, or not advertised, with evidence (button label or copy snippet ≤120 chars) and URL.
+
+3) Contributing — Find a path for (a) proposing a talk or workshop, OR (b) joining the organizing core team. Return separate objects with entry_label, destination_url, and one requirement bullet quoted from the page if visible (e.g. “must be NUS student”).
+
+Return one JSON object only (no markdown fences), keys:
+- upcoming_sessions: array of { "series": "Friday Hacks" | "Hackerschool" | "other", "title": string, "date_or_time_text": string, "source_url": string }
+- hackathon: { "name": string, "registration_status": "open" | "closed" | "unknown", "evidence": string, "source_url": string }
+- contribute: { "talk_proposal": { "entry_label": string, "destination_url": string, "requirement_quote": string | null } | null, "core_team": { "entry_label": string, "destination_url": string, "requirement_quote": string | null } | null }
+- playbook_used_how: string
+
+If the live site structure differs from any static map you were given, note it under "site_drift".
