@@ -1,0 +1,894 @@
+{
+  "scout_id": "nav",
+  "seed_url": "https://hckr.cc",
+  "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "browse_friday_hacks",
+        "name": "Browse Friday Hacks talks",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Friday Hacks section from the homepage"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Primary event series for the organization.",
+          "urls_seen": [
+            "https://www.nushackers.org/fridayhacks"
+          ],
+          "labels_seen": [
+            "Friday Hacks",
+            "Interesting talks for hackers from all walks of life"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/fridayhacks",
+            "label": "Friday Hacks",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "browse_hackerschool_workshops",
+        "name": "Browse Hackerschool workshops",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Hackerschool workshops section from the homepage"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Educational workshop series.",
+          "urls_seen": [
+            "https://www.nushackers.org/hackerschool"
+          ],
+          "labels_seen": [
+            "Hackerschool",
+            "Hacking workshops for everyone"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/hackerschool",
+            "label": "Hackerschool",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "learn_about_organization",
+        "name": "Learn about NUS Hackers",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the About link in the navigation menu"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Informational page about the group mission and team.",
+          "urls_seen": [
+            "https://www.nushackers.org/about"
+          ],
+          "labels_seen": [
+            "About",
+            "The Core Team"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/about",
+            "label": "About",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      },
+      {
+        "id": "join_community",
+        "name": "Join the community",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Community link to find social media and mailing list options"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Links to external platforms like Telegram"
+          }
+        ],
+        "evidence": {
+          "notes": "Path for user engagement and support.",
+          "urls_seen": [
+            "https://www.nushackers.org/community"
+          ],
+          "labels_seen": [
+            "Community"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/community",
+            "label": "Community",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "access_archive",
+        "name": "Access resource archive",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click Archive in the navigation to view past talks and resources"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Repository of previous event materials.",
+          "urls_seen": [
+            "https://www.nushackers.org/archive"
+          ],
+          "labels_seen": [
+            "Archive"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/archive",
+            "label": "Archive",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "contact_sales_support",
+        "name": "Contact for inquiries",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click Contact in the navigation"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Provides contact information for support or inquiries.",
+          "urls_seen": [
+            "https://www.nushackers.org/contact"
+          ],
+          "labels_seen": [
+            "Contact"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/contact",
+            "label": "Contact",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "apply_to_core_team",
+        "name": "Apply to join core team",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click Join Us to view recruitment information"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Recruitment path for internal membership.",
+          "urls_seen": [
+            "https://www.nushackers.org/join-coreteam"
+          ],
+          "labels_seen": [
+            "Join Us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/join-coreteam",
+            "label": "Join Us",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      },
+      {
+        "id": "participate_hacknroll",
+        "name": "Participate in Hack&Roll hackathon",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Hack&Roll CTA to navigate to the external hackathon site"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "External navigation"
+          }
+        ],
+        "evidence": {
+          "notes": "Dedicated external site for the annual hackathon.",
+          "urls_seen": [
+            "https://hacknroll.nushackers.org/"
+          ],
+          "labels_seen": [
+            "Hack&Roll",
+            "24-hour hackathon for students"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://hacknroll.nushackers.org/",
+            "label": "Hack&Roll",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "The site is primarily informational and community-driven, lacking commerce or complex authentication for general browsing. Navigation is flat and accessible via a clear header and homepage hero blocks.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "browse_friday_hacks",
+        "name": "Browse Friday Hacks talks",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Friday Hacks section from the homepage"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Primary event series for the organization.",
+          "urls_seen": [
+            "https://www.nushackers.org/fridayhacks"
+          ],
+          "labels_seen": [
+            "Friday Hacks",
+            "Interesting talks for hackers from all walks of life"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/fridayhacks",
+            "label": "Friday Hacks",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "browse_hackerschool_workshops",
+        "name": "Browse Hackerschool workshops",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Hackerschool workshops section from the homepage"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Educational workshop series.",
+          "urls_seen": [
+            "https://www.nushackers.org/hackerschool"
+          ],
+          "labels_seen": [
+            "Hackerschool",
+            "Hacking workshops for everyone"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/hackerschool",
+            "label": "Hackerschool",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "learn_about_organization",
+        "name": "Learn about NUS Hackers",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the About link in the navigation menu"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Informational page about the group mission and team.",
+          "urls_seen": [
+            "https://www.nushackers.org/about"
+          ],
+          "labels_seen": [
+            "About",
+            "The Core Team"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/about",
+            "label": "About",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      },
+      {
+        "id": "join_community",
+        "name": "Join the community",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Community link to find social media and mailing list options"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Links to external platforms like Telegram"
+          }
+        ],
+        "evidence": {
+          "notes": "Path for user engagement and support.",
+          "urls_seen": [
+            "https://www.nushackers.org/community"
+          ],
+          "labels_seen": [
+            "Community"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/community",
+            "label": "Community",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "access_archive",
+        "name": "Access resource archive",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click Archive in the navigation to view past talks and resources"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Repository of previous event materials.",
+          "urls_seen": [
+            "https://www.nushackers.org/archive"
+          ],
+          "labels_seen": [
+            "Archive"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/archive",
+            "label": "Archive",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "browse"
+      },
+      {
+        "id": "contact_sales_support",
+        "name": "Contact for inquiries",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click Contact in the navigation"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Provides contact information for support or inquiries.",
+          "urls_seen": [
+            "https://www.nushackers.org/contact"
+          ],
+          "labels_seen": [
+            "Contact"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/contact",
+            "label": "Contact",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "apply_to_core_team",
+        "name": "Apply to join core team",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click Join Us to view recruitment information"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "Publicly accessible"
+          }
+        ],
+        "evidence": {
+          "notes": "Recruitment path for internal membership.",
+          "urls_seen": [
+            "https://www.nushackers.org/join-coreteam"
+          ],
+          "labels_seen": [
+            "Join Us"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/join-coreteam",
+            "label": "Join Us",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      },
+      {
+        "id": "participate_hacknroll",
+        "name": "Participate in Hack&Roll hackathon",
+        "steps": [
+          {
+            "order": 1,
+            "action": "click",
+            "description": "Click the Hack&Roll CTA to navigate to the external hackathon site"
+          }
+        ],
+        "blockers": [
+          {
+            "type": "none",
+            "detail": "External navigation"
+          }
+        ],
+        "evidence": {
+          "notes": "Dedicated external site for the annual hackathon.",
+          "urls_seen": [
+            "https://hacknroll.nushackers.org/"
+          ],
+          "labels_seen": [
+            "Hack&Roll",
+            "24-hour hackathon for students"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://hacknroll.nushackers.org/",
+            "label": "Hack&Roll",
+            "location": "hero"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "The site is primarily informational and community-driven, lacking commerce or complex authentication for general browsing. Navigation is flat and accessible via a clear header and homepage hero blocks.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "browse_friday_hacks",
+              "name": "Browse Friday Hacks talks",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Friday Hacks section from the homepage"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible"
+                }
+              ],
+              "evidence": {
+                "notes": "Primary event series for the organization.",
+                "urls_seen": [
+                  "https://www.nushackers.org/fridayhacks"
+                ],
+                "labels_seen": [
+                  "Friday Hacks",
+                  "Interesting talks for hackers from all walks of life"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/fridayhacks",
+                  "label": "Friday Hacks",
+                  "location": "hero"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "browse_hackerschool_workshops",
+              "name": "Browse Hackerschool workshops",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Hackerschool workshops section from the homepage"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible"
+                }
+              ],
+              "evidence": {
+                "notes": "Educational workshop series.",
+                "urls_seen": [
+                  "https://www.nushackers.org/hackerschool"
+                ],
+                "labels_seen": [
+                  "Hackerschool",
+                  "Hacking workshops for everyone"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/hackerschool",
+                  "label": "Hackerschool",
+                  "location": "hero"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "learn_about_organization",
+              "name": "Learn about NUS Hackers",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the About link in the navigation menu"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible"
+                }
+              ],
+              "evidence": {
+                "notes": "Informational page about the group mission and team.",
+                "urls_seen": [
+                  "https://www.nushackers.org/about"
+                ],
+                "labels_seen": [
+                  "About",
+                  "The Core Team"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/about",
+                  "label": "About",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "other"
+            },
+            {
+              "id": "join_community",
+              "name": "Join the community",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the Community link to find social media and mailing list options"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Links to external platforms like Telegram"
+                }
+              ],
+              "evidence": {
+                "notes": "Path for user engagement and support.",
+                "urls_seen": [
+                  "https://www.nushackers.org/community"
+                ],
+                "labels_seen": [
+                  "Community"
+                ]
+              },
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/community",
+                  "label": "Community",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "access_archive",
+              "name": "Access resource archive",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click Archive in the navigation to view past talks and resources"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible"
+                }
+              ],
+              "evidence": {
+                "notes": "Repository of previous event materials.",
+                "urls_seen": [
+                  "https://www.nushackers.org/archive"
+                ],
+                "labels_seen": [
+                  "Archive"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/archive",
+                  "label": "Archive",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "browse"
+            },
+            {
+              "id": "contact_sales_support",
+              "name": "Contact for inquiries",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click Contact in the navigation"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible"
+                }
+              ],
+              "evidence": {
+                "notes": "Provides contact information for support or inquiries.",
+                "urls_seen": [
+                  "https://www.nushackers.org/contact"
+                ],
+                "labels_seen": [
+                  "Contact"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/contact",
+                  "label": "Contact",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "apply_to_core_team",
+              "name": "Apply to join core team",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click Join Us to view recruitment information"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "Publicly accessible"
+                }
+              ],
+              "evidence": {
+                "notes": "Recruitment path for internal membership.",
+                "urls_seen": [
+                  "https://www.nushackers.org/join-coreteam"
+                ],
+                "labels_seen": [
+                  "Join Us"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/join-coreteam",
+                  "label": "Join Us",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "other"
+            },
+            {
+              "id": "participate_hacknroll",
+              "name": "Participate in Hack&Roll hackathon",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "click",
+                  "description": "Click the Hack&Roll CTA to navigate to the external hackathon site"
+                }
+              ],
+              "blockers": [
+                {
+                  "type": "none",
+                  "detail": "External navigation"
+                }
+              ],
+              "evidence": {
+                "notes": "Dedicated external site for the annual hackathon.",
+                "urls_seen": [
+                  "https://hacknroll.nushackers.org/"
+                ],
+                "labels_seen": [
+                  "Hack&Roll",
+                  "24-hour hackathon for students"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://hacknroll.nushackers.org/",
+                  "label": "Hack&Roll",
+                  "location": "hero"
+                }
+              ],
+              "intent_category": "other"
+            }
+          ],
+          "notes": "The site is primarily informational and community-driven, lacking commerce or complex authentication for general browsing. Navigation is flat and accessible via a clear header and homepage hero blocks.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T05:12:27.361095+00:00"
+}

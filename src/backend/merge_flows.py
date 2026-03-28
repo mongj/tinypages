@@ -22,6 +22,27 @@ def _flow_dedupe_key(flow: dict[str, Any]) -> str:
     return f"{name}|{first_url}|{fid}"
 
 
+def _site_understanding_from_artifacts(artifacts: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """Pick ``site_understanding`` from the ``purpose`` scout payload, if present."""
+    chosen: dict[str, Any] | None = None
+    run_id: Any = None
+    for art in artifacts:
+        if str(art.get("scout_id", "")) != "purpose":
+            continue
+        p = art.get("result_payload")
+        if not isinstance(p, dict):
+            continue
+        su = p.get("site_understanding")
+        if not isinstance(su, dict):
+            continue
+        chosen = dict(su)
+        run_id = art.get("run_id")
+    if chosen is None:
+        return None
+    chosen["_provenance"] = {"scout_id": "purpose", "run_id": run_id}
+    return chosen
+
+
 def merge_flow_artifacts(artifacts: list[dict[str, Any]]) -> dict[str, Any]:
     """
     artifacts: list of saved run records, each with optional parsed.result_payload (dict with flows).
@@ -55,9 +76,12 @@ def merge_flow_artifacts(artifacts: list[dict[str, Any]]) -> dict[str, Any]:
         p = art.get("result_payload")
         if isinstance(p, dict) and isinstance(p.get("notes"), str) and p["notes"].strip():
             global_notes.append(f"[{art.get('scout_id')}]: {p['notes'].strip()}")
-    return {
-        "merged_flows": merged_flows,
-        "merge_count": len(merged_flows),
-        "source_runs": len(artifacts),
-        "collected_notes": global_notes,
-    }
+    site_understanding = _site_understanding_from_artifacts(artifacts)
+    out: dict[str, Any] = {}
+    if site_understanding is not None:
+        out["site_understanding"] = site_understanding
+    out["merged_flows"] = merged_flows
+    out["merge_count"] = len(merged_flows)
+    out["source_runs"] = len(artifacts)
+    out["collected_notes"] = global_notes
+    return out

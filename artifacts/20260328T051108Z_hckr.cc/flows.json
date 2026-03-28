@@ -1,0 +1,542 @@
+{
+  "site_understanding": {
+    "evidence": {
+      "notes": "The site redirects from hckr.cc to nushackers.org. The organization is primarily based at the National University of Singapore.",
+      "urls_seen": [
+        "https://hckr.cc",
+        "https://www.nushackers.org/",
+        "https://www.nushackers.org/about",
+        "https://www.nushackers.org/community",
+        "https://www.nushackers.org/archive"
+      ],
+      "labels_seen": [
+        "About",
+        "Community",
+        "Archive",
+        "Friday Hacks",
+        "Hackerschool",
+        "Hack&Roll",
+        "Join Us",
+        "Spreading hacker culture",
+        "Upcoming events",
+        "Featured Articles"
+      ]
+    },
+    "offerings": [
+      "Friday Hacks (technical talks)",
+      "Hackerschool (technical workshops)",
+      "Hack&Roll (24-hour hackathon)",
+      "Hackers Toolbox (core technical skills training)",
+      "Technical resources (slides, handouts, video recordings)",
+      "Community discussion groups (Discord, Telegram, Mailing lists)"
+    ],
+    "confidence": 1,
+    "one_line_summary": "NUS Hackers is a student-led organization at the National University of Singapore dedicated to spreading hacker culture through technical talks, workshops, and hackathons.",
+    "primary_audiences": [
+      "NUS students",
+      "Software developers",
+      "Tech enthusiasts",
+      "Computer Science students",
+      "Hackers"
+    ],
+    "what_the_site_does": "The site acts as a central hub for the NUS Hackers community, providing schedules and information for recurring technical events like Friday Hacks and Hackerschool. It also serves as a comprehensive educational repository, hosting an archive of video recordings, slides, and handouts from past sessions on various software development and computer science topics.\n\nAdditionally, it provides platforms for community connection via links to social media and messaging groups, and information on how students can get involved in the organization's core activities such as joining the core team or participating in their flagship hackathon, Hack&Roll.",
+    "organization_or_brand": "NUS Hackers",
+    "_provenance": {
+      "scout_id": "purpose",
+      "run_id": "cc58abe2-afa3-4364-8979-9d4b89a8d36d"
+    }
+  },
+  "merged_flows": [
+    {
+      "id": "browse_friday_hacks",
+      "name": "Browse Friday Hacks talks",
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Friday Hacks section from the homepage"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible"
+        }
+      ],
+      "evidence": {
+        "notes": "Primary event series for the organization.",
+        "urls_seen": [
+          "https://www.nushackers.org/fridayhacks"
+        ],
+        "labels_seen": [
+          "Friday Hacks",
+          "Interesting talks for hackers from all walks of life"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/fridayhacks",
+          "label": "Friday Hacks",
+          "location": "hero"
+        }
+      ],
+      "intent_category": "browse",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "browse_hackerschool_workshops",
+      "name": "Browse Hackerschool workshops",
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Hackerschool workshops section from the homepage"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible"
+        }
+      ],
+      "evidence": {
+        "notes": "Educational workshop series.",
+        "urls_seen": [
+          "https://www.nushackers.org/hackerschool"
+        ],
+        "labels_seen": [
+          "Hackerschool",
+          "Hacking workshops for everyone"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/hackerschool",
+          "label": "Hackerschool",
+          "location": "hero"
+        }
+      ],
+      "intent_category": "browse",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "learn_about_organization",
+      "name": "Learn about NUS Hackers",
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the About link in the navigation menu"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible"
+        }
+      ],
+      "evidence": {
+        "notes": "Informational page about the group mission and team.",
+        "urls_seen": [
+          "https://www.nushackers.org/about"
+        ],
+        "labels_seen": [
+          "About",
+          "The Core Team"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/about",
+          "label": "About",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "other",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "join_community",
+      "name": "Join the community",
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the Community link to find social media and mailing list options"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Links to external platforms like Telegram"
+        }
+      ],
+      "evidence": {
+        "notes": "Path for user engagement and support.",
+        "urls_seen": [
+          "https://www.nushackers.org/community"
+        ],
+        "labels_seen": [
+          "Community"
+        ]
+      },
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/community",
+          "label": "Community",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "support",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "access_archive",
+      "name": "Access resource archive",
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click Archive in the navigation to view past talks and resources"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible"
+        }
+      ],
+      "evidence": {
+        "notes": "Repository of previous event materials.",
+        "urls_seen": [
+          "https://www.nushackers.org/archive"
+        ],
+        "labels_seen": [
+          "Archive"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/archive",
+          "label": "Archive",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "browse",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "contact_sales_support",
+      "name": "Contact for inquiries",
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click Contact in the navigation"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible"
+        }
+      ],
+      "evidence": {
+        "notes": "Provides contact information for support or inquiries.",
+        "urls_seen": [
+          "https://www.nushackers.org/contact"
+        ],
+        "labels_seen": [
+          "Contact"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/contact",
+          "label": "Contact",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "support",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "apply_to_core_team",
+      "name": "Apply to join core team",
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click Join Us to view recruitment information"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "Publicly accessible"
+        }
+      ],
+      "evidence": {
+        "notes": "Recruitment path for internal membership.",
+        "urls_seen": [
+          "https://www.nushackers.org/join-coreteam"
+        ],
+        "labels_seen": [
+          "Join Us"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/join-coreteam",
+          "label": "Join Us",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "other",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "participate_hacknroll",
+      "name": "Participate in Hack&Roll hackathon",
+      "steps": [
+        {
+          "order": 1,
+          "action": "click",
+          "description": "Click the Hack&Roll CTA to navigate to the external hackathon site"
+        }
+      ],
+      "blockers": [
+        {
+          "type": "none",
+          "detail": "External navigation"
+        }
+      ],
+      "evidence": {
+        "notes": "Dedicated external site for the annual hackathon.",
+        "urls_seen": [
+          "https://hacknroll.nushackers.org/"
+        ],
+        "labels_seen": [
+          "Hack&Roll",
+          "24-hour hackathon for students"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://hacknroll.nushackers.org/",
+          "label": "Hack&Roll",
+          "location": "hero"
+        }
+      ],
+      "intent_category": "other",
+      "_provenance": [
+        {
+          "scout_id": "nav",
+          "run_id": "4b345276-8e39-4c4a-b234-3feb495d8653"
+        }
+      ]
+    },
+    {
+      "id": "contact_support",
+      "name": "Contact Support",
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the contact page to find support email and community links."
+        }
+      ],
+      "blockers": [],
+      "evidence": {
+        "notes": "The contact page provides a direct email for the core team and links to the community.",
+        "urls_seen": [
+          "https://www.nushackers.org/contact"
+        ],
+        "labels_seen": [
+          "Contact",
+          "coreteam [at] nushackers [fullstop] org"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/contact",
+          "label": "Contact",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "support",
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "9e1a0a83-ae5a-46b9-b97b-c0201c373073"
+        }
+      ]
+    },
+    {
+      "id": "legal_conduct",
+      "name": "Event Code of Conduct",
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the code of conduct page to view trust and safety guidelines."
+        }
+      ],
+      "blockers": [],
+      "evidence": {
+        "notes": "This page serves as the primary legal/trust document for events organized by the group.",
+        "urls_seen": [
+          "https://www.nushackers.org/conduct/"
+        ],
+        "labels_seen": [
+          "Event code of conduct",
+          "Conference Code of Conduct"
+        ]
+      },
+      "confidence": 1,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/conduct/",
+          "label": "Event code of conduct",
+          "location": "footer"
+        }
+      ],
+      "intent_category": "legal",
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "9e1a0a83-ae5a-46b9-b97b-c0201c373073"
+        }
+      ]
+    },
+    {
+      "id": "docs_hacker_school",
+      "name": "Hacker School Documentation",
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the Hacker School page for educational resources and workshops."
+        }
+      ],
+      "blockers": [],
+      "evidence": {
+        "notes": "Provides documentation and materials for workshops.",
+        "urls_seen": [
+          "https://www.nushackers.org/hackerschool"
+        ],
+        "labels_seen": [
+          "Hackerschool",
+          "Hacking workshops for everyone"
+        ]
+      },
+      "confidence": 0.8,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/hackerschool",
+          "label": "Hackerschool",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "support",
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "9e1a0a83-ae5a-46b9-b97b-c0201c373073"
+        }
+      ]
+    },
+    {
+      "id": "about_docs",
+      "name": "About and Mission",
+      "steps": [
+        {
+          "order": 1,
+          "action": "navigate",
+          "description": "Navigate to the About page to learn about the organization and its team."
+        }
+      ],
+      "blockers": [],
+      "evidence": {
+        "notes": "Information about the organization's structure and goals.",
+        "urls_seen": [
+          "https://www.nushackers.org/about"
+        ],
+        "labels_seen": [
+          "About",
+          "Who are we?"
+        ]
+      },
+      "confidence": 0.9,
+      "entry_points": [
+        {
+          "url": "https://www.nushackers.org/about",
+          "label": "About",
+          "location": "nav"
+        }
+      ],
+      "intent_category": "other",
+      "_provenance": [
+        {
+          "scout_id": "support",
+          "run_id": "9e1a0a83-ae5a-46b9-b97b-c0201c373073"
+        }
+      ]
+    }
+  ],
+  "merge_count": 12,
+  "source_runs": 5,
+  "collected_notes": [
+    "[purpose]: The site is informative and focused on technical community building and education. Navigation is straightforward with no significant blockers encountered.",
+    "[nav]: The site is primarily informational and community-driven, lacking commerce or complex authentication for general browsing. Navigation is flat and accessible via a clear header and homepage hero blocks.",
+    "[auth]: The website https://hckr.cc redirects to https://www.nushackers.org, which is a static informational site for a student organization. Thorough scouting of the homepage, sub-sites (Hack&Roll), community pages, and common authentication paths (e.g., /login, /admin, /signup) revealed no native sign-in, sign-up, or account-related entry points. Registration for events like Hack&Roll is mentioned in FAQs but typically occurs through external platforms like Devpost or Google Forms, and is currently closed. No internal member portal or dashboard was found.",
+    "[commerce]: The website hckr.cc redirects to nushackers.org, which is the official site for the NUS Hackers student community. The site primarily serves as an informational portal for their workshops (Hackerschool), hackathons (Hack&Roll), and community events (Friday Hacks). All events are described as free and open to the public, and no product listings, shopping carts, or checkout flows were identified during the scout. The site does not contain commercial elements.",
+    "[support]: Privacy Policy, Terms of Service, Security, and Status pages were not found in the main IA. The site appears to be for a student organization (NUS Hackers), and legal/trust information is primarily contained within the 'Event code of conduct' page."
+  ],
+  "seed_url": "https://hckr.cc",
+  "created_at": "2026-03-28T05:23:30.053484+00:00"
+}

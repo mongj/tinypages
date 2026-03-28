@@ -2,12 +2,23 @@
 
 from __future__ import annotations
 
-from scout_schema import OUTPUT_SCHEMA, SHARED_RULES
+from scout_schema import OUTPUT_SCHEMA, PURPOSE_OUTPUT_SCHEMA, SHARED_RULES
 
 
-def _goal(intro: str) -> str:
-    parts = [intro.strip(), "", OUTPUT_SCHEMA, "", SHARED_RULES]
+def _goal(intro: str, schema: str = OUTPUT_SCHEMA) -> str:
+    parts = [intro.strip(), "", schema, "", SHARED_RULES]
     return "\n".join(parts)
+
+
+def goal_purpose(seed_url: str) -> str:
+    return _goal(
+        f"""You start at: {seed_url}
+Scout focus — site purpose and context (for downstream AI agents, not user journeys):
+- Read the homepage and shallow linked pages only; infer what the organization offers and who it serves.
+- Ground claims in visible copy, navigation labels, and page structure.
+- Output summary metadata only; keep flows as an empty array [].""",
+        PURPOSE_OUTPUT_SCHEMA,
+    )
 
 
 def goal_nav_ia(seed_url: str) -> str:
@@ -52,6 +63,7 @@ Scout focus — support, trust, and legal:
 
 
 SCOUT_SPECS: dict[str, tuple[str, str]] = {
+    "purpose": ("Site purpose / context", goal_purpose),
     "nav": ("Navigation / IA", goal_nav_ia),
     "auth": ("Account / auth", goal_account_auth),
     "commerce": ("Commerce", goal_commerce),

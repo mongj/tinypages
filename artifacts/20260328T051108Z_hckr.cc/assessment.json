@@ -1,0 +1,19 @@
+{
+  "scout_count": 5,
+  "status_histogram": {
+    "COMPLETED": 5
+  },
+  "validation_issue_histogram": {},
+  "attempts_by_browser_profile": {
+    "lite": 5
+  },
+  "flows_per_scout": [
+    0,
+    8,
+    0,
+    0,
+    4
+  ],
+  "total_flows_extracted": 12,
+  "notes": "Use eval/rubric.json expected_flows to manually mark found/missed/wrong per site, then compute recall against total_flows_extracted and merged flows.json."
+}

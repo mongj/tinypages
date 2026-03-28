@@ -1,0 +1,414 @@
+{
+  "scout_id": "support",
+  "seed_url": "https://hckr.cc",
+  "run_id": "9e1a0a83-ae5a-46b9-b97b-c0201c373073",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [
+      {
+        "id": "contact_support",
+        "name": "Contact Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the contact page to find support email and community links."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "The contact page provides a direct email for the core team and links to the community.",
+          "urls_seen": [
+            "https://www.nushackers.org/contact"
+          ],
+          "labels_seen": [
+            "Contact",
+            "coreteam [at] nushackers [fullstop] org"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/contact",
+            "label": "Contact",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "legal_conduct",
+        "name": "Event Code of Conduct",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the code of conduct page to view trust and safety guidelines."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "This page serves as the primary legal/trust document for events organized by the group.",
+          "urls_seen": [
+            "https://www.nushackers.org/conduct/"
+          ],
+          "labels_seen": [
+            "Event code of conduct",
+            "Conference Code of Conduct"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/conduct/",
+            "label": "Event code of conduct",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "docs_hacker_school",
+        "name": "Hacker School Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Hacker School page for educational resources and workshops."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Provides documentation and materials for workshops.",
+          "urls_seen": [
+            "https://www.nushackers.org/hackerschool"
+          ],
+          "labels_seen": [
+            "Hackerschool",
+            "Hacking workshops for everyone"
+          ]
+        },
+        "confidence": 0.8,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/hackerschool",
+            "label": "Hackerschool",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "about_docs",
+        "name": "About and Mission",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the About page to learn about the organization and its team."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Information about the organization's structure and goals.",
+          "urls_seen": [
+            "https://www.nushackers.org/about"
+          ],
+          "labels_seen": [
+            "About",
+            "Who are we?"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/about",
+            "label": "About",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "Privacy Policy, Terms of Service, Security, and Status pages were not found in the main IA. The site appears to be for a student organization (NUS Hackers), and legal/trust information is primarily contained within the 'Event code of conduct' page.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [
+      {
+        "id": "contact_support",
+        "name": "Contact Support",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the contact page to find support email and community links."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "The contact page provides a direct email for the core team and links to the community.",
+          "urls_seen": [
+            "https://www.nushackers.org/contact"
+          ],
+          "labels_seen": [
+            "Contact",
+            "coreteam [at] nushackers [fullstop] org"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/contact",
+            "label": "Contact",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "legal_conduct",
+        "name": "Event Code of Conduct",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the code of conduct page to view trust and safety guidelines."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "This page serves as the primary legal/trust document for events organized by the group.",
+          "urls_seen": [
+            "https://www.nushackers.org/conduct/"
+          ],
+          "labels_seen": [
+            "Event code of conduct",
+            "Conference Code of Conduct"
+          ]
+        },
+        "confidence": 1,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/conduct/",
+            "label": "Event code of conduct",
+            "location": "footer"
+          }
+        ],
+        "intent_category": "legal"
+      },
+      {
+        "id": "docs_hacker_school",
+        "name": "Hacker School Documentation",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the Hacker School page for educational resources and workshops."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Provides documentation and materials for workshops.",
+          "urls_seen": [
+            "https://www.nushackers.org/hackerschool"
+          ],
+          "labels_seen": [
+            "Hackerschool",
+            "Hacking workshops for everyone"
+          ]
+        },
+        "confidence": 0.8,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/hackerschool",
+            "label": "Hackerschool",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "support"
+      },
+      {
+        "id": "about_docs",
+        "name": "About and Mission",
+        "steps": [
+          {
+            "order": 1,
+            "action": "navigate",
+            "description": "Navigate to the About page to learn about the organization and its team."
+          }
+        ],
+        "blockers": [],
+        "evidence": {
+          "notes": "Information about the organization's structure and goals.",
+          "urls_seen": [
+            "https://www.nushackers.org/about"
+          ],
+          "labels_seen": [
+            "About",
+            "Who are we?"
+          ]
+        },
+        "confidence": 0.9,
+        "entry_points": [
+          {
+            "url": "https://www.nushackers.org/about",
+            "label": "About",
+            "location": "nav"
+          }
+        ],
+        "intent_category": "other"
+      }
+    ],
+    "notes": "Privacy Policy, Terms of Service, Security, and Status pages were not found in the main IA. The site appears to be for a student organization (NUS Hackers), and legal/trust information is primarily contained within the 'Event code of conduct' page.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "9e1a0a83-ae5a-46b9-b97b-c0201c373073",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [
+            {
+              "id": "contact_support",
+              "name": "Contact Support",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the contact page to find support email and community links."
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "The contact page provides a direct email for the core team and links to the community.",
+                "urls_seen": [
+                  "https://www.nushackers.org/contact"
+                ],
+                "labels_seen": [
+                  "Contact",
+                  "coreteam [at] nushackers [fullstop] org"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/contact",
+                  "label": "Contact",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "legal_conduct",
+              "name": "Event Code of Conduct",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the code of conduct page to view trust and safety guidelines."
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "This page serves as the primary legal/trust document for events organized by the group.",
+                "urls_seen": [
+                  "https://www.nushackers.org/conduct/"
+                ],
+                "labels_seen": [
+                  "Event code of conduct",
+                  "Conference Code of Conduct"
+                ]
+              },
+              "confidence": 1,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/conduct/",
+                  "label": "Event code of conduct",
+                  "location": "footer"
+                }
+              ],
+              "intent_category": "legal"
+            },
+            {
+              "id": "docs_hacker_school",
+              "name": "Hacker School Documentation",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the Hacker School page for educational resources and workshops."
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Provides documentation and materials for workshops.",
+                "urls_seen": [
+                  "https://www.nushackers.org/hackerschool"
+                ],
+                "labels_seen": [
+                  "Hackerschool",
+                  "Hacking workshops for everyone"
+                ]
+              },
+              "confidence": 0.8,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/hackerschool",
+                  "label": "Hackerschool",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "support"
+            },
+            {
+              "id": "about_docs",
+              "name": "About and Mission",
+              "steps": [
+                {
+                  "order": 1,
+                  "action": "navigate",
+                  "description": "Navigate to the About page to learn about the organization and its team."
+                }
+              ],
+              "blockers": [],
+              "evidence": {
+                "notes": "Information about the organization's structure and goals.",
+                "urls_seen": [
+                  "https://www.nushackers.org/about"
+                ],
+                "labels_seen": [
+                  "About",
+                  "Who are we?"
+                ]
+              },
+              "confidence": 0.9,
+              "entry_points": [
+                {
+                  "url": "https://www.nushackers.org/about",
+                  "label": "About",
+                  "location": "nav"
+                }
+              ],
+              "intent_category": "other"
+            }
+          ],
+          "notes": "Privacy Policy, Terms of Service, Security, and Status pages were not found in the main IA. The site appears to be for a student organization (NUS Hackers), and legal/trust information is primarily contained within the 'Event code of conduct' page.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T05:23:30.051183+00:00"
+}

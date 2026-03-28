@@ -1,0 +1,39 @@
+{
+  "scout_id": "commerce",
+  "seed_url": "https://hckr.cc",
+  "run_id": "41029d24-67b3-4cdd-8f13-42745d029db3",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [],
+    "notes": "The website hckr.cc redirects to nushackers.org, which is the official site for the NUS Hackers student community. The site primarily serves as an informational portal for their workshops (Hackerschool), hackathons (Hack&Roll), and community events (Friday Hacks). All events are described as free and open to the public, and no product listings, shopping carts, or checkout flows were identified during the scout. The site does not contain commercial elements.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [],
+    "notes": "The website hckr.cc redirects to nushackers.org, which is the official site for the NUS Hackers student community. The site primarily serves as an informational portal for their workshops (Hackerschool), hackathons (Hack&Roll), and community events (Friday Hacks). All events are described as free and open to the public, and no product listings, shopping carts, or checkout flows were identified during the scout. The site does not contain commercial elements.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "41029d24-67b3-4cdd-8f13-42745d029db3",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [],
+          "notes": "The website hckr.cc redirects to nushackers.org, which is the official site for the NUS Hackers student community. The site primarily serves as an informational portal for their workshops (Hackerschool), hackathons (Hack&Roll), and community events (Friday Hacks). All events are described as free and open to the public, and no product listings, shopping carts, or checkout flows were identified during the scout. The site does not contain commercial elements.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T05:13:40.202962+00:00"
+}

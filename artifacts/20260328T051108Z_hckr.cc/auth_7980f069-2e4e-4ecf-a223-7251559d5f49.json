@@ -1,0 +1,39 @@
+{
+  "scout_id": "auth",
+  "seed_url": "https://hckr.cc",
+  "run_id": "7980f069-2e4e-4ecf-a223-7251559d5f49",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [],
+    "notes": "The website https://hckr.cc redirects to https://www.nushackers.org, which is a static informational site for a student organization. Thorough scouting of the homepage, sub-sites (Hack&Roll), community pages, and common authentication paths (e.g., /login, /admin, /signup) revealed no native sign-in, sign-up, or account-related entry points. Registration for events like Hack&Roll is mentioned in FAQs but typically occurs through external platforms like Devpost or Google Forms, and is currently closed. No internal member portal or dashboard was found.",
+    "global_blockers": []
+  },
+  "result_payload": {
+    "flows": [],
+    "notes": "The website https://hckr.cc redirects to https://www.nushackers.org, which is a static informational site for a student organization. Thorough scouting of the homepage, sub-sites (Hack&Roll), community pages, and common authentication paths (e.g., /login, /admin, /signup) revealed no native sign-in, sign-up, or account-related entry points. Registration for events like Hack&Roll is mentioned in FAQs but typically occurs through external platforms like Devpost or Google Forms, and is currently closed. No internal member portal or dashboard was found.",
+    "global_blockers": []
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "7980f069-2e4e-4ecf-a223-7251559d5f49",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [],
+          "notes": "The website https://hckr.cc redirects to https://www.nushackers.org, which is a static informational site for a student organization. Thorough scouting of the homepage, sub-sites (Hack&Roll), community pages, and common authentication paths (e.g., /login, /admin, /signup) revealed no native sign-in, sign-up, or account-related entry points. Registration for events like Hack&Roll is mentioned in FAQs but typically occurs through external platforms like Devpost or Google Forms, and is currently closed. No internal member portal or dashboard was found.",
+          "global_blockers": []
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T05:22:09.665526+00:00"
+}

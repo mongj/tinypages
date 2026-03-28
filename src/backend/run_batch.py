@@ -169,7 +169,7 @@ async def execute_scout(
             if status == RunStatus.COMPLETED.value:
                 rr = raw.get("result_raw")
                 parsed = parse_scout_result(rr if isinstance(rr, dict) else None)
-                validation_issues = validate_parsed_shape(parsed)
+                validation_issues = validate_parsed_shape(parsed, scout_id)
                 return {
                     "scout_id": scout_id,
                     "seed_url": seed_url,

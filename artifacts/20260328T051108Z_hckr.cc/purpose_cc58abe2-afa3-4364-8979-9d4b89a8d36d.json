@@ -1,0 +1,168 @@
+{
+  "scout_id": "purpose",
+  "seed_url": "https://hckr.cc",
+  "run_id": "cc58abe2-afa3-4364-8979-9d4b89a8d36d",
+  "status": "COMPLETED",
+  "num_of_steps": null,
+  "result_raw": {
+    "flows": [],
+    "notes": "The site is informative and focused on technical community building and education. Navigation is straightforward with no significant blockers encountered.",
+    "global_blockers": [],
+    "site_understanding": {
+      "evidence": {
+        "notes": "The site redirects from hckr.cc to nushackers.org. The organization is primarily based at the National University of Singapore.",
+        "urls_seen": [
+          "https://hckr.cc",
+          "https://www.nushackers.org/",
+          "https://www.nushackers.org/about",
+          "https://www.nushackers.org/community",
+          "https://www.nushackers.org/archive"
+        ],
+        "labels_seen": [
+          "About",
+          "Community",
+          "Archive",
+          "Friday Hacks",
+          "Hackerschool",
+          "Hack&Roll",
+          "Join Us",
+          "Spreading hacker culture",
+          "Upcoming events",
+          "Featured Articles"
+        ]
+      },
+      "offerings": [
+        "Friday Hacks (technical talks)",
+        "Hackerschool (technical workshops)",
+        "Hack&Roll (24-hour hackathon)",
+        "Hackers Toolbox (core technical skills training)",
+        "Technical resources (slides, handouts, video recordings)",
+        "Community discussion groups (Discord, Telegram, Mailing lists)"
+      ],
+      "confidence": 1,
+      "one_line_summary": "NUS Hackers is a student-led organization at the National University of Singapore dedicated to spreading hacker culture through technical talks, workshops, and hackathons.",
+      "primary_audiences": [
+        "NUS students",
+        "Software developers",
+        "Tech enthusiasts",
+        "Computer Science students",
+        "Hackers"
+      ],
+      "what_the_site_does": "The site acts as a central hub for the NUS Hackers community, providing schedules and information for recurring technical events like Friday Hacks and Hackerschool. It also serves as a comprehensive educational repository, hosting an archive of video recordings, slides, and handouts from past sessions on various software development and computer science topics.\n\nAdditionally, it provides platforms for community connection via links to social media and messaging groups, and information on how students can get involved in the organization's core activities such as joining the core team or participating in their flagship hackathon, Hack&Roll.",
+      "organization_or_brand": "NUS Hackers"
+    }
+  },
+  "result_payload": {
+    "flows": [],
+    "notes": "The site is informative and focused on technical community building and education. Navigation is straightforward with no significant blockers encountered.",
+    "global_blockers": [],
+    "site_understanding": {
+      "evidence": {
+        "notes": "The site redirects from hckr.cc to nushackers.org. The organization is primarily based at the National University of Singapore.",
+        "urls_seen": [
+          "https://hckr.cc",
+          "https://www.nushackers.org/",
+          "https://www.nushackers.org/about",
+          "https://www.nushackers.org/community",
+          "https://www.nushackers.org/archive"
+        ],
+        "labels_seen": [
+          "About",
+          "Community",
+          "Archive",
+          "Friday Hacks",
+          "Hackerschool",
+          "Hack&Roll",
+          "Join Us",
+          "Spreading hacker culture",
+          "Upcoming events",
+          "Featured Articles"
+        ]
+      },
+      "offerings": [
+        "Friday Hacks (technical talks)",
+        "Hackerschool (technical workshops)",
+        "Hack&Roll (24-hour hackathon)",
+        "Hackers Toolbox (core technical skills training)",
+        "Technical resources (slides, handouts, video recordings)",
+        "Community discussion groups (Discord, Telegram, Mailing lists)"
+      ],
+      "confidence": 1,
+      "one_line_summary": "NUS Hackers is a student-led organization at the National University of Singapore dedicated to spreading hacker culture through technical talks, workshops, and hackathons.",
+      "primary_audiences": [
+        "NUS students",
+        "Software developers",
+        "Tech enthusiasts",
+        "Computer Science students",
+        "Hackers"
+      ],
+      "what_the_site_does": "The site acts as a central hub for the NUS Hackers community, providing schedules and information for recurring technical events like Friday Hacks and Hackerschool. It also serves as a comprehensive educational repository, hosting an archive of video recordings, slides, and handouts from past sessions on various software development and computer science topics.\n\nAdditionally, it provides platforms for community connection via links to social media and messaging groups, and information on how students can get involved in the organization's core activities such as joining the core team or participating in their flagship hackathon, Hack&Roll.",
+      "organization_or_brand": "NUS Hackers"
+    }
+  },
+  "validation_issues": [],
+  "error": null,
+  "attempts": [
+    {
+      "browser_profile": "lite",
+      "ok": true,
+      "detail": {
+        "http_ok": true,
+        "run_id": "cc58abe2-afa3-4364-8979-9d4b89a8d36d",
+        "status": "COMPLETED",
+        "num_of_steps": null,
+        "result_raw": {
+          "flows": [],
+          "notes": "The site is informative and focused on technical community building and education. Navigation is straightforward with no significant blockers encountered.",
+          "global_blockers": [],
+          "site_understanding": {
+            "evidence": {
+              "notes": "The site redirects from hckr.cc to nushackers.org. The organization is primarily based at the National University of Singapore.",
+              "urls_seen": [
+                "https://hckr.cc",
+                "https://www.nushackers.org/",
+                "https://www.nushackers.org/about",
+                "https://www.nushackers.org/community",
+                "https://www.nushackers.org/archive"
+              ],
+              "labels_seen": [
+                "About",
+                "Community",
+                "Archive",
+                "Friday Hacks",
+                "Hackerschool",
+                "Hack&Roll",
+                "Join Us",
+                "Spreading hacker culture",
+                "Upcoming events",
+                "Featured Articles"
+              ]
+            },
+            "offerings": [
+              "Friday Hacks (technical talks)",
+              "Hackerschool (technical workshops)",
+              "Hack&Roll (24-hour hackathon)",
+              "Hackers Toolbox (core technical skills training)",
+              "Technical resources (slides, handouts, video recordings)",
+              "Community discussion groups (Discord, Telegram, Mailing lists)"
+            ],
+            "confidence": 1,
+            "one_line_summary": "NUS Hackers is a student-led organization at the National University of Singapore dedicated to spreading hacker culture through technical talks, workshops, and hackathons.",
+            "primary_audiences": [
+              "NUS students",
+              "Software developers",
+              "Tech enthusiasts",
+              "Computer Science students",
+              "Hackers"
+            ],
+            "what_the_site_does": "The site acts as a central hub for the NUS Hackers community, providing schedules and information for recurring technical events like Friday Hacks and Hackerschool. It also serves as a comprehensive educational repository, hosting an archive of video recordings, slides, and handouts from past sessions on various software development and computer science topics.\n\nAdditionally, it provides platforms for community connection via links to social media and messaging groups, and information on how students can get involved in the organization's core activities such as joining the core team or participating in their flagship hackathon, Hack&Roll.",
+            "organization_or_brand": "NUS Hackers"
+          }
+        },
+        "error": null,
+        "execution": "queue_poll"
+      }
+    }
+  ],
+  "finished_at": "2026-03-28T05:12:27.384467+00:00"
+}
