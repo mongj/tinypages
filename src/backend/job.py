@@ -125,9 +125,8 @@ _modal_image = (
 @app.function(
     image=_modal_image,
     secrets=[modal.Secret.from_dotenv()],
-    timeout=900,
+    timeout=3600,
 )
-@modal.fastapi_endpoint()
 def run_job_remote(job_id: str, seed_url: str) -> dict:
     """Run all scouts for *seed_url*, writing progress to Supabase along the way."""
     import asyncio
@@ -156,7 +155,7 @@ def run_job_remote(job_id: str, seed_url: str) -> dict:
         logger.info("[%s] running %d scouts", job_id, len(scout_ids))
 
         artifacts = asyncio.run(
-            run_swarm(url, scout_ids, parallelism=2, max_attempts=4, poll_max_wait_seconds=900.0)
+            run_swarm(url, scout_ids, parallelism=2, max_attempts=4, poll_max_wait_seconds=3600.0)
         )
         logger.info("[%s] swarm finished, %d artifacts: %s", job_id, len(artifacts), artifacts)
 
